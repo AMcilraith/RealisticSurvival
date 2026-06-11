@@ -12,7 +12,7 @@ Realistic Survival uses GitHub Actions on `windows-latest` with bash steps.
 | **Publish GitHub Release** | Reusable | Create GitHub release with mod zip assets |
 | **Bump Mod Version** | Reusable | Commit next `ci/MOD_VERSION` after GitHub publish |
 | **Publish To Nexus** | Manual or via Package And Release | Upload mod zips to Nexus |
-| **Publish Wiki** | Push to `docs/**` or manual | Sync `docs/` to GitHub Wiki |
+| **Publish Wiki** | Push to `docs/**` or manual | Sync `docs/` to GitHub Wiki (uses `WIKI_PUSH_TOKEN` secret) |
 
 ## Versioning
 

@@ -3,8 +3,9 @@ set -euo pipefail
 
 log() { echo "[publish-wiki] $*"; }
 
-if [[ -z "${GITHUB_TOKEN:-}" ]]; then
-  echo "GITHUB_TOKEN is required" >&2
+WIKI_TOKEN="${WIKI_PUSH_TOKEN:-${GITHUB_TOKEN:-}}"
+if [[ -z "$WIKI_TOKEN" ]]; then
+  echo "WIKI_PUSH_TOKEN or GITHUB_TOKEN is required" >&2
   exit 1
 fi
 
@@ -26,7 +27,7 @@ fi
 WIKI_DIR="$(mktemp -d)"
 trap 'rm -rf "$WIKI_DIR"' EXIT
 
-WIKI_URL="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git"
+WIKI_URL="https://x-access-token:${WIKI_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git"
 
 log "Cloning wiki for ${GITHUB_REPOSITORY}"
 if ! git clone --depth=1 "$WIKI_URL" "$WIKI_DIR" 2>/dev/null; then
@@ -38,7 +39,12 @@ if ! git clone --depth=1 "$WIKI_URL" "$WIKI_DIR" 2>/dev/null; then
 fi
 
 log "Syncing docs/ to wiki"
-rsync -a --delete --exclude='.git' docs/ "$WIKI_DIR/"
+if command -v rsync >/dev/null 2>&1; then
+  rsync -a --delete --exclude='.git' docs/ "$WIKI_DIR/"
+else
+  find "$WIKI_DIR" -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+  cp -a docs/. "$WIKI_DIR/"
+fi
 
 # Normalize markdown links for GitHub Wiki (strip .md suffix from internal links).
 if command -v find >/dev/null 2>&1; then
