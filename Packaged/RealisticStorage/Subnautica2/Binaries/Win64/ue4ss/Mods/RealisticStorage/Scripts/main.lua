@@ -1,5 +1,6 @@
 local PlayerInventory = require("PlayerInventory")
 local Hotbar = require("Hotbar")
+local PassiveBiomods = require("PassiveBiomods")
 local Storage = require("Storage")
 
 local activeLockers = {}
@@ -82,6 +83,7 @@ NotifyOnNewObject("/Game/Blueprints/Core/BP_SN2PlayerCharacter.BP_SN2PlayerChara
     activePlayers[player] = true
     PlayerInventory.Apply(player)
     Hotbar.Apply(player)
+    PassiveBiomods.Apply(player)
 end)
 
 local pendingLockers = {}
@@ -126,10 +128,12 @@ LoopAsync(1000, function()
         if player:IsValid() then
             PlayerInventory.Apply(player)
             Hotbar.Apply(player)
+            PassiveBiomods.Apply(player)
         else
             activePlayers[player] = nil
             PlayerInventory.Clear(player)
             Hotbar.Clear(player)
+            PassiveBiomods.Clear(player)
         end
     end
     if #pendingLockers > 0 then

@@ -1,6 +1,6 @@
 # Realistic Survival
 
-**Version:** 2.1
+**Version:** 2.2
 
 A multi-package Subnautica 2 mod overhaul focused on realistic crafting, survival balance, and expanded storage — built on [UE4SS](https://www.nexusmods.com/subnautica2/mods/36) and [SN2-DF](https://github.com/AMcilraith/Subnautica2Mods/wiki).
 

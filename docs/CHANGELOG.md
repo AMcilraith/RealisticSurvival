@@ -2,6 +2,11 @@
 
 Version tracked in `ci/MOD_VERSION`. Release tags on GitHub use `v` prefix.
 
+## 2.2
+
+- RealisticStorage: passive biomod slot milestones from creature bio-scans; curated biomod discovery TOML.
+- SN2-DF 1.1-beta: `[[bio_ability_modify]]` support with deferred discovery (bio-scan capability, recipe unlock).
+
 ## 2.1
 
 - Documentation expanded; GitHub Wiki sync added.
