@@ -34,12 +34,12 @@ Detailed steps, load order, and troubleshooting: [Installation guide](https://gi
 
 [UE4SS](https://www.nexusmods.com/subnautica2/mods/36) is required for all included mods.
 
-**Realistic Storage** biomod discovery rules in `SDF/Biomods/` also require **SN2-DF** (shipped with this pack). Do not run the separate **ExtraPassiveBiomodSlots** mod alongside Realistic Storage — both modify passive biomod slot trackers.
+**Realistic Storage** biomod discovery rules in `SN2-DF/Biomods/` also require **SN2-DF** (shipped with this pack). Do not run the separate **ExtraPassiveBiomodSlots** mod alongside Realistic Storage — both modify passive biomod slot trackers.
 
 ### Realistic Storage — biomods
 
 - **Passive biomod slots** grow at creature bio-scan milestones (default: 3, 8, 15, and 25 unique scans, up to +4 mod slots on top of vanilla story unlocks). Configure thresholds in `Scripts/config.lua`.
-- **Unpublished biomods** can be revealed via SN2-DF `bio_ability_modify` entries under `SDF/Biomods/` when the player gains bio-scan capability (ScannerV2 from Realistic Craft) or unlocks named modification recipes.
+- **Unpublished biomods** can be revealed via SN2-DF `bio_ability_modify` entries under `SN2-DF/Biomods/` when the player gains bio-scan capability (ScannerV2 from Realistic Craft) or unlocks named modification recipes.
 
 ## Basic tips for new players
 
