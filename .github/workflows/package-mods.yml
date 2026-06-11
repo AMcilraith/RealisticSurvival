@@ -104,7 +104,7 @@ jobs:
 
           archive_create() {
             local parent_dir="$1" zip_path="$2"
-            python <<'PY' "$parent_dir" "$zip_path"
+            python - "$parent_dir" "$zip_path" <<'PY'
           import sys, zipfile
           from pathlib import Path
           parent_dir = Path(sys.argv[1]).resolve()
@@ -124,7 +124,7 @@ jobs:
 
           archive_validate() {
             local path="$1" label="${2:-archive}"
-            python <<'PY' "$path" "$label"
+            python - "$path" "$label" <<'PY'
           import sys, tarfile, zipfile
           from pathlib import Path
           path = Path(sys.argv[1])
@@ -145,7 +145,7 @@ jobs:
 
           archive_extract() {
             local archive_path="$1" dest_dir="$2"
-            python <<'PY' "$archive_path" "$dest_dir"
+            python - "$archive_path" "$dest_dir" <<'PY'
           import sys, tarfile, zipfile
           from pathlib import Path
           archive_path = Path(sys.argv[1]).resolve()
