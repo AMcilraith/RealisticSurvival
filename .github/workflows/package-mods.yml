@@ -217,7 +217,9 @@ jobs:
           }
 
           get_sn2_df_release_config() {
-            local default_repo="AMcilraith/Subnautica2Mods" tag="latest" repo="$default_repo"
+            local default_repo="AMcilraith/Subnautica2Mods"
+            local tag="latest"
+            local repo="$default_repo"
             if [ -n "${SN2_DF_RELEASE:-}" ]; then
               tag="${SN2_DF_RELEASE//[[:space:]]/}"
             elif [ -n "${SDF_RELEASE:-}" ]; then
@@ -462,7 +464,9 @@ jobs:
           }
 
           new_mod_zip() {
-            local mod_name="$1" src_dir="$PACKAGED_DIR/$mod_name/Subnautica2" zip_file="$PACKAGED_DIR/$mod_name.zip"
+            local mod_name="$1"
+            local src_dir="$PACKAGED_DIR/$mod_name/Subnautica2"
+            local zip_file="$PACKAGED_DIR/$mod_name.zip"
             [ -d "$src_dir" ] || fail "Cannot zip ${mod_name}; missing $src_dir"
             rm -f "$zip_file"
             log "Zipping $mod_name -> $zip_file"
