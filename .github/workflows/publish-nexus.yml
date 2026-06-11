@@ -1,6 +1,32 @@
 name: Publish To Nexus
 
 on:
+  workflow_call:
+    inputs:
+      release_version:
+        description: 'Mod release version to publish'
+        type: string
+        required: true
+      version_override:
+        description: 'Nexus file version override (takes precedence over release_version)'
+        type: string
+        default: ''
+      upload_description:
+        description: 'Optional Nexus changelog / file description override'
+        type: string
+        default: ''
+      file_category:
+        description: 'Nexus file category'
+        type: string
+        default: main
+      package_run_id:
+        description: 'Optional workflow run ID to download mod-zips from (defaults to caller run)'
+        type: string
+        default: ''
+    outputs:
+      published:
+        description: 'Whether any Nexus file was uploaded'
+        value: ${{ jobs.nexus.outputs.published }}
   workflow_dispatch:
     inputs:
       release_version:
@@ -40,29 +66,42 @@ permissions:
 jobs:
   nexus:
     runs-on: windows-latest
+    outputs:
+      published: ${{ steps.nexus.outputs.published }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Download packaged zips
+      - name: Download packaged zips from caller run
+        if: github.event_name == 'workflow_call' && inputs.package_run_id == ''
+        uses: actions/download-artifact@v4
+        with:
+          name: mod-zips
+          path: Packaged
+
+      - name: Download packaged zips from workflow run ID
+        if: github.event_name == 'workflow_dispatch' || inputs.package_run_id != ''
         uses: actions/download-artifact@v4
         with:
           name: mod-zips
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          run-id: ${{ inputs.package_run_id }}
+          run-id: ${{ github.event_name == 'workflow_dispatch' && inputs.package_run_id || inputs.package_run_id }}
           path: Packaged
 
       - name: Resolve Nexus version
         id: version
         shell: bash
+        env:
+          CALL_RELEASE_VERSION: ${{ inputs.release_version }}
+          VERSION_OVERRIDE: ${{ inputs.version_override }}
         run: |
           set -euo pipefail
           version=""
-          if [ -n "${{ inputs.version_override }}" ]; then
-            version="${{ inputs.version_override }}"
+          if [ -n "$VERSION_OVERRIDE" ]; then
+            version="$VERSION_OVERRIDE"
             echo "Using version_override: $version"
-          elif [ -n "${{ inputs.release_version }}" ]; then
-            version="${{ inputs.release_version }}"
+          elif [ -n "$CALL_RELEASE_VERSION" ]; then
+            version="$CALL_RELEASE_VERSION"
             echo "Using release_version: $version"
           elif [ -f ci/MOD_VERSION ]; then
             version="$(tr -d '\r\n' < ci/MOD_VERSION)"
@@ -75,6 +114,7 @@ jobs:
           echo "version=$version" >> "$GITHUB_OUTPUT"
 
       - name: Upload to Nexus Mods
+        id: nexus
         shell: bash
         env:
           NEXUSMODS_API_KEY: ${{ secrets.NEXUSMODS_API_KEY }}

@@ -108,14 +108,14 @@ CI is workflow-only (bash steps on `windows-latest`; no PowerShell in pipelines)
 
 | Workflow | Trigger | Purpose |
 |----------|---------|---------|
-| **Package And Release** | Push to `main`/`master` (mod content paths) or manual | Check changes → package mods → GitHub release → bump `ci/MOD_VERSION` |
+| **Package And Release** | Push to `main`/`master` (mod content paths) or manual | Check changes → package mods → optional GitHub release and/or Nexus upload → bump `ci/MOD_VERSION` after GitHub publish |
 | **Check Mod Changes** | Reusable | Detect changes under `Packaged/`, `Source/`, `Images/`, `Licence/` |
 | **Package Mods** | Reusable | Fetch SN2-DF, build paks with retoc, zip content mods |
 | **Publish GitHub Release** | Reusable | Create GitHub release with mod zip assets |
 | **Bump Mod Version** | Reusable | Commit next `ci/MOD_VERSION` after a successful GitHub release |
-| **Publish To Nexus** | **Manual only** (`workflow_dispatch`) | Upload mod zips to Nexus; requires `package_run_id` from a **Package And Release** run. Version comes from `version_override`, `release_version`, or `ci/MOD_VERSION` (first non-empty wins). |
+| **Publish To Nexus** | Manual (`workflow_dispatch`) or via **Package And Release** | Upload mod zips to Nexus. Standalone run requires `package_run_id` from a package workflow run. |
 
-Nexus upload never runs on push. After **Package And Release** completes, run **Publish To Nexus** manually with the workflow run ID. Leave version fields empty to use `ci/MOD_VERSION`, or set `version_override` to publish under a different Nexus file version without repackaging. Use `upload_description` for a changelog override and `file_category` to choose the Nexus file slot (`main`, `update`, `optional`, `old`, or `miscellaneous`; defaults to `main`).
+On push, **Package And Release** still publishes to GitHub when content changed. For manual runs, use **Package And Release** checkboxes: `publish_github` (default on) and `publish_nexus` (default off). Nexus options: `nexus_version_override`, `nexus_upload_description`, and `nexus_file_category` (`main`, `update`, `optional`, `old`, or `miscellaneous`). You can also run **Publish To Nexus** separately with a prior run ID.
 
 ---
 

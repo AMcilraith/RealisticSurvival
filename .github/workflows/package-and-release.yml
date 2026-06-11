@@ -23,6 +23,35 @@ on:
         description: 'Skip retoc pak build during packaging'
         type: boolean
         default: false
+      publish_github:
+        description: 'Create a GitHub release with mod zip assets'
+        type: boolean
+        default: true
+      publish_nexus:
+        description: 'Upload mod zips to Nexus Mods (requires Nexus secrets)'
+        type: boolean
+        default: false
+      nexus_version_override:
+        description: 'Nexus file version override (defaults to packaged release version)'
+        type: string
+        required: false
+        default: ''
+      nexus_upload_description:
+        description: 'Optional Nexus changelog / file description override'
+        type: string
+        required: false
+        default: ''
+      nexus_file_category:
+        description: 'Nexus file category when publish_nexus is enabled'
+        type: choice
+        required: true
+        default: main
+        options:
+          - main
+          - update
+          - optional
+          - old
+          - miscellaneous
 
 permissions:
   contents: write
@@ -42,10 +71,26 @@ jobs:
 
   github-release:
     needs: [check, package]
-    if: needs.check.outputs.should_publish == 'true'
+    if: |
+      needs.check.outputs.should_publish == 'true' &&
+      (github.event_name == 'push' || inputs.publish_github == true)
     uses: ./.github/workflows/publish-github-release.yml
     with:
       release_version: ${{ needs.package.outputs.release_version }}
+    secrets: inherit
+
+  nexus-release:
+    needs: [check, package]
+    if: |
+      needs.check.outputs.should_publish == 'true' &&
+      github.event_name == 'workflow_dispatch' &&
+      inputs.publish_nexus == true
+    uses: ./.github/workflows/publish-nexus.yml
+    with:
+      release_version: ${{ needs.package.outputs.release_version }}
+      version_override: ${{ inputs.nexus_version_override }}
+      upload_description: ${{ inputs.nexus_upload_description }}
+      file_category: ${{ inputs.nexus_file_category }}
     secrets: inherit
 
   version-bump:
