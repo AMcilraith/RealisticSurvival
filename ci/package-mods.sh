@@ -67,6 +67,26 @@ ensure_directory() {
   fi
 }
 
+native_path() {
+  local path="$1"
+  if command -v cygpath >/dev/null 2>&1; then
+    cygpath -m "$path"
+  else
+    printf '%s' "$path"
+  fi
+}
+
+ensure_native_directory() {
+  local path="$1"
+  python -c "
+import os, sys
+path = sys.argv[1]
+if len(path) > 3 and path[0] == '/' and path[2] == '/':
+    path = f'{path[1].upper()}:{path[2:]}'
+os.makedirs(path, exist_ok=True)
+" "$(native_path "$path")"
+}
+
 ensure_retoc() {
   if [ -n "${RETOC_PATH:-}" ] && [ -f "$RETOC_PATH" ]; then
     RETOC_EXE="$RETOC_PATH"
@@ -113,16 +133,22 @@ invoke_retoc_to_zen() {
   local source_path="$1"
   local target_utoc="$2"
   local label="$3"
+  local native_source native_target target_dir
 
   if [ ! -e "$source_path" ]; then
     fail "retoc source not found for ${label}: $source_path"
   fi
 
-  ensure_directory "$(dirname "$target_utoc")"
+  target_dir="$(dirname "$target_utoc")"
+  ensure_native_directory "$target_dir"
+
+  native_source="$(native_path "$source_path")"
+  native_target="$(native_path "$target_utoc")"
+
   log "retoc to-zen $label"
-  log "  source: $source_path"
-  log "  target: $target_utoc"
-  "$RETOC_EXE" to-zen "$source_path" "$target_utoc" --version UE5_6
+  log "  source: $native_source"
+  log "  target: $native_target"
+  "$RETOC_EXE" to-zen "$native_source" "$native_target" --version UE5_6
 }
 
 ensure_enabled_txt() {
@@ -219,8 +245,8 @@ prepare_packaged_mods() {
 }
 
 build_content_paks() {
-  ensure_directory "$PACKAGED_DIR/RealisticCraft/Subnautica2/Content/Paks/~mods/RealisticCraft"
-  ensure_directory "$PACKAGED_DIR/RealisticCraft_Plus/Subnautica2/Content/Paks/~mods/RealisticCraft_Plus"
+  ensure_native_directory "$PACKAGED_DIR/RealisticCraft/Subnautica2/Content/Paks/~mods/RealisticCraft"
+  ensure_native_directory "$PACKAGED_DIR/RealisticCraft_Plus/Subnautica2/Content/Paks/~mods/RealisticCraft_Plus"
 
   invoke_retoc_to_zen \
     "$SOURCE/RealisticCraft_Main" \
