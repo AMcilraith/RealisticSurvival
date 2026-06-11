@@ -29,7 +29,7 @@ jobs:
         shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SN2_DF_RELEASE: ${{ vars.SN2_DF_RELEASE }}
+          SN2_DF_RELEASE: ${{ vars.SN2_DF_RELEASE || vars.SDF_RELEASE }}
           SKIP_PAK_BUILD: ${{ inputs.skip_pak_build }}
         run: bash ci/package-mods.sh
 

@@ -16,7 +16,7 @@ The **SN2-DF** data loader shipped with this pack is licensed under **GPL-3.0** 
 
 ## About Realistic Survival
 
-Developed by TerryTie and addi-4th.
+Developed by TerryTie.
 
 Some time ago, I made the [Realistic Craft 2.0](https://www.nexusmods.com/subnautica/mods/767) mod for Subnautica 1, focused on more realistic and varied crafting.
 
@@ -100,6 +100,25 @@ You can view most of the recipes in the Media section. Below, I will describe on
 
 Unpack and drop all files into the `/Subnautica2` folder. That should be it, as long as the requirements are installed.
 
+---
+
+## GitHub Actions (CI)
+
+CI is workflow-only (bash steps on `windows-latest`; no PowerShell in pipelines).
+
+| Workflow | Trigger | Purpose |
+|----------|---------|---------|
+| **Package And Release** | Push to `main`/`master` (mod content paths) or manual | Check changes → package mods → GitHub release → bump `ci/MOD_VERSION` |
+| **Check Mod Changes** | Reusable | Detect changes under `Packaged/`, `Source/`, `Images/`, `Licence/` |
+| **Package Mods** | Reusable | Fetch SN2-DF, build paks with retoc, zip content mods |
+| **Publish GitHub Release** | Reusable | Create GitHub release with mod zip assets |
+| **Bump Mod Version** | Reusable | Commit next `ci/MOD_VERSION` after a successful GitHub release |
+| **Publish To Nexus** | **Manual only** (`workflow_dispatch`) | Upload mod zips to Nexus; requires `package_run_id` from a **Package And Release** run. Version comes from `version_override`, `release_version`, or `ci/MOD_VERSION` (first non-empty wins). |
+
+Nexus upload never runs on push. After **Package And Release** completes, run **Publish To Nexus** manually with the workflow run ID. Leave version fields empty to use `ci/MOD_VERSION`, or set `version_override` to publish under a different Nexus file version without repackaging. Use `upload_description` for a changelog override and `file_category` to choose the Nexus file slot (`main`, `update`, `optional`, `old`, or `miscellaneous`; defaults to `main`).
+
+---
+
 ## Requirements
 
 [UE4SS](https://www.nexusmods.com/subnautica2/mods/36) for Subnautica 2 is required for all included mods.
@@ -148,7 +167,5 @@ Swim 230 meters South East from the Lifepod.
 ## Shout outs
 
 Since I have almost no experience in modding, [marksmango](https://www.nexusmods.com/profile/marksmango) really helped me a lot with advice in the early stages. A very responsive and great person!
-
-Huge thanks to [addi-4th](https://www.nexusmods.com/profile/addi4th) for taking the initiative to rewrite the descriptions for the modified crafting recipes. They came up with and implemented great item descriptions and also created two new icons for the advanced water variants. They've also been helping maintain the mod in my absence, while I am attending to personal matters. Very creative person!
 
 Thanks to [Limo](https://www.nexusmods.com/profile/LimoDerEchte) on the SN2 Modding Discord for working to create some of the amazing item frameworks we now use!

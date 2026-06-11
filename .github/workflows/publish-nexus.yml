@@ -18,10 +18,21 @@ on:
         type: string
         required: true
       upload_description:
-        description: 'Optional Nexus file description'
+        description: 'Optional Nexus changelog / file description override'
         type: string
         required: false
         default: ''
+      file_category:
+        description: 'Nexus file category (main replaces the primary download; old archives the previous main file)'
+        type: choice
+        required: true
+        default: main
+        options:
+          - main
+          - update
+          - optional
+          - old
+          - miscellaneous
 
 permissions:
   contents: read
@@ -72,4 +83,5 @@ jobs:
           NEXUS_FILE_GROUP_ID_REALISTIC_STORAGE: ${{ secrets.NEXUS_FILE_GROUP_ID_REALISTIC_STORAGE }}
           NEXUS_FILE_GROUP_ID_REALISTIC_SCANS: ${{ secrets.NEXUS_FILE_GROUP_ID_REALISTIC_SCANS }}
           NEXUS_UPLOAD_DESCRIPTION: ${{ inputs.upload_description }}
+          NEXUS_FILE_CATEGORY: ${{ inputs.file_category }}
         run: bash ci/publish-nexus.sh '${{ steps.version.outputs.version }}'

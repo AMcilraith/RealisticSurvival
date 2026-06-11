@@ -12,6 +12,8 @@ get_sn2_df_release_config() {
 
   if [ -n "${SN2_DF_RELEASE:-}" ]; then
     tag="${SN2_DF_RELEASE//[[:space:]]/}"
+  elif [ -n "${SDF_RELEASE:-}" ]; then
+    tag="${SDF_RELEASE//[[:space:]]/}"
   elif [ -n "${SN2_DF_RELEASE_TAG:-}" ]; then
     tag="${SN2_DF_RELEASE_TAG//[[:space:]]/}"
   fi
@@ -72,13 +74,13 @@ import json, sys
 release = json.load(sys.stdin)
 assets = release.get('assets') or []
 tag = release.get('tag_name', '')
-for preferred in ('SN2-DF.zip', 'main.dll'):
+for preferred in ('SN2-DF.zip', 'SDF.zip', 'main.dll'):
     for asset in assets:
         if asset.get('name') == preferred:
             print(json.dumps(asset))
             sys.exit(0)
 names = ', '.join(a.get('name', '') for a in assets)
-print(f\"Release '{tag}' is missing SN2-DF.zip or main.dll. Found: {names}\", file=sys.stderr)
+print(f\"Release '{tag}' is missing SN2-DF.zip, SDF.zip, or main.dll. Found: {names}\", file=sys.stderr)
 sys.exit(1)
 "
 }
@@ -117,43 +119,34 @@ except subprocess.CalledProcessError as exc:
 validate_downloaded_asset() {
   local path="$1"
   local asset_name="$2"
+  local script_dir
+  script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-  python -c "
+  if [[ "$asset_name" == *.zip ]]; then
+    python "$script_dir/archive.py" validate "$path" "$asset_name" || {
+      echo "Download failed: $path is not a valid zip or tar archive." >&2
+      return 1
+    }
+    return 0
+  fi
+
+  if [[ "$asset_name" == *.dll ]]; then
+    python -c "
 import os, sys
-
 path = sys.argv[1]
-name = sys.argv[2]
-
-if not os.path.isfile(path):
-    print(f'Download failed: file not found at {path}', file=sys.stderr)
+if not os.path.isfile(path) or os.path.getsize(path) < 1:
+    print(f'Download failed: missing or empty DLL at {path}', file=sys.stderr)
     sys.exit(1)
-
-size = os.path.getsize(path)
-if size < 1:
-    print(f'Download failed: {path} is empty (0 bytes)', file=sys.stderr)
-    sys.exit(1)
-
 with open(path, 'rb') as handle:
-    header = handle.read(8)
+    if handle.read(2) != b'MZ':
+        print(f'Download failed: {path} is not a valid PE DLL.', file=sys.stderr)
+        sys.exit(1)
+" "$path"
+    return
+  fi
 
-if name.endswith('.zip'):
-    if not header.startswith(b'PK'):
-        with open(path, 'rb') as handle:
-            preview = handle.read(200).decode('utf-8', errors='replace')
-        print(
-            f'Download failed: {path} is not a valid zip ({size} bytes, expected PK header). '
-            f'Preview: {preview!r}',
-            file=sys.stderr,
-        )
-        sys.exit(1)
-elif name.endswith('.dll'):
-    if not header.startswith(b'MZ'):
-        print(
-            f'Download failed: {path} is not a valid PE DLL ({size} bytes, expected MZ header).',
-            file=sys.stderr,
-        )
-        sys.exit(1)
-" "$path" "$asset_name"
+  echo "Download failed: unsupported asset type: $asset_name" >&2
+  return 1
 }
 
 install_sn2_df_mod_layout_from_dll() {
@@ -201,24 +194,31 @@ install_sn2_df_from_release() {
   download_asset "$asset_json" "$download_path"
   validate_downloaded_asset "$download_path" "$asset_name"
 
-  if [ "$asset_name" = "SN2-DF.zip" ]; then
+  if [[ "$asset_name" == *.zip ]]; then
     local extract_dir="$temp_root/extract"
+    local script_dir
+    script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
     mkdir -p "$extract_dir"
-    unzip -q "$download_path" -d "$extract_dir"
+    python "$script_dir/archive.py" extract "$download_path" "$extract_dir"
 
     local subnautica_root
     subnautica_root="$(find "$extract_dir" -type d -name Subnautica2 | head -1)"
     if [ -z "$subnautica_root" ]; then
-      echo "SN2-DF.zip does not contain a Subnautica2/ folder." >&2
+      echo "$asset_name does not contain a Subnautica2/ folder." >&2
       exit 1
     fi
 
     local packaged_root="$packaged_mod_dir"
-    while [ -n "$packaged_root" ] && [ "$(basename "$packaged_root")" != "SN2-DF" ]; do
+    local packaged_base=""
+    while [ -n "$packaged_root" ]; do
+      packaged_base="$(basename "$packaged_root")"
+      if [ "$packaged_base" = "SN2-DF" ] || [ "$packaged_base" = "SDF" ]; then
+        break
+      fi
       packaged_root="$(dirname "$packaged_root")"
     done
-    if [ -z "$packaged_root" ] || [ "$(basename "$packaged_root")" != "SN2-DF" ]; then
-      echo "Could not resolve Packaged/SN2-DF root from $packaged_mod_dir" >&2
+    if [ -z "$packaged_root" ] || { [ "$packaged_base" != "SN2-DF" ] && [ "$packaged_base" != "SDF" ]; }; then
+      echo "Could not resolve Packaged/SN2-DF or Packaged/SDF root from $packaged_mod_dir" >&2
       exit 1
     fi
 
@@ -226,9 +226,19 @@ install_sn2_df_from_release() {
     rm -rf "$target_subnautica"
     cp -R "$subnautica_root" "$target_subnautica"
 
+    local mods_dir
+    mods_dir="$(dirname "$packaged_mod_dir")"
+    if [ -d "$mods_dir/SN2-DF" ] && [ ! -d "$mods_dir/SDF" ]; then
+      mv "$mods_dir/SN2-DF" "$mods_dir/SDF"
+      log "Renamed release mod folder $mods_dir/SN2-DF -> SDF"
+    elif [ -d "$mods_dir/SN2-DF" ] && [ -d "$mods_dir/SDF" ]; then
+      rm -rf "$mods_dir/SN2-DF"
+      log "Removed duplicate release mod folder $mods_dir/SN2-DF (keeping SDF)"
+    fi
+
     local dll_path="$packaged_mod_dir/dlls/main.dll"
     if [ ! -f "$dll_path" ]; then
-      echo "SN2-DF.zip installed but main.dll is missing at $dll_path" >&2
+      echo "$asset_name installed but main.dll is missing at $dll_path" >&2
       exit 1
     fi
 

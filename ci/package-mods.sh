@@ -13,7 +13,7 @@ RCP_MODS="$PACKAGED_DIR/RealisticCraft_Plus/Subnautica2/Binaries/Win64/ue4ss/Mod
 RS_SCAN_MODS="$PACKAGED_DIR/RealisticScans/Subnautica2/Binaries/Win64/ue4ss/Mods"
 MOD_ROOTS=("$RC_MODS" "$RCP_MODS" "$RS_SCAN_MODS")
 LICENSE_SOURCE="$REPO_ROOT/Licence/license"
-SN2_DF_PACKAGED_MOD="$PACKAGED_DIR/SN2-DF/Subnautica2/Binaries/Win64/ue4ss/Mods/SN2-DF"
+SN2_DF_PACKAGED_MOD="$PACKAGED_DIR/SN2-DF/Subnautica2/Binaries/Win64/ue4ss/Mods/SDF"
 VERSION_FILE="$REPO_ROOT/ci/MOD_VERSION"
 CONTENT_RELEASE_MODS=(RealisticCraft RealisticCraft_Plus RealisticStorage RealisticScans)
 RETOC_VERSION="${RETOC_VERSION:-v0.1.4}"
@@ -143,23 +143,34 @@ install_sn2_df_from_github_release() {
 }
 
 remove_stale_loader_mods() {
-  log "Removing stale nested SN2-DF loader folders from packaged mods..."
+  log "Removing stale misplaced loader mods from packaged content mod roots..."
   for mod_root in "${MOD_ROOTS[@]}"; do
-    local stale="$mod_root/SN2-DF"
-    if [ -d "$stale" ]; then
-      rm -rf "$stale"
-      log "Removed $stale"
-    fi
+    for misplaced_loader in SDF SN2-DF; do
+      local misplaced="$mod_root/$misplaced_loader"
+      if [ -d "$misplaced" ]; then
+        rm -rf "$misplaced"
+        log "Removed misplaced loader at $misplaced"
+      fi
+    done
+
+    for mod_dir in "$mod_root"/*; do
+      [ -d "$mod_dir" ] || continue
+      local wrong_name="$mod_dir/SN2-DF"
+      if [ -d "$wrong_name" ]; then
+        rm -rf "$wrong_name"
+        log "Removed wrongly named data folder $wrong_name (use SDF/)"
+      fi
+    done
   done
 }
 
 ensure_packaged_sn2_df() {
   local mod_name="$1"
-  local sdf="$PACKAGED_DIR/$mod_name/Subnautica2/Binaries/Win64/ue4ss/Mods/$mod_name/SN2-DF"
-  if [ ! -d "$sdf" ]; then
-    fail "Packaged SN2-DF not found for ${mod_name}: $sdf"
+  local sdf_data="$PACKAGED_DIR/$mod_name/Subnautica2/Binaries/Win64/ue4ss/Mods/$mod_name/SDF"
+  if [ ! -d "$sdf_data" ]; then
+    fail "Packaged SDF data folder not found for ${mod_name}: $sdf_data"
   fi
-  log "Found packaged SN2-DF for $mod_name"
+  log "Found packaged SDF data for $mod_name"
 }
 
 install_realistic_survival_license() {
@@ -238,7 +249,7 @@ new_mod_zip() {
 
   rm -f "$zip_file"
   log "Zipping $mod_name -> $zip_file"
-  (cd "$PACKAGED_DIR/$mod_name" && tar -a -c -f "../$mod_name.zip" Subnautica2)
+  python "$SCRIPT_DIR/archive.py" create "$PACKAGED_DIR/$mod_name" "$zip_file"
   local size
   size="$(wc -c < "$zip_file" | tr -d ' ')"
   log "Created $zip_file ($size bytes)"
@@ -268,9 +279,9 @@ for mod_name in "${CONTENT_RELEASE_MODS[@]}"; do
   content_zip_files+=("$(new_mod_zip "$mod_name")")
 done
 
-sdf_dll="$SN2_DF_PACKAGED_MOD/dlls/main.dll"
-if [ ! -f "$sdf_dll" ]; then
-  fail "SN2-DF loader not installed at $sdf_dll"
+sn2_df_dll="$SN2_DF_PACKAGED_MOD/dlls/main.dll"
+if [ ! -f "$sn2_df_dll" ]; then
+  fail "SN2-DF loader not installed at $sn2_df_dll"
 fi
 new_mod_zip SN2-DF >/dev/null
 log "Built SN2-DF.zip from Subnautica2Mods release (not published to Nexus or GitHub Releases)"

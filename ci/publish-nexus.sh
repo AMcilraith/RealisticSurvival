@@ -37,6 +37,10 @@ if [ -n "${NEXUS_MOD_VERSION:-}" ]; then
   log "Using NEXUS_MOD_VERSION override: $RELEASE_VERSION"
 fi
 
+if [ -n "${NEXUS_FILE_CATEGORY:-}" ] && [ "${NEXUS_FILE_CATEGORY}" != "main" ]; then
+  log "Using NEXUS_FILE_CATEGORY override: $NEXUS_FILE_CATEGORY"
+fi
+
 write_output() {
   if [ -n "${GITHUB_OUTPUT:-}" ]; then
     echo "$1=$2" >> "$GITHUB_OUTPUT"
