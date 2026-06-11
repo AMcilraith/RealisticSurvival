@@ -34,8 +34,35 @@ jobs:
         id: github
         shell: bash
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_RELEASE_TAG: v${{ inputs.release_version }}
-          GITHUB_RELEASE_TITLE: Realistic Survival v${{ inputs.release_version }}
-          GITHUB_RELEASE_NOTES: ${{ github.event.head_commit.message }}
-        run: bash ci/publish-github-release.sh '${{ inputs.release_version }}'
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_VERSION: ${{ inputs.release_version }}
+          RELEASE_NOTES: ${{ github.event.head_commit.message || 'Automated mod package build.' }}
+        run: |
+          set -euo pipefail
+          log() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*"; }
+
+          if ! [[ "$RELEASE_VERSION" =~ ^[0-9]+\.[0-9]+$ ]]; then
+            echo "Release version must be major.minor (e.g. 2.0); got: $RELEASE_VERSION" >&2
+            exit 1
+          fi
+
+          zip_files=()
+          for mod_name in RealisticCraft RealisticCraft_Plus RealisticStorage RealisticScans; do
+            zip_path="Packaged/${mod_name}.zip"
+            if [ ! -f "$zip_path" ]; then
+              echo "Expected packaged zip not found: $zip_path" >&2
+              exit 1
+            fi
+            zip_files+=("$zip_path")
+          done
+
+          tag="v${RELEASE_VERSION}"
+          title="Realistic Survival v${RELEASE_VERSION}"
+          notes="$RELEASE_NOTES"
+
+          log "Creating GitHub release $tag with ${#zip_files[@]} asset(s)"
+          gh release create "$tag" --title "$title" --notes "$notes" "${zip_files[@]}"
+
+          echo "published=true" >> "$GITHUB_OUTPUT"
+          echo "release_tag=$tag" >> "$GITHUB_OUTPUT"
+          log "Published GitHub release: $tag"

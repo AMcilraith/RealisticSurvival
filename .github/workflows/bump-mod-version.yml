@@ -29,4 +29,42 @@ jobs:
       - name: Bump ci/MOD_VERSION
         id: bump
         shell: bash
-        run: bash ci/bump-mod-version.sh '${{ inputs.release_version }}'
+        env:
+          RELEASE_VERSION: ${{ inputs.release_version }}
+        run: |
+          set -euo pipefail
+          log() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*"; }
+
+          if ! [[ "$RELEASE_VERSION" =~ ^[0-9]+\.[0-9]+$ ]]; then
+            echo "Release version must be major.minor (e.g. 2.0); got: $RELEASE_VERSION" >&2
+            exit 1
+          fi
+
+          IFS='.' read -r major minor <<< "$RELEASE_VERSION"
+          next_version=""
+          if [ -n "${NEXUS_MOD_VERSION:-}" ]; then
+            log "Skipping version bump (NEXUS_MOD_VERSION override was used)"
+          elif [ "${SKIP_VERSION_BUMP:-}" = "true" ]; then
+            log "Skipping version bump (SKIP_VERSION_BUMP=true)"
+          else
+            next_version="$((major)).$((minor + 1))"
+            printf '%s' "$next_version" > ci/MOD_VERSION
+            log "Updated ci/MOD_VERSION: $RELEASE_VERSION -> $next_version"
+          fi
+
+          if [ -n "$next_version" ]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add -- ci/MOD_VERSION
+            if git diff --cached --quiet -- ci/MOD_VERSION; then
+              log "No MOD_VERSION change to commit"
+            else
+              git commit -m "chore: bump mod release version to $next_version [skip ci]"
+              git push
+              log "Committed and pushed MOD_VERSION bump to $next_version"
+            fi
+          fi
+
+          echo "release_version=$RELEASE_VERSION" >> "$GITHUB_OUTPUT"
+          echo "next_release_version=${next_version:-}" >> "$GITHUB_OUTPUT"
+          log "Version bump phase finished"
