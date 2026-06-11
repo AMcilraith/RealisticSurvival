@@ -1,0 +1,16 @@
+[[recipe_modify]]
+id = "Tadpole_HAUL_Chassis"
+name = "TadpoleHaul"
+description = "TadpoleHaul_description"
+category = "Vehicles"
+ordering_index = 4
+crafting_time = 3.0
+
+[[recipe_modify.ingredients]]
+PlasteelIngot = 4
+FiberMesh = 2
+GermaniumIngot = 2
+ConduitCrystal = 4
+
+[[recipe_modify.outputs]]
+Haul = 1

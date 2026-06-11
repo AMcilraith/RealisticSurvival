@@ -1,0 +1,19 @@
+[[recipe_modify]]
+id = "Light_Wall_Small"
+name = "WallLightSmall"
+description = "WallLightSmallDescription"
+category = "BuilderBaseObject_Lighting"
+ordering_index = 2
+DefaultRecipeState = "Locked"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+scan_data = ["Interior_LightWall"]
+
+[[recipe_modify.ingredients]]
+Titanium = 1
+Quartz = 1
+
+[[recipe_modify.outputs]]
+Light_Wall_Small = 1

@@ -1,0 +1,18 @@
+[[recipe_modify]]
+id = "PosterKeepCalm"
+name = "PosterKeepCalm"
+description = "PosterKeepCalmDescription"
+category = "BuilderPostersCategory"
+DefaultRecipeState = "Locked"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+scan_data = ["BasePiece_KeepCalmPoster"]
+
+[[recipe_modify.ingredients]]
+Titanium = 1
+Lead = 1
+
+[[recipe_modify.outputs]]
+Poster_KeepCalm = 1

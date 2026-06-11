@@ -1,0 +1,22 @@
+# Packaged zip archives (rebuild via GitHub Actions Package And Release or Export.bat)
+*.zip
+
+# SN2-DF loader binary (fetched from Subnautica2Mods GitHub Releases)
+Packaged/SN2-DF/**/dlls/main.dll
+Packaged/SN2-DF/**/SN2-DF_RELEASE.txt
+
+# retoc downloaded by CI/local packaging script
+tools/retoc/
+
+# Debug session logs
+debug-*.log
+
+# OS / temp
+Thumbs.db
+Desktop.ini
+*.tmp
+*.bak
+
+# Python
+__pycache__/
+*.pyc

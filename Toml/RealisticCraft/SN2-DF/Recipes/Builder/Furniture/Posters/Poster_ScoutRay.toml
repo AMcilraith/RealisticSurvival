@@ -1,0 +1,14 @@
+[[recipe_modify]]
+id = "Poster_ScoutRay"
+name = "Poster03"
+description = "PosterDescription"
+category = "BuilderPostersCategory"
+ordering_index = 3
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 1
+Lead = 1
+
+[[recipe_modify.outputs]]
+Poster_ScoutRay = 1

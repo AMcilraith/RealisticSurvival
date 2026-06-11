@@ -1,0 +1,45 @@
+name: Package Mods
+
+on:
+  workflow_call:
+    inputs:
+      skip_pak_build:
+        description: 'Skip retoc pak build'
+        type: boolean
+        default: false
+    outputs:
+      release_version:
+        description: 'Mod release version used for this package build'
+        value: ${{ jobs.package.outputs.release_version }}
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: windows-latest
+    outputs:
+      release_version: ${{ steps.package.outputs.release_version }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build mod packages
+        id: package
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SN2_DF_RELEASE: ${{ vars.SN2_DF_RELEASE }}
+          SKIP_PAK_BUILD: ${{ inputs.skip_pak_build }}
+        run: bash ci/package-mods.sh
+
+      - name: Upload content mod zips
+        uses: actions/upload-artifact@v4
+        with:
+          name: mod-zips
+          path: |
+            Packaged/RealisticCraft.zip
+            Packaged/RealisticCraft_Plus.zip
+            Packaged/RealisticStorage.zip
+            Packaged/RealisticScans.zip
+          retention-days: 7

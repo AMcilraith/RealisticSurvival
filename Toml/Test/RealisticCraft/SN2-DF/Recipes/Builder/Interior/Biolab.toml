@@ -1,0 +1,24 @@
+[[recipe_modify]]
+id = "Biolab"
+name = "Biolab"
+description = "BiolabDescription"
+category = "BuilderToolProductionResearchCategory"
+ordering_index = 3
+crafting_time = 26.0
+DefaultRecipeState = "Locked"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+scan_data = ["BioLab_Fragment"]
+
+[[recipe_modify.ingredients]]
+Titanium = 4
+Sulfur = 2
+Grease = 1
+Glass = 1
+ComputerChip = 1
+CopperWire = 1
+
+[[recipe_modify.outputs]]
+Biolab = 1

@@ -1,0 +1,19 @@
+[[recipe_modify]]
+id = "PosterCommunity02"
+name = "PosterCommunity02"
+description = "PosterDescription"
+category = "BuilderPostersCategory"
+ordering_index = 12
+DefaultRecipeState = "Locked"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+scan_data = ["BasePiece_Community02Poster"]
+
+[[recipe_modify.ingredients]]
+Titanium = 1
+Lead = 1
+
+[[recipe_modify.outputs]]
+Poster_Community02 = 1

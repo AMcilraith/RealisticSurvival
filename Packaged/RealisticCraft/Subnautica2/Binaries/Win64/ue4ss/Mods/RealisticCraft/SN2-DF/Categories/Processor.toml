@@ -1,0 +1,50 @@
+# --- PROCESSOR CATEGORIES ---
+
+[[category_modify]]
+id = "Processor_Ingots"
+name = "Base Ingots"
+description = "Smelt common and precious ores into structural and conductor ingots for everyday fabrication and construction."
+crafted_by = "Processor"
+ordering_index = 1
+
+[[category]]
+id = "Processor_ValuableIngots"
+name = "Valuable Ingots"
+description = "Refine germanium substitutes and advanced alloys—plasteel and semiconducting feedstock—for high-tier electronics and fabrication."
+crafted_by = "Processor"
+ordering_index = 2
+
+[[category]]
+id = "Processor_SpecialisedIngots"
+name = "Specialised Ingots"
+description = "Advanced alloy ingots—strontium and mangalloy—for specialised fabrication and end-game construction."
+crafted_by = "Processor"
+ordering_index = 3
+
+[[category]]
+id = "ProcessorRefinement"
+name = "Refined Materials"
+description = "Batch-process ores and feedstock into fabricator-grade components—glass, wire, fiber, and polymers."
+crafted_by = "Processor"
+ordering_index = 4
+
+[[category_modify]]
+id = "ProcessorExtraction"
+name = "Extractions"
+description = "Distill acids, reagents, and concentrated materials from biological and mineral feedstock."
+crafted_by = "Processor"
+ordering_index = 5
+
+[[category_modify]]
+id = "ProcessorAlternateRecipes"
+name = "Consumables"
+description = "Processor routes for water, medkits, and other items consumed during exploration and survival."
+crafted_by = "Processor"
+ordering_index = 6
+
+[[category_modify]]
+id = "ProcessorBiofuel"
+name = "Biofuel"
+description = "Compress and process organic waste and plant matter into dense biofuel blocks for power generation."
+crafted_by = "Processor"
+ordering_index = 7

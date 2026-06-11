@@ -1,0 +1,554 @@
+{
+  "$type": "UAssetAPI.UAsset, UAssetAPI",
+  "Info": "Serialized with UAssetAPI 1.1.0 (8b8687a)",
+  "NameMap": [
+    "Comment",
+    "Locked",
+    "ST_Resources",
+    "/Game/StringTables/ST_Resources",
+    "/Script/CoreUObject",
+    "Package",
+    "/Script/Engine",
+    "Class",
+    "StringTable",
+    "Default__StringTable"
+  ],
+  "CustomSerializationFlags": "None",
+  "UseSeparateBulkDataFiles": true,
+  "IsUnversioned": true,
+  "FileVersionLicenseeUE": 0,
+  "ObjectVersion": "VER_UE4_CORRECT_LICENSEE_FLAG",
+  "ObjectVersionUE5": "OS_SUB_OBJECT_SHADOW_SERIALIZATION",
+  "CustomVersionContainer": [
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{375EC13C-06E4-48FB-B500-84F0262A717E}",
+      "FriendlyName": "FCoreObjectVersion",
+      "Version": 4,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{E4B068ED-F494-42E9-A231-DA0B2E46BB41}",
+      "FriendlyName": "FEditorObjectVersion",
+      "Version": 40,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{CFFC743F-43B0-4480-9391-14DF171D2073}",
+      "FriendlyName": "FFrameworkObjectVersion",
+      "Version": 37,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{7B5AE74C-D270-4C10-A958-57980B212A5A}",
+      "FriendlyName": "FSequencerObjectVersion",
+      "Version": 13,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{29E575DD-E0A3-4627-9D10-D276232CDCEA}",
+      "FriendlyName": "FAnimPhysObjectVersion",
+      "Version": 17,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{601D1886-AC64-4F84-AA16-D3DE0DEAC7D6}",
+      "FriendlyName": "FFortniteMainBranchObjectVersion",
+      "Version": 207,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC}",
+      "FriendlyName": "FNiagaraObjectVersion",
+      "Version": 1,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{717F9EE7-E9B0-493A-88B3-91321B388107}",
+      "FriendlyName": "FAssetRegistryVersion",
+      "Version": 17,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{9C54D522-A826-4FBE-9421-074661B482D0}",
+      "FriendlyName": "FReleaseObjectVersion",
+      "Version": 44,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{E7086368-6B23-4C58-8439-1B7016265E91}",
+      "FriendlyName": "FFortniteReleaseBranchCustomObjectVersion",
+      "Version": 17,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{D89B5E42-24BD-4D46-8412-ACA8DF641779}",
+      "FriendlyName": "FUE5ReleaseStreamObjectVersion",
+      "Version": 56,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{FCF57AFA-5076-4283-B9A9-E658FFA02D32}",
+      "FriendlyName": "FNiagaraCustomVersion",
+      "Version": 92,
+      "IsSerialized": false
+    }
+  ],
+  "SoftObjectPathList": [],
+  "GatherableTextData": null,
+  "Exports": [
+    {
+      "$type": "UAssetAPI.ExportTypes.StringTableExport, UAssetAPI",
+      "Table": {
+        "TableNamespace": "ST_Resources",
+        "Value": [
+          [
+            "Acid",
+            "Medical Gel Sac"
+          ],
+          [
+            "AcidDescription",
+            "Plucked from the stem of an acidic raion. Analysis shows it has medicinal properties. "
+          ],
+          [
+            "Copper",
+            "Copper"
+          ],
+          [
+            "CopperDescription",
+            "Cu. Element 29. Basic conductor."
+          ],
+          [
+            "Diamond",
+            "Diamond"
+          ],
+          [
+            "DiamondDescription",
+            "C. Element 6. Crystalline carbon allotrope with superb physical properties."
+          ],
+          [
+            "Germanium",
+            "Germanium Substitute"
+          ],
+          [
+            "GermaniumDescription",
+            "A semiconducting Germanium substitute used for advanced microelectronics and structural baffling."
+          ],
+          [
+            "Gold",
+            "Gold"
+          ],
+          [
+            "GoldDescription",
+            "Au. Element 79. Useful in corrosion-resistant electronics. "
+          ],
+          [
+            "Lead",
+            "Lead"
+          ],
+          [
+            "LeadDescription",
+            "Pb. Element 82. Heaviest stable element. Slow neurotoxin."
+          ],
+          [
+            "Lithium",
+            "Lithium"
+          ],
+          [
+            "LithiumDescription",
+            "Li. Element 3. Useful for industry and nuclear physics. Mood stabilizer."
+          ],
+          [
+            "Nickel",
+            "Nickel"
+          ],
+          [
+            "NickelDescription",
+            "Ni. Element 28. Hard. Often a sign of meteorite impact. Important nutrient to some organisms."
+          ],
+          [
+            "LuciferRotsacDescription",
+            "An oily, glowing bulb. Has a heartbeat."
+          ],
+          [
+            "Quartz",
+            "Quartz"
+          ],
+          [
+            "QuartzDescription",
+            "Silicon dioxide (SiO2). For silica glass and optical memory. Often makes up most of a planet's crust."
+          ],
+          [
+            "Salt",
+            "Salt"
+          ],
+          [
+            "SaltDescription",
+            "NaCl. Halite, also known as rock salt. Culinary and sanitation applications."
+          ],
+          [
+            "Silver",
+            "Silver"
+          ],
+          [
+            "SilverDescription",
+            "Ag. Element 47. Excellent conductor. Applications in computing, medicine and nanotech."
+          ],
+          [
+            "Sulfur",
+            "Sulfur"
+          ],
+          [
+            "SulfurDescription",
+            "S. Element 16. Useful precursor for strong acids."
+          ],
+          [
+            "Titanium",
+            "Titanium"
+          ],
+          [
+            "TitaniumDescription",
+            "Ti. Element 22. Ideal for underwater construction."
+          ],
+          [
+            "Tungsten",
+            "Tungsten"
+          ],
+          [
+            "TungstenDescription",
+            "Unrefined tungsten."
+          ],
+          [
+            "CopperNode",
+            "Copper Node"
+          ],
+          [
+            "TitaniumNode",
+            "Titanium Node"
+          ],
+          [
+            "TungstenNode",
+            "Tungsten Node"
+          ],
+          [
+            "SulfurNode",
+            "Sulfur Crystal"
+          ],
+          [
+            "SilverNode",
+            "Silver Node"
+          ],
+          [
+            "SaltNode",
+            "Salt Crystal"
+          ],
+          [
+            "QuartzNode",
+            "Quartz Crystal"
+          ],
+          [
+            "NickelNode",
+            "Nickel Node"
+          ],
+          [
+            "LithiumNode",
+            "Lithium Node"
+          ],
+          [
+            "LeadNode",
+            "Lead Node"
+          ],
+          [
+            "GoldNode",
+            "Gold Node"
+          ],
+          [
+            "DiamondNode",
+            "Diamond"
+          ],
+          [
+            "TitaniumNodeLarge",
+            "Titanium Deposit"
+          ],
+          [
+            "AcidSac",
+            "Acidic Raion Pouch"
+          ],
+          [
+            "AcidSacDescription",
+            "Gelatinous pouch full of acid with properties useful in fabrication. "
+          ],
+          [
+            "CopperNodeLarge",
+            "Copper Deposit"
+          ],
+          [
+            "QuartzNodeLarge",
+            "Quartz Deposit"
+          ],
+          [
+            "PearlNodeLarge",
+            "Pearl Deposit"
+          ],
+          [
+            "ResearchEcology_CoralGardens_Have_Prompt",
+            "Upload"
+          ],
+          [
+            "ResearchEcology_CoralGardens_Have_Input",
+            "Upload"
+          ],
+          [
+            "ResearchEcology_CoralGardens_Have_Response",
+            "ANALYZING\r\n|||||||||||||||||||||\r\n|||||||||||||||||||||\r\n|||||||||||||||||||||\r\n|||||||||||||||||||||\r\nOUTPUTTING RESULTS TO PDA DATABANK\r\n\r\nPROPOSED BIOME NAME: \"SHALLOW CORAL GARDENS\""
+          ],
+          [
+            "LeadNodeLarge",
+            "Lead Deposit"
+          ],
+          [
+            "BlightDamagePoint",
+            "Bloom Canker"
+          ],
+          [
+            "ClamthuluCartilage",
+            "Great Jaw Tendon"
+          ],
+          [
+            "NecroleiEgg",
+            "Necrolei Cyst"
+          ],
+          [
+            "OysterRaionNoduleDescription",
+            "A massive nodule of acidic compounds. High energy potential. "
+          ],
+          [
+            "PlateCoralDescription",
+            "Plate coral slices. Tastes like meaty crackers. Can be consumed raw or cooked into more nutritious food."
+          ],
+          [
+            "PlateCoral",
+            "Coral Shavings"
+          ],
+          [
+            "GoldNodeLarge",
+            "Gold Deposit"
+          ],
+          [
+            "SilverNodeLarge",
+            "Silver Deposit"
+          ],
+          [
+            "Strontium",
+            "Strontium"
+          ],
+          [
+            "StrontiumDescription",
+            "Refined from Celestine. Radioactive element used in Radioisotope Thermoelectric Generators (or RTGs) and other nuclear applications."
+          ],
+          [
+            "SaltNodeLarge",
+            "Salt Deposit"
+          ],
+          [
+            "CrabFeces",
+            "Crab Feces"
+          ],
+          [
+            "CrabFecesDescription",
+            "Coprolyte-like deposit of excreta. Extreme energy density; suitable as bioreactor fuel."
+          ],
+          [
+            "Atacamite",
+            "Atacamite"
+          ],
+          [
+            "AtacamiteDescription",
+            "Tabular green crystal. Trace substitutions give it anomalous thermo-magnetic behavior, enabling localized cooling."
+          ],
+          [
+            "Troilite",
+            "Troilite"
+          ],
+          [
+            "TroiliteDescription",
+            "Iron sulfide mineral. Conductive and thermally reactive, Troilite has applications in a wide range of energy systems."
+          ],
+          [
+            "DeepRootResource",
+            "Mineralized Clinker"
+          ],
+          [
+            "DeepRootResourceDescription",
+            "Hardened industrial runoff. Contents vary based on local production during the waning days of the Axum."
+          ],
+          [
+            "Enamel",
+            "Creature Enamel"
+          ],
+          [
+            "EnamelDescription",
+            "Hard ceramic coating. Forms a dense, impermeable surface layer that shields delicate systems from hostile environments."
+          ]
+        ]
+      },
+      "Data": [],
+      "ObjectGuid": null,
+      "SerializationControl": "NoExtension",
+      "Operation": "None",
+      "HasLeadingFourNullBytes": false,
+      "ObjectName": "ST_Resources",
+      "OuterIndex": 0,
+      "ClassIndex": -1,
+      "SuperIndex": 0,
+      "TemplateIndex": -3,
+      "ObjectFlags": "RF_Public, RF_Standalone, RF_Transactional",
+      "SerialSize": 7052,
+      "SerialOffset": 702,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": true,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [],
+      "CreateBeforeSerializationDependencies": [],
+      "SerializationBeforeCreateDependencies": [
+        -1,
+        -3
+      ],
+      "CreateBeforeCreateDependencies": [],
+      "Extras": "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"
+    }
+  ],
+  "SearchableNames": null,
+  "ImportTypeHierarchies": null,
+  "MetaData": null,
+  "Thumbnails": null,
+  "WorldTileInfo": null,
+  "AppendedNullBytes": 0,
+  "OtherAssetsFailedToAccess": [],
+  "LegacyFileVersion": -9,
+  "DataResourceVersion": "Invalid",
+  "DataResources": null,
+  "UsesEventDrivenLoader": true,
+  "WillSerializeNameHashes": true,
+  "Imports": [
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "StringTable",
+      "OuterIndex": -2,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Script/Engine",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Default__StringTable",
+      "OuterIndex": -2,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "StringTable",
+      "PackageName": null,
+      "bImportOptional": false
+    }
+  ],
+  "DependsMap": [
+    []
+  ],
+  "SoftPackageReferenceList": null,
+  "AssetRegistryDependencyDataOffset": -1,
+  "AssetRegistryRecords": [],
+  "ImportBits": null,
+  "SoftPackageBits": null,
+  "ExtraPackageDependencies": null,
+  "BulkData": null,
+  "AdditionalFiles": "",
+  "Trailer": null,
+  "ValorantGarbageData": null,
+  "SeaOfThievesGarbageData": null,
+  "Generations": [
+    {
+      "$type": "UAssetAPI.FGenerationInfo, UAssetAPI",
+      "ExportCount": 1,
+      "NameCount": 10
+    }
+  ],
+  "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+  "PersistentGuid": "{00000000-0000-0000-0000-000000000000}",
+  "RecordedEngineVersion": {
+    "$type": "UAssetAPI.FEngineVersion, UAssetAPI",
+    "Major": 0,
+    "Minor": 0,
+    "Patch": 0,
+    "Changelist": 0,
+    "Branch": null
+  },
+  "RecordedCompatibleWithEngineVersion": {
+    "$type": "UAssetAPI.FEngineVersion, UAssetAPI",
+    "Major": 0,
+    "Minor": 0,
+    "Patch": 0,
+    "Changelist": 0,
+    "Branch": null
+  },
+  "ChunkIDs": [],
+  "PackageSource": 0,
+  "FolderName": "/Game/StringTables/ST_Resources",
+  "LocalizationId": null,
+  "SoftObjectPathsCount": 0,
+  "SoftObjectPathsOffset": 494,
+  "SearchableNamesOffset": 0,
+  "ThumbnailTableOffset": 0,
+  "ImportTypeHierarchiesCount": 0,
+  "ImportTypeHierarchiesOffset": 0,
+  "SavedHash": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+  "CompressionFlags": 0,
+  "AdditionalPackagesToCook": [],
+  "NamesReferencedFromExportDataCount": 4,
+  "PayloadTocOffset": -1,
+  "DataResourceOffset": -1,
+  "doWeHaveAssetRegistryData": true,
+  "doWeHaveWorldTileInfo": false,
+  "PackageFlags": "PKG_Cooked, PKG_UnversionedProperties, PKG_RequiresLocalizationGather, PKG_FilterEditorOnly",
+  "HasUnversionedProperties": true,
+  "IsFilterEditorOnly": true,
+  "IsPreDependencyFormat": true
+}

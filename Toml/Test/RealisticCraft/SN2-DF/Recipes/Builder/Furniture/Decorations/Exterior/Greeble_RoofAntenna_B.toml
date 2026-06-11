@@ -1,0 +1,14 @@
+[[recipe_modify]]
+id = "Greeble_RoofAntenna_B"
+name = "RoofAntennaLarge"
+description = "RoofAntennaLargeDescription"
+category = "BuilderExteriorGreebleCategory"
+ordering_index = 5
+DefaultRecipeState = "Locked"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 4
+
+[[recipe_modify.outputs]]
+Greeble_RoofAntenna_B = 1

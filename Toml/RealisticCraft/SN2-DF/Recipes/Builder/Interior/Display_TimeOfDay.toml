@@ -1,0 +1,16 @@
+[[recipe_modify]]
+id = "Display_TimeOfDay"
+name = "DisplayTimeOfDay"
+description = "DisplayTimeOfDayDescription"
+category = "BuilderHabitatSystemsCategory"
+ordering_index = 4
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 1
+Celestine = 2
+ComputerChip = 1
+CopperWire = 1
+
+[[recipe_modify.outputs]]
+Display_TimeOfDay = 1

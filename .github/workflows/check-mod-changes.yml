@@ -1,0 +1,37 @@
+name: Check Mod Changes
+
+on:
+  workflow_call:
+    inputs:
+      force_publish:
+        description: 'Treat mod content as changed regardless of diff'
+        type: boolean
+        default: false
+    outputs:
+      should_publish:
+        description: 'Whether publish workflows should run'
+        value: ${{ jobs.check.outputs.should_publish }}
+      release_version:
+        description: 'Current mod release version from ci/MOD_VERSION'
+        value: ${{ jobs.check.outputs.release_version }}
+
+jobs:
+  check:
+    runs-on: windows-latest
+    outputs:
+      should_publish: ${{ steps.check.outputs.should_publish }}
+      release_version: ${{ steps.check.outputs.release_version }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect mod content changes
+        id: check
+        shell: bash
+        env:
+          GITHUB_EVENT_BEFORE: ${{ github.event.before }}
+          GITHUB_SHA: ${{ github.sha }}
+          FORCE_PUBLISH: ${{ inputs.force_publish }}
+        run: bash ci/check-mod-changes.sh

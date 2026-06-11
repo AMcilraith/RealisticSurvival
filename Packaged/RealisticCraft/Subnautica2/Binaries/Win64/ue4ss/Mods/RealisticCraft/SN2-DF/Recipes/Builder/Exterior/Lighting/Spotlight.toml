@@ -1,0 +1,14 @@
+[[recipe_modify]]
+id = "Spotlight"
+name = "Spotlight"
+description = "SpotlightDescription"
+category = "BuilderLightingExternalCategory"
+ordering_index = 3
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 1
+Quartz = 1
+
+[[recipe_modify.outputs]]
+Spotlight = 1

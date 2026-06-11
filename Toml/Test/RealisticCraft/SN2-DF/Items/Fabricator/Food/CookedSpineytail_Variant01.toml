@@ -1,0 +1,15 @@
+[[item_type_modify]]
+id = "CookedSpineytail_Variant01"
+name = "Cooked Black Hoverthorn"
+description = "Edible fish. Contains a crystal spine, which can be used as a skewer to hold while eating."
+type_tag = "ItemType.Fauna"
+equipment_slot = "Character.Slot.Tool"
+use_from_inventory = true
+pickup_cue_tag = "GameplayCue.Pickup.Food"
+drop_cue_tag = "GameplayCue.Drop.Food"
+adaptations = ["Stomach.RequiredToConsume"]
+gameplay_tags = ["ItemType.TunableData.BioFuelConsumption.Short"]
+replace_gameplay_tags = true
+[item_type_modify.tunable_data]
+"ItemType.TunableData.Food" = 20.0
+replace_tunable_data = true

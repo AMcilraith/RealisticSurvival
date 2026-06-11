@@ -1,0 +1,21 @@
+[[recipe_modify]]
+id = "SolarPanel"
+name = "SolarPanel"
+description = "SolarPanelDescription"
+category = "BuilderPowerExternalCategory"
+crafting_time = 2.5
+DefaultRecipeState = "Locked"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+pickup_items = ["Builder"]
+
+[[recipe_modify.ingredients]]
+Titanium = 2
+Quartz = 2
+CopperWire = 1
+PlateCoral = 2
+
+[[recipe_modify.outputs]]
+SolarPanel = 1

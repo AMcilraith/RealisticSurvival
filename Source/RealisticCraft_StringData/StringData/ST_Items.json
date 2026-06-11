@@ -1,0 +1,1114 @@
+{
+  "$type": "UAssetAPI.UAsset, UAssetAPI",
+  "Info": "Serialized with UAssetAPI 1.1.0 (8b8687a)",
+  "NameMap": [
+    "Comment",
+    "Locked",
+    "ST_Items",
+    "/Game/StringTables/ST_Items",
+    "/Script/CoreUObject",
+    "Package",
+    "/Script/Engine",
+    "Class",
+    "StringTable",
+    "Default__StringTable"
+  ],
+  "CustomSerializationFlags": "None",
+  "UseSeparateBulkDataFiles": true,
+  "IsUnversioned": true,
+  "FileVersionLicenseeUE": 0,
+  "ObjectVersion": "VER_UE4_CORRECT_LICENSEE_FLAG",
+  "ObjectVersionUE5": "OS_SUB_OBJECT_SHADOW_SERIALIZATION",
+  "CustomVersionContainer": [
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{375EC13C-06E4-48FB-B500-84F0262A717E}",
+      "FriendlyName": "FCoreObjectVersion",
+      "Version": 4,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{E4B068ED-F494-42E9-A231-DA0B2E46BB41}",
+      "FriendlyName": "FEditorObjectVersion",
+      "Version": 40,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{CFFC743F-43B0-4480-9391-14DF171D2073}",
+      "FriendlyName": "FFrameworkObjectVersion",
+      "Version": 37,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{7B5AE74C-D270-4C10-A958-57980B212A5A}",
+      "FriendlyName": "FSequencerObjectVersion",
+      "Version": 13,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{29E575DD-E0A3-4627-9D10-D276232CDCEA}",
+      "FriendlyName": "FAnimPhysObjectVersion",
+      "Version": 17,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{601D1886-AC64-4F84-AA16-D3DE0DEAC7D6}",
+      "FriendlyName": "FFortniteMainBranchObjectVersion",
+      "Version": 207,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC}",
+      "FriendlyName": "FNiagaraObjectVersion",
+      "Version": 1,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{717F9EE7-E9B0-493A-88B3-91321B388107}",
+      "FriendlyName": "FAssetRegistryVersion",
+      "Version": 17,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{9C54D522-A826-4FBE-9421-074661B482D0}",
+      "FriendlyName": "FReleaseObjectVersion",
+      "Version": 44,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{E7086368-6B23-4C58-8439-1B7016265E91}",
+      "FriendlyName": "FFortniteReleaseBranchCustomObjectVersion",
+      "Version": 17,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{D89B5E42-24BD-4D46-8412-ACA8DF641779}",
+      "FriendlyName": "FUE5ReleaseStreamObjectVersion",
+      "Version": 56,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{FCF57AFA-5076-4283-B9A9-E658FFA02D32}",
+      "FriendlyName": "FNiagaraCustomVersion",
+      "Version": 92,
+      "IsSerialized": false
+    }
+  ],
+  "SoftObjectPathList": [],
+  "GatherableTextData": null,
+  "Exports": [
+    {
+      "$type": "UAssetAPI.ExportTypes.StringTableExport, UAssetAPI",
+      "Table": {
+        "TableNamespace": "ST_Items",
+        "Value": [
+          [
+            "AdvancedBattery",
+            "Advanced Battery"
+          ],
+          [
+            "AdvancedBatteryDescription",
+            "Lithium-Strontium Power Cell in a Conduit Crystal solid-state matrix, using a Titanium shell. High capacity and moderate radioactivity compared to a Standard Battery. Does not corrode in seawater."
+          ],
+          [
+            "AdvancedWiringKit",
+            "Advanced Wiring Kit"
+          ],
+          [
+            "AdvancedWiringKitDescription",
+            "Gold-core wiring coated with much better insulation for specialised applications. For sensitive high-frequency electronics and complex fabrication. Corrosion-resistant and flexible. Use for advanced circuitry and high-end fabrication."
+          ],
+          [
+            "AEPSuit_title",
+            "AEP Suit"
+          ],
+          [
+            "AeroshellSpongeItemDescription",
+            "AeroshellSpongeItemDescription"
+          ],
+          [
+            "Airag",
+            "Airag"
+          ],
+          [
+            "AiragDescription",
+            "How did you...?"
+          ],
+          [
+            "AirBladder",
+            "Air Bladder"
+          ],
+          [
+            "AirBladderDescription",
+            "Titanium-framed rubber bladder. Rapid inflation for emergency ascent. Compressed air supply sufficient for approximately eight seconds. Use once. Ascend fast."
+          ],
+          [
+            "Alcohol",
+            "Alcohol"
+          ],
+          [
+            "AlcoholDescription",
+            "Fermented Geordie distillate. Ethanol-methanol mix. Useful in chemistry and medical applications. Pioneer consumption is not sanctioned."
+          ],
+          [
+            "AxumBioprintCulture",
+            "Axum Bacterial Culture"
+          ],
+          [
+            "AxumBioprintCultureDescription",
+            "Meticulously bred microbe colony used to kickstart Axum technologies such as metal farms. Not reproducible in standard Fabricators. Do not eat."
+          ],
+          [
+            "AxumIngot",
+            "Mangalloy Ingot"
+          ],
+          [
+            "AxumIngotDescription",
+            "Titanium Ingot base alloyed with Atacamite manganese compounds and Troilite iron in the Processor. Conduit Crystal as catalyst. Produces Mangalloy: tough, corrosion-resistant, structurally dense. Required for Axum-adjacent fabrication."
+          ],
+          [
+            "BasicFirstAidKit",
+            "Basic First Aid Kit"
+          ],
+          [
+            "BasicFirstAidKitDescription",
+            "Compressed Raion Medigel dressing. Stabilizes mild trauma and surface wounds. Single use. Derived from Frontiersman emergency protocols."
+          ],
+          [
+            "Battery",
+            "Basic Battery"
+          ],
+          [
+            "BatteryDescription",
+            "Copper plate electrodes in a Raion Acid Sac electrolyte. Portable energy supply. Ecological guilt negligible \u2014 the Raion had it coming."
+          ],
+          [
+            "BoxofHolding",
+            "Box of Holding"
+          ],
+          [
+            "BoxofHoldingDescription",
+            "A box that holds fabrication overflows. Interact to take the items."
+          ],
+          [
+            "CherimoyaRotsacItemDescription",
+            "Full of sweet fluid. Resembles a Cherimoya fruit. Edible, with some spitting."
+          ],
+          [
+            "CollectorLeviathanItemDescription",
+            "Enormous cephalopod predator (tentatively *Tyrannoteuthis phobocoeus*, tyrant squid of fearful curiosity). "
+          ],
+          [
+            "ConduitCrystal",
+            "Conduit Crystal"
+          ],
+          [
+            "ConduitCrystalDescription",
+            "Kagome optical fibers derived from shock Quartz. Naturally occuring wires for light."
+          ],
+          [
+            "CookedBluemoon",
+            "Cooked Bluemoon"
+          ],
+          [
+            "CookedBluemoonDescription",
+            "Edible fish. Sub-speciation of its Halfmoon cousin. Higher moisture content."
+          ],
+          [
+            "CookedElectricGeordie",
+            "Cooked Electric Geordie"
+          ],
+          [
+            "CookedElectricGeordieDescription",
+            "Electrolyte-rich non-fish organism. May produce a mild tingling effect from residual bioelectric charge."
+          ],
+          [
+            "CookedGeordie",
+            "Cooked Geordie"
+          ],
+          [
+            "CookedGeordieDescription",
+            "Edible organism. Significant heavy metal accumulation requires partial chelation during preparation for consumption."
+          ],
+          [
+            "CookedHalfmoon",
+            "Cooked Halfmoon"
+          ],
+          [
+            "CookedHalfmoonDescription",
+            "Edible fish. Slimy and slightly bioluminescent. Adequate caloric yield."
+          ],
+          [
+            "CookedHarvestmoon",
+            "Cooked Harvestmoon"
+          ],
+          [
+            "CookedHarvestmoonDescription",
+            "Edible fish. Sub-speciation of its Halfmoon cousin. Higher caloric yield."
+          ],
+          [
+            "CookedQuadrate",
+            "Cooked Quadrate"
+          ],
+          [
+            "CookedQuadrateDescription",
+            "Edible non-fish organism. Requires processing to remove bone fragments that may tear the throat."
+          ],
+          [
+            "CookedSpineytail",
+            "Cooked Hoverthorn"
+          ],
+          [
+            "CookedSpineytailDescription",
+            "Edible fish. Contains a crystal spine, which can be used as a skewer to hold while eating."
+          ],
+          [
+            "CopperIngot",
+            "Copper Ingot"
+          ],
+          [
+            "CopperIngotDescription",
+            "Copper ore smelted into a solid machining Ingot under Processor heat. Required for drawn wire and precision electrical components. GHS H400: mildly toxic to aquatic life. Life here remains untroubled."
+          ],
+          [
+            "CopperWire",
+            "Copper Wire"
+          ],
+          [
+            "CopperWireDescription",
+            "Two Copper Ingots drawn into a conductive strand. Low resistance. Corrodes slowly in salt water, has basic insulation to prevent shocks. Replace as needed."
+          ],
+          [
+            "CoralCookie",
+            "Coral Mash"
+          ],
+          [
+            "CoralCookieDescription",
+            "Mashed Coral grounds treated with Alcohol from Lucifer Rotsac fruit. Do not chew: suck to extract Coral polyps, then spit. Positive labor-unit ROI despite reduced lifespan maxima."
+          ],
+          [
+            "DeepwingEgg",
+            "Deepwing Egg Clump"
+          ],
+          [
+            "DeepwingEggDescription",
+            "Unfertilized Deepwing roe. Miraculous source of bioavailable nutrients and hydration. The clump swiftly dissolves in seawater. Possible ecological function."
+          ],
+          [
+            "ElectricGeordieItemDescription",
+            "Full of electrolytes."
+          ],
+          [
+            "EnergyFormat",
+            "energy/sec"
+          ],
+          [
+            "EnhancedFirstAidKit",
+            "Enhanced First Aid Kit"
+          ],
+          [
+            "EnhancedFirstAidKitDescription",
+            "Compressed Raion Medigel dressing augmented with healing agents from the Cherimoya fruit. Effective for moderate trauma. Accelerates cellular repair. Single use."
+          ],
+          [
+            "Fiber",
+            "Fiber"
+          ],
+          [
+            "FiberDescription",
+            "Plant-like matter extruded into a continuous polymer strand using Raion extract. Closer to plastic or latex than cellulose. Surprisingly strong."
+          ],
+          [
+            "FiberMesh",
+            "Fiber Mesh"
+          ],
+          [
+            "FiberMeshDescription",
+            "Fiber weave acid-bonded with Strong Acid to cross-link polymer chains. Tough, flexible mesh. Resembles vinyl. Smells worse."
+          ],
+          [
+            "FibrousMatter",
+            "Fibrous Matter"
+          ],
+          [
+            "FibrousMatterDescription",
+            "Raw, fibrous biomatter that can be woven."
+          ],
+          [
+            "Flare",
+            "Distraction Flare"
+          ],
+          [
+            "FlareDescription",
+            "Titanium tube packed with Quartz-ignited chemiluminescent compound. High likelihood of creature response. Use accordingly."
+          ],
+          [
+            "GeordieItemDescription",
+            "*Salpapod geordie*. Jet-propelled omnivore. Not a fish."
+          ],
+          [
+            "Glass",
+            "Glass"
+          ],
+          [
+            "GlassDescription",
+            "Aligned Quartz Crystal, pressure-fused. Hard, clear, and structurally tough. Required for optical components and viewports."
+          ],
+          [
+            "GlassAlt",
+            "Glass (From Salt, Lead)"
+          ],
+          [
+            "GlassAltDescription",
+            "Lead and Salt, pressure-fused into Glass through silication. Hard, clear, and structurally tough. Alternative to Quartz Glass when Lead and Salt are more readily available."
+          ],
+          [
+            "Glowstick",
+            "Glowstick"
+          ],
+          [
+            "GlowstickDescription",
+            "Bioluminescent Rotsac extract sealed in a Quartz tube with a Titanium crimp. Single-use light source. Organic glow lasts approximately four hours."
+          ],
+          [
+            "GoldIngot",
+            "Gold Ingot"
+          ],
+          [
+            "GoldIngotDescription",
+            "Gold ore refined into a precision machining Ingot. Chemically stable in seawater. Standard material for insulating conductors and high-contact electrical plating."
+          ],
+          [
+            "Grease",
+            "Grease"
+          ],
+          [
+            "GreaseDescription",
+            "Rendered Lucifer Rotsac lipids. Thick, persistent lubricant. Multiple industrial applications. Not for consumption despite smell."
+          ],
+          [
+            "HabitatBuilder",
+            "Habitat Builder"
+          ],
+          [
+            "HabitatBuilderDescription",
+            "Titanium-framed miniature fabrication unit. Quartz-lensed projection array. Constructs habitat components from raw materials using battery-powered field assembly."
+          ],
+          [
+            "HalfmoonItemDescription",
+            "*Moliform semiluna*. Edible forage fish. Peculiar nervous system. "
+          ],
+          [
+            "HammerheadItemDescription",
+            "*Panoplia hammerhead*. Territorial herbivore with a powerful ram."
+          ],
+          [
+            "HighCapacityAirTank",
+            "High Capacity Air Tank"
+          ],
+          [
+            "HighCapacityAirTankDescription",
+            "Plasteel-reinforced air tank. Expanded reservoir volume for extended dives. Do not exceed rated depth."
+          ],
+          [
+            "HoundgarItemDescription",
+            "Squid-like hunter that works alongside the Marrowbreach."
+          ],
+          [
+            "ImprovedFins",
+            "Improved Fins"
+          ],
+          [
+            "ImprovedFinsDescription",
+            "Advanced fins with Fiber Mesh flex panels and Conduit Crystal stabilizers. Substantially faster and more maneuverable than standard fins."
+          ],
+          [
+            "ItemHasBeenPickedUp",
+            "{0} has been picked up"
+          ],
+          [
+            "Lightstick",
+            "Lightstick"
+          ],
+          [
+            "LightstickDescription",
+            "Deployable LED lightstick. Titanium casing, Quartz diffuser, Silver conductor. Plant it and forget it. Battery lasts approximately one work shift."
+          ],
+          [
+            "MarrowbreachItemDescription",
+            "*Mango marrowbreach*. Dangerous selachian predator. Selachian means sharklike."
+          ],
+          [
+            "MetalSalvage",
+            "Metal Salvage"
+          ],
+          [
+            "MetalSalvageDescription",
+            "Debris from a human habitat or vehicle. Easily converted into raw materials in a Fabricator."
+          ],
+          [
+            "MildAcid",
+            "Mild Acid"
+          ],
+          [
+            "MildAcidDescription",
+            "Dilute acid extracted from Pents, stabilized with Copper ions. Sufficient for basic chemical stripping and battery production."
+          ],
+          [
+            "MildAcidProcessorConversion_Pents_Description",
+            "Weak acid extracted from Pent biological matter in the Processor. Comparable yield to Acid Sac method. Useful alternate source during early surface operations."
+          ],
+          [
+            "MildAcidProcessorConversionDescription",
+            "Acid Sac extract batch-processed under Processor pressure using Copper as a catalyst. Higher per-unit purity than Fabricator method. Preferred for downstream chemistry and electrochemical work."
+          ],
+          [
+            "NeedlerSharkItem_description",
+            "*Mango kestros*, the dart-throwing shark. Territorial predator capable of launching uranium-tipped tusks at up to twenty meters per second."
+          ],
+          [
+            "NibblerMangoItemDescription",
+            "*Mango tructa*. Pesky omnivore. Eats anything, thinks little."
+          ],
+          [
+            "NutrientBlock",
+            "Nutrient Block"
+          ],
+          [
+            "NutrientBlockDescription",
+            "Biofuel Block substrate compressed with Salt into an edible macronutrient block. Calorie dense. Will not spoil. Flavor profile comparable to wet chalk."
+          ],
+          [
+            "OilySalad",
+            "Oily Salad"
+          ],
+          [
+            "OilySaladDescription",
+            "Compressed plant-like fiber in its own extracted hydrocarbon oil. Liminal flavor profile. Bowel effects unknown."
+          ],
+          [
+            "PDA_title",
+            "PDA"
+          ],
+          [
+            "PDAHistory_title",
+            "PDA History"
+          ],
+          [
+            "Pent",
+            "Pent"
+          ],
+          [
+            "PentDescription",
+            "Anomaly. No genes detected. Waxy shell full of sulfuric acid."
+          ],
+          [
+            "PlasteelIngot",
+            "Plasteel Ingot"
+          ],
+          [
+            "PlasteelIngotDescription",
+            "Bonelike matrix of Titanium and Ceramic. Self-healing. Stronger than strong."
+          ],
+          [
+            "PoliticalConsciousness",
+            "Political Consciousness"
+          ],
+          [
+            "PoliticalConsciousnessDescription",
+            "A Quartz memory chip produced by an unlicensed Fabricator recipe. Alterra does not endorse, examine, or acknowledge its contents."
+          ],
+          [
+            "PowerCell",
+            "Power Cell"
+          ],
+          [
+            "PowerCellDescription",
+            "Larger Lead-Acid Power Cell with a stronger electrolyte bridge. High-capacity mobile power. For structures and vehicles. Not for personal use."
+          ],
+          [
+            "PowerCellV2",
+            "Entangled Power Cell"
+          ],
+          [
+            "PowerCellV2Description",
+            "Ultra-high-capacity solid-state power source. Conduit Crystal matrix which is then acid-etched and doped with radioactive Strontium. Troilite for thermal regulation. The physics are real. The warranty is not."
+          ],
+          [
+            "QuadrateItemDescription",
+            "*Salpapod tetragnatha*. Similar behavior to Earth lamprey or hagfish. A risky eat."
+          ],
+          [
+            "Rebreather",
+            "Rebreather/Regulator"
+          ],
+          [
+            "RebreatherDescription",
+            "Fiber Mesh regulator fitted with a chip-controlled gas pressure valve. Recirculates exhaled gas to reduce oxygen consumption at depth."
+          ],
+          [
+            "RefinedMedigel",
+            "First Aid \r\n(from Harvestmoon)"
+          ],
+          [
+            "RefinedMedigelDescription",
+            "Refined aerogels from local Harvestmoon. Cellular contaminants removed. Active compounds stabilized. Yields one refined First Aid Kit per gel unit."
+          ],
+          [
+            "RepairTool",
+            "Repair Tool"
+          ],
+          [
+            "RepairToolDescription",
+            "Titanium Ingot chassis with Sulfur-based welding compound and a wired battery system. Portable repair and fabrication unit. Effective on vehicles, bases, and most alloys."
+          ],
+          [
+            "Rubber",
+            "Rubber"
+          ],
+          [
+            "RubberDescription",
+            "Vulcanized Lucifer Rotsac polymer treated with acid. Dense, flexible, and electrically inert. Primary non-metal insulator in fabrication chains."
+          ],
+          [
+            "Scanner",
+            "Scanner"
+          ],
+          [
+            "ScannerDescription",
+            "Titanium-framed Glass-lens Scanner, battery-powered. Emits coherent light through Quartz optics to analyze biological and structural targets. Generates databank entries and unlock blueprints."
+          ],
+          [
+            "ScannerV2",
+            "Bioscanner"
+          ],
+          [
+            "ScannerV2Description",
+            "Scanner base fitted with Enameled Glass deep-scan optics and Conduit Crystal signal processors. Reads Axum material signatures and Protean biology. Generates alien blueprints and biomods."
+          ],
+          [
+            "ScubaMa  sk",
+            "Scuba Mask"
+          ],
+          [
+            "ScubaMaskDescription",
+            "Self-contained underwater breathing apparatus. Allows a diver with an air tank to breathe."
+          ],
+          [
+            "SilverIngot",
+            "Silver Ingot"
+          ],
+          [
+            "SilverIngotDescription",
+            "Silver ore cast into a solid machining Ingot. Soft, highly conductive, and seawater-resistant. Primary conductor material for mid-tier electronics fabrication."
+          ],
+          [
+            "SonicResonator",
+            "Sonic Resonator"
+          ],
+          [
+            "SonicResonatorDescription",
+            "Titanium Ingot housing with specialised transducers and a Wiring Kit signal array. Phased-array sound amplifier for mining and extraction."
+          ],
+          [
+            "SonicResonatorV2",
+            "Feedback Resonator"
+          ],
+          [
+            "SonicResonatorV2Description",
+            "Sonic Resonator upgraded with Conduit Crystal transducers and Strontium-treated Enameled Glass housing. Bacterial feedback loop identifies and shatters hardened biomolecule structures."
+          ],
+          [
+            "SpineytailDescription",
+            "Edible though insubstantial fish. Difficult to grip due to its unique electromagnetic propulsion."
+          ],
+          [
+            "StandardAirTank",
+            "Standard Air Tank"
+          ],
+          [
+            "StandardAirTankDescription",
+            "Titanium pressure vessel with Silver valve assembly. Stores compressed air for standard dive operations. SAER compliant."
+          ],
+          [
+            "StrongAcid",
+            "Strong Acid"
+          ],
+          [
+            "StrongAcidDescription",
+            "Concentrated acid derived from Necrolei Cysts, or synthesized from sulfur and gold. Catalysed with Lead. Dangerous and Toxic. Useful for metal stripping and advanced fabrication."
+          ],
+          [
+            "StrongAcidAlt1",
+            "Strong Acid \r\n(From Necrolei, Lead)"
+          ],
+          [
+            "StrongAcidDescriptionAlt1",
+            "Necrolei Cyst and Lead reduction creating Strong Acids capable for use in etching electronic components and other useful industrial tasks."
+          ],
+          [
+            "StrongAcidAlt2",
+            "Strong Acid \r\n(From Gold, Sulfur, Lead)"
+          ],
+          [
+            "StrongAcidDescriptionAlt2",
+            "Gold, Sulfur and Lead reduction creating Strong Acids capable for use in etching electronic components and other useful industrial tasks."
+          ],
+          [
+            "SurgeJellyItemDescription",
+            "Electroactive organism."
+          ],
+          [
+            "SurvivalMultitool",
+            "Survival Multitool"
+          ],
+          [
+            "SurvivalMultitoolDescription",
+            "Three-way Titanium tool. Cutter, harvester, pry bar. Issued to all pioneers. No discretionary modifications permitted."
+          ],
+          [
+            "SystemChip1",
+            "System Chip"
+          ],
+          [
+            "SystemChip1Description",
+            "Quartz-substrate microchip wired to a Silver-Copper harness using Coral shavings and etched in acid. Compact, energy-efficient, mobile. The most computation you can hold with one hand."
+          ],
+          [
+            "SystemChip2",
+            "Dedicated Core"
+          ],
+          [
+            "SystemChip2Description",
+            "High-purity Quartz Processor etched with Strong Acid and Coral shavings and wired to an advanced harness. Discrete control core for complex systems. AI-capable in the same way an iron lung is life-capable."
+          ],
+          [
+            "TadpoleModificationEngineEfficiency",
+            "Engine Efficiency"
+          ],
+          [
+            "TadpoleModificationEngineEfficiencyDesc",
+            "Strontium and Lithium regulated power modulator managed by a System Chip. Reduces engine power draw by 20% through real-time optimization. Stacks up to four times."
+          ],
+          [
+            "TadpoleModificationHullReinforcement",
+            "Strike Armor"
+          ],
+          [
+            "TadpoleModificationHullReinforcementDesc",
+            "Enameled Glass strike plates bonded with Plasteel, regulated by a System Chip. Greatly reduces damage from impacts and creature attacks."
+          ],
+          [
+            "TadpoleModificationHydraulicMuffler",
+            "Cavitation Muffler"
+          ],
+          [
+            "TadpoleModificationHydraulicMufflerDesc",
+            "Germanium baffled hydraulic muffler treated with mesh dampening compound. Suppresses cavitation and engine harmonics using composite materials."
+          ],
+          [
+            "TadpoleModificationPhotovoltaicCharger",
+            "Photovoltaic Charger"
+          ],
+          [
+            "TadpoleModificationPhotovoltaicChargerDesc",
+            "Conduit Crystal photovoltaic array utilising integrated chips to charge passively. Charges the Tadpole in shallow light conditions."
+          ],
+          [
+            "TadpoleUpgradeCrushdepth",
+            "Tadpole Depth Module Mk. 1"
+          ],
+          [
+            "TadpoleUpgradeCrushDepth2",
+            "Tadpole Depth Module Mk. 2"
+          ],
+          [
+            "TadpoleUpgradeCrushdepthDescription",
+            "Germanium and Plasteel fused to an Enameled Glass hull insert, processed by a Dedicated Core. Monitors and predicts structural stress at depth. Allows deeper operation before hull damage. Does not stack with itself."
+          ],
+          [
+            "TadpoleUpgradeCrushDepthDescription2",
+            "Germanium and Plasteel fused to an Enameled Glass hull insert, processed by a Dedicated Core. This one doubles the active pressure compensation allowing for significantly deeper operation. Does not stack with itself."
+          ],
+          [
+            "TitaniumIngot",
+            "Titanium Ingot"
+          ],
+          [
+            "TitaniumIngotDescription",
+            "Titanium ore Processor-smelted into a machining Ingot. Requires fewer ore units than the Fabricator equivalent. Same output. More efficient."
+          ],
+          [
+            "TitaniumPaneling",
+            "Titanium Paneling"
+          ],
+          [
+            "TitaniumPanelingDescription",
+            "Sheets of thinly-pressed Titanium for construction."
+          ],
+          [
+            "ToolHasBeenEquipped",
+            "You have equipped {0}"
+          ],
+          [
+            "UltraHighCapacityAirTank",
+            "Ultra High Capacity Air Tank"
+          ],
+          [
+            "UltraHighCapacityAirTankDescription",
+            "Troilite-clad ultra-capacity pressure tank. Atacamite lining resists deep-water corrosion. For dives so long you'll forget you can actually drown."
+          ],
+          [
+            "UnobtainiumDescription",
+            "An imaginary resource that can not, does not, and will not exist, but may no longer be necessary to craft this recipe... in time. When it's less early, and there's more access."
+          ],
+          [
+            "Unobtanium",
+            "Unobtainium"
+          ],
+          [
+            "Wakemaker",
+            "Wakemaker"
+          ],
+          [
+            "WakemakerDescription",
+            "Arm-mounted jet thruster with wired control and grease-sealed bearings. Effective for rapid maneuvering. Risk of shoulder strain is real and documented."
+          ],
+          [
+            "WakemakerFragment",
+            "Wakemaker Fragment"
+          ],
+          [
+            "Water",
+            "Water"
+          ],
+          [
+            "WaterDescription",
+            "Pressed Water Slug fluid. Filtered and safe to drink. Water Slug carcass is not consumed."
+          ],
+          [
+            "WaterFilterGlandConsumable",
+            "Filtered Water Packet"
+          ],
+          [
+            "WaterFilterGlandConsumableDescription",
+            "Biologically filtered water encased in a thin Glycerin membrane. Puncture and squeeze, or consume whole."
+          ],
+          [
+            "WaterProcessorDescription",
+            "Fibrous plant-like matter compressed and heated to extract cellular moisture. This process also yields 2 units of Salt. Less efficient than Water Slug processing, but uses widely available plant-like biomass."
+          ],
+          [
+            "WaterSlugItemDescription",
+            "Biological source of desalinated water."
+          ],
+          [
+            "WiringKit",
+            "Wiring Kit"
+          ],
+          [
+            "WiringKitDescription",
+            "Silver conductor wire, with a more robust insulation for more complex applications. Standard signal harness for basic fabrication. Corrosion-resistant and flexible. Use for general electronics and circuitry."
+          ],
+          [
+            "YouHaveConsumedFood",
+            "You have consumed some food"
+          ],
+          [
+            "YouHaveConsumedWater",
+            "You have consumed some water"
+          ],
+          [
+            "AlgaeBlockDescription",
+            "Accumulated eldible algae from your skin -- delicious"
+          ],
+          [
+            "AlgaeBlockTitle",
+            "Algae Block"
+          ],
+          [
+            "CookedPneumo",
+            "Cooked Pneuma"
+          ],
+          [
+            "CookedPneumoDescription",
+            "Edible prey fish. Tough skin and soft, spongy innards. Cut along the dorsal seam. The innards are the edible part."
+          ],
+          [
+            "PneumoDescription",
+            "A prey fish that mimics the bladders of an undiscovered kelp species."
+          ],
+          [
+            "BiofuelBlock",
+            "Biofuel Block"
+          ],
+          [
+            "BiofuelBlockDescription",
+            "Condensed, space-efficient fuel suitable for use in a Bioreactor. Produced at the Processor from a variety of source organics."
+          ],
+          [
+            "EnameledGlass",
+            "Enameled Glass"
+          ],
+          [
+            "EnameledGlassDescription",
+            "Celestine Glass fused with crushed Enamel. Structural reinforcement increases barometric tolerance. Required for deep-water viewports."
+          ],
+          [
+            "CookedSpineytail_Variant01",
+            "Cooked Black Hoverthorn"
+          ],
+          [
+            "Spineytail_Variant01",
+            "Black Hoverthorn"
+          ],
+          [
+            "IsotonicDrink",
+            "Isotonic Water"
+          ],
+          [
+            "IsotonicDrinkDescription",
+            "Flash Slug extract in saline solution. Approximates the standard Alterra bodyprint electrolyte profile. Approximately."
+          ],
+          [
+            "HalfmoonJerky",
+            "Halfmoon Jerky"
+          ],
+          [
+            "HalfmoonJerkyDescription",
+            "Dried Halfmoon and Geordie strips, salted and pressed in liquid-filled Fibrous Matter. Chewy and flavorful."
+          ],
+          [
+            "ThreemoonTemaki",
+            "Threemoon Temaki"
+          ],
+          [
+            "ThreemoonTemakiDescription",
+            "All three Halfmoon variants rolled in plant-like matter with Salt and brine. Statistically a complete meal."
+          ],
+          [
+            "HoverthornSouvlaki",
+            "Hoverthorn Souvlaki"
+          ],
+          [
+            "HoverthornSouvlakiDescription",
+            "Hoverthorn and Pneuma, salted and cooked in a Rotsac marinade, with the crystal used as a stick for roasting. Has a mild bitter aftertaste."
+          ],
+          [
+            "SugarAnalogDescription",
+            "Lead-Salt compound. Activates sweet taste receptors via neurotoxic pathway. Safe at recommended serving sizes."
+          ],
+          [
+            "CherimoyaChutney",
+            "Cherimoya Salad"
+          ],
+          [
+            "CherimoyaChutneyDescription",
+            "Sliced Cherimoya fruit and Water Slug chunks over a bed of Fibrous Pulp, tossed with Sugar of Saturn. A hearty and refreshing salad, but somewhat slimy."
+          ],
+          [
+            "Pavlova",
+            "Pavlova"
+          ],
+          [
+            "PavlovaDescription",
+            "Deepwing Egg Yolk, Cherimoya fruit, and raw Medical Gel - sweetened with Sugar of Saturn. Structurally a dessert, yet somehow quite filling."
+          ],
+          [
+            "CookedSpineytail_Variant01Description",
+            "Edible fish. Darker Variety. Contains a crystal spine, which can be used as a skewer to hold while eating."
+          ],
+          [
+            "CookedItemDescriptionGeneric",
+            "Intentionally prepared, human-digestible ration made at a Fabricator."
+          ],
+          [
+            "SugarAnalog",
+            "Sugar of Saturn"
+          ],
+          [
+            "GermaniumAlt1",
+            "Germanium\r\n(From Silver, Celestine)"
+          ],
+          [
+            "GermaniumAlt1Description",
+            "Silver and Celestine refined into a semiconducting Germanium substitute. Highly efficient for advanced microelectronics and structural baffling."
+          ],
+          [
+            "GermaniumAlt2",
+            "Germanium\r\n(From Lead, Atacamite)"
+          ],
+          [
+            "GermaniumAlt2Description",
+            "Lead and Atacamite processed into a semiconducting Germanium substitute. A heavier, corrosion-resistant alternative for advanced fabrication."
+          ],
+          [
+            "Flashlight",
+            "Portable Flashlight"
+          ],
+          [
+            "FlashlightDescription",
+            "Compact, high-intensity light source powered by a rechargeable battery. Essential for navigation in dark "
+          ]
+        ]
+      },
+      "Data": [],
+      "ObjectGuid": null,
+      "SerializationControl": "NoExtension",
+      "Operation": "None",
+      "HasLeadingFourNullBytes": false,
+      "ObjectName": "ST_Items",
+      "OuterIndex": 0,
+      "ClassIndex": -1,
+      "SuperIndex": 0,
+      "TemplateIndex": -3,
+      "ObjectFlags": "RF_Public, RF_Standalone, RF_Transactional",
+      "SerialSize": 30947,
+      "SerialOffset": 690,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": true,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [],
+      "CreateBeforeSerializationDependencies": [],
+      "SerializationBeforeCreateDependencies": [
+        -1,
+        -3
+      ],
+      "CreateBeforeCreateDependencies": [],
+      "Extras": "tAAAABAAAABBZHZhbmNlZEJhdHRlcnkAAQAAAAEAAAAAAAAABQAAAHRydWUAGwAAAEFkdmFuY2VkQmF0dGVyeURlc2NyaXB0aW9uAAEAAAABAAAAAAAAAAUAAAB0cnVlABIAAABBZHZhbmNlZFdpcmluZ0tpdAABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAdAAAAQWR2YW5jZWRXaXJpbmdLaXREZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAOAAAAQUVQU3VpdF90aXRsZQACAAAAAAAAAAAAAAAjAAAAQUVQID0gImFsbCBlbnZpcm9ubWVudCBwcm90ZWN0aW9uIgABAAAAAAAAAAUAAAB0cnVlAB8AAABBZXJvc2hlbGxTcG9uZ2VJdGVtRGVzY3JpcHRpb24AAgAAAAAAAAAAAAAACwAAAERPIE5PVCBMT0MAAQAAAAAAAAAFAAAAdHJ1ZQAGAAAAQWlyYWcAAgAAAAAAAAAAAAAAAAAAAAEAAAAAAAAABQAAAHRydWUAEQAAAEFpcmFnRGVzY3JpcHRpb24AAgAAAAAAAAAAAAAACwAAAERPIE5PVCBMT0MAAQAAAAAAAAAFAAAAdHJ1ZQALAAAAQWlyQmxhZGRlcgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAWAAAAQWlyQmxhZGRlckRlc2NyaXB0aW9uAAEAAAABAAAAAAAAAAUAAAB0cnVlAAgAAABBbGNvaG9sAAEAAAABAAAAAAAAAAUAAAB0cnVlABMAAABBbGNvaG9sRGVzY3JpcHRpb24AAQAAAAEAAAAAAAAABQAAAHRydWUAFAAAAEF4dW1CaW9wcmludEN1bHR1cmUAAQAAAAEAAAAAAAAABQAAAHRydWUAHwAAAEF4dW1CaW9wcmludEN1bHR1cmVEZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAKAAAAQXh1bUluZ290AAEAAAABAAAAAAAAAAUAAAB0cnVlABUAAABBeHVtSW5nb3REZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQARAAAAQmFzaWNGaXJzdEFpZEtpdAABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAcAAAAQmFzaWNGaXJzdEFpZEtpdERlc2NyaXB0aW9uAAEAAAABAAAAAAAAAAUAAAB0cnVlAAgAAABCYXR0ZXJ5AAEAAAABAAAAAAAAAAUAAAB0cnVlABMAAABCYXR0ZXJ5RGVzY3JpcHRpb24AAQAAAAEAAAAAAAAABQAAAHRydWUADQAAAEJveG9mSG9sZGluZwABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAYAAAAQm94b2ZIb2xkaW5nRGVzY3JpcHRpb24AAQAAAAEAAAAAAAAABQAAAHRydWUAHwAAAENoZXJpbW95YVJvdHNhY0l0ZW1EZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAiAAAAQ29sbGVjdG9yTGV2aWF0aGFuSXRlbURlc2NyaXB0aW9uAAEAAAABAAAAAAAAAAUAAAB0cnVlAA8AAABDb25kdWl0Q3J5c3RhbAABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAaAAAAQ29uZHVpdENyeXN0YWxEZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAPAAAAQ29va2VkQmx1ZW1vb24AAQAAAAEAAAAAAAAABQAAAHRydWUAGgAAAENvb2tlZEJsdWVtb29uRGVzY3JpcHRpb24AAQAAAAEAAAAAAAAABQAAAHRydWUAFgAAAENvb2tlZEVsZWN0cmljR2VvcmRpZQABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAhAAAAQ29va2VkRWxlY3RyaWNHZW9yZGllRGVzY3JpcHRpb24AAQAAAAEAAAAAAAAABQAAAHRydWUADgAAAENvb2tlZEdlb3JkaWUAAQAAAAEAAAAAAAAABQAAAHRydWUAGQAAAENvb2tlZEdlb3JkaWVEZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAPAAAAQ29va2VkSGFsZm1vb24AAQAAAAEAAAAAAAAABQAAAHRydWUAGgAAAENvb2tlZEhhbGZtb29uRGVzY3JpcHRpb24AAQAAAAEAAAAAAAAABQAAAHRydWUAEgAAAENvb2tlZEhhcnZlc3Rtb29uAAEAAAABAAAAAAAAAAUAAAB0cnVlAB0AAABDb29rZWRIYXJ2ZXN0bW9vbkRlc2NyaXB0aW9uAAEAAAABAAAAAAAAAAUAAAB0cnVlAA8AAABDb29rZWRRdWFkcmF0ZQABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAaAAAAQ29va2VkUXVh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AAUAAAB0cnVlABQAAABJdGVtSGFzQmVlblBpY2tlZFVwAAEAAAABAAAAAAAAAAUAAAB0cnVlAAsAAABMaWdodHN0aWNrAAEAAAABAAAAAAAAAAUAAAB0cnVlABYAAABMaWdodHN0aWNrRGVzY3JpcHRpb24AAQAAAAEAAAAAAAAABQAAAHRydWUAHAAAAE1hcnJvd2JyZWFjaEl0ZW1EZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQANAAAATWV0YWxTYWx2YWdlAAEAAAABAAAAAAAAAAUAAAB0cnVlABgAAABNZXRhbFNhbHZhZ2VEZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAJAAAATWlsZEFjaWQAAQAAAAEAAAAAAAAABQAAAHRydWUAFAAAAE1pbGRBY2lkRGVzY3JpcHRpb24AAQAAAAEAAAAAAAAABQAAAHRydWUALgAAAE1pbGRBY2lkUHJvY2Vzc29yQ29udmVyc2lvbl9QZW50c19EZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAnAAAATWlsZEFjaWRQcm9jZXNzb3JDb252ZXJzaW9uRGVzY3JpcHRpb24AAQAAAAEAAAAAAAAABQAAAHRydWUAHQAAAE5lZWRsZXJTaGFya0l0ZW1fZGVzY3JpcHRpb24AAQAAAAEAAAAAAAAABQAAAHRydWUAHAAAAE5pYmJsZXJNYW5nb0l0ZW1EZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAOAAAATnV0cmllbnRCbG9jawABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAZAAAATnV0cmllbnRCbG9ja0Rlc2NyaXB0aW9uAAEAAAABAAAAAAAAAAUAAAB0cnVlAAoAAABPaWx5U2FsYWQAAQAAAAEAAAAAAAAABQAAAHRydWUAFQAAAE9pbHlTYWxhZERlc2NyaXB0aW9uAAEAAAABAAAAAAAAAAUAAAB0cnVlAAoAAABQREFfdGl0bGUAAQAAAAEAAAAAAAAABQAAAHRydWUAEQAAAFBEQUhpc3RvcnlfdGl0bGUAAQAAAAEAAAAAAAAABQAAAHRydWUABQAAAFBlbnQAAQAAAAEAAAAAAAAABQAAAHRydWUAEAAAAFBlbnREZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAOAAAAUGxhc3RlZWxJbmdvdAABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAZAAAAUGxhc3RlZWxJbmdvdERlc2NyaXB0aW9uAAEAAAABAAAAAAAAAAUAAAB0cnVlABcAAABQb2xpdGljYWxDb25zY2lvdXNuZXNzAAEAAAABAAAAAAAAAAUAAAB0cnVlACIAAABQb2xpdGljYWxDb25zY2lvdXNuZXNzRGVzY3JpcHRpb24AAQAAAAEAAAAAAAAABQAAAHRydWUACgAAAFBvd2VyQ2VsbAABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAVAAAAUG93ZXJDZWxsRGVzY3JpcHRpb24AAQAAAAEAAAAAAAAABQAAAHRydWUADAAAAFBvd2VyQ2VsbFYyAAEAAAABAAAAAAAAAAUAAAB0cnVlABcAAABQb3dlckNlbGxWMkRlc2NyaXB0aW9uAAEAAAABAAAAAAAAAAUAAAB0cnVlABgAAABRdWFkcmF0ZUl0ZW1EZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQALAAAAUmVicmVhdGhlcgACAAAAAAAAAAAAAAAyAAAAUmVkdW5kYW50IHdpdGggU1RfUmVicmVhdGhlci4gU2hvdWxkIGJlIGNvcnJlY3RlZAABAAAAAAAAAAUAAAB0cnVlABYAAABSZWJyZWF0aGVyRGVzY3JpcHRpb24AAgAAAAAAAAAAAAAAMgAAAFJlZHVuZGFudCB3aXRoIFNUX1JlYnJlYXRoZXIuIFNob3VsZCBiZSBjb3JyZWN0ZWQAAQAAAAAAAAAFAAAAdHJ1ZQAPAAAAUmVmaW5lZE1lZGlnZWwAAQAAAAEAAAAAAAAABQAAAHRydWUAGgAAAFJlZmluZWRNZWRpZ2VsRGVzY3JpcHRpb24AAQAAAAEAAAAAAAAABQAAAHRydWUACwAAAFJlcGFpclRvb2wAAQAAAAEAAAAAAAAABQAAAHRydWUAFgAAAFJlcGFpclRvb2xEZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAHAAAAUnViYmVyAAEAAAABAAAAAAAAAAUAAAB0cnVlABIAAABSdWJiZXJEZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAIAAAAU2Nhbm5lcgACAAAAAAAAAAAAAAArAAAATmVlZHMgdG8gYmUgbW92ZWQgdG8gU1RfU2Nhbm5lciBldmVudHVhbGx5AAEAAAAAAAAABQAAAHRydWUAEwAAAFNjYW5uZXJEZXNjcmlwdGlvbgACAAAAAAAAAAAAAAArAAAATmVlZHMgdG8gYmUgbW92ZWQgdG8gU1RfU2Nhbm5lciBldmVudHVhbGx5AAEAAAAAAAAABQAAAHRydWUACgAAAFNjYW5uZXJWMgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAVAAAAU2Nhbm5lclYyRGVzY3JpcHRpb24AAQAAAAEAAAAAAAAABQAAAHRydWUACgAAAFNjdWJhTWFzawABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAVAAAAU2N1YmFNYXNrRGVzY3JpcHRpb24AAQAAAAEAAAAAAAAABQAAAHRydWUADAAAAFNpbHZlckluZ290AAEAAAABAAAAAAAAAAUAAAB0cnVlABcAAABTaWx2ZXJJbmdvdERlc2NyaXB0aW9uAAEAAAABAAAAAAAAAAUAAAB0cnVlAA8AAABTb25pY1Jlc29uYXRvcgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAaAAAAU29uaWNSZXNvbmF0b3JEZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQARAAAAU29uaWNSZXNvbmF0b3JWMgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAcAAAAU29uaWNSZXNvbmF0b3JWMkRlc2NyaXB0aW9uAAEAAAABAAAAAAAAAAUAAAB0cnVlABYAAABTcGluZXl0YWlsRGVzY3JpcHRpb24AAQAAAAEAAAAAAAAABQAAAHRydWUAEAAAAFN0YW5kYXJkQWlyVGFuawACAAAAAAAAAAAAAAAtAAAATmVlZHMgdG8gYmUgcmVjb25jaWxlZCB3aXRoIFNUX0Jhc2ljQWlyVGFuay4AAQAAAAAAAAAFAAAAdHJ1ZQAbAAAAU3RhbmRhcmRBaXJUYW5rRGVzY3JpcHRpb24AAgAAAAAAAAAAAAAALQAAAE5lZWRzIHRvIGJlIHJlY29uY2lsZWQgd2l0aCBTVF9CYXNpY0FpclRhbmsuAAEAAAAAAAAABQAAAHRydWUACwAAAFN0cm9uZ0FjaWQAAQAAAAEAAAAAAAAABQAAAHRydWUAFgAAAFN0cm9uZ0FjaWREZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAaAAAAU3VyZ2VKZWxseUl0ZW1EZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQASAAAAU3Vydml2YWxNdWx0aXRvb2wAAgAAAAAAAAAAAAAANQAAAE5lZWRzIHRvIGJlIG1vdmVkIHRvIFNUX1N1cnZpdmFsTXVsdGl0b29sIGV2ZW50dWFsbHkAAQAAAAAAAAAFAAAAdHJ1ZQAdAAAAU3Vydml2YWxNdWx0aXRvb2xEZXNjcmlwdGlvbgACAAAAAAAAAAAAAAA1AAAATmVlZHMgdG8gYmUgbW92ZWQgdG8gU1RfU3Vydml2YWxNdWx0aXRvb2wgZXZlbnR1YWxseQABAAAAAAAAAAUAAAB0cnVlAAwAAABTeXN0ZW1DaGlwMQABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAXAAAAU3lzdGVtQ2hpcDFEZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAMAAAAU3lzdGVtQ2hpcDIAAQAAAAEAAAAAAAAABQAAAHRydWUAFwAAAFN5c3RlbUNoaXAyRGVzY3JpcHRpb24AAQAAAAEAAAAAAAAABQAAAHRydWUAJAAAAFRhZHBvbGVNb2RpZmljYXRpb25FbmdpbmVFZmZpY2llbmN5AAEAAAABAAAAAAAAAAUAAAB0cnVlACgAAABUYWRwb2xlTW9kaWZpY2F0aW9uRW5naW5lRWZmaWNpZW5jeURlc2MAAQAAAAEAAAAAAAAABQAAAHRydWUAJQAAAFRhZHBvbGVNb2RpZmljYXRpb25IdWxsUmVpbmZvcmNlbWVudAABAAAAAQAAAAAAAAAFAAAAdHJ1ZQApAAAAVGFkcG9sZU1vZGlmaWNhdGlvbkh1bGxSZWluZm9yY2VtZW50RGVzYwABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAkAAAAVGFkcG9sZU1vZGlmaWNhdGlvbkh5ZHJhdWxpY011ZmZsZXIAAQAAAAEAAAAAAAAABQAAAHRydWUAKAAAAFRhZHBvbGVNb2RpZmljYXRpb25IeWRyYXVsaWNNdWZmbGVyRGVzYwABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAnAAAAVGFkcG9sZU1vZGlmaWNhdGlvblBob3Rvdm9sdGFpY0NoYXJnZXIAAQAAAAEAAAAAAAAABQAAAHRydWUAKwAAAFRhZHBvbGVNb2RpZmljYXRpb25QaG90b3ZvbHRhaWNDaGFyZ2VyRGVzYwABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAZAAAAVGFkcG9sZVVwZ3JhZGVDcnVzaGRlcHRoAAIAAAAAAAAAAAAAADUAAABOZWVkcyB0byBiZSBtb3ZlZCB0byBTVF9UYWRwb2xlIGV2ZW50dWFsbHksIHByb2JhYmx5AAEAAAAAAAAABQAAAHRydWUAGgAAAFRhZHBvbGVVcGdyYWRlQ3J1c2hEZXB0aDIAAgAAAAAAAAAAAAAANQAAAE5lZWRzIHRvIGJlIG1vdmVkIHRvIFNUX1RhZHBvbGUgZXZlbnR1YWxseSwgcHJvYmFibHkAAQAAAAAAAAAFAAAAdHJ1ZQAkAAAAVGFkcG9sZVVwZ3JhZGVDcnVzaGRlcHRoRGVzY3JpcHRpb24AAgAAAAAAAAAAAAAANQAAAE5lZWRzIHRvIGJlIG1vdmVkIHRvIFNUX1RhZHBvbGUgZXZlbnR1YWxseSwgcHJvYmFibHkAAQAAAAAAAAAFAAAAdHJ1ZQAlAAAAVGFkcG9sZVVwZ3JhZGVDcnVzaERlcHRoRGVzY3JpcHRpb24yAAIAAAAAAAAAAAAAADUAAABOZWVkcyB0byBiZSBtb3ZlZCB0byBTVF9UYWRwb2xlIGV2ZW50dWFsbHksIHByb2JhYmx5AAEAAAAAAAAABQAAAHRydWUADgAAAFRpdGFuaXVtSW5nb3QAAQAAAAEAAAAAAAAABQAAAHRydWUAGQAAAFRpdGFuaXVtSW5nb3REZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQARAAAAVGl0YW5pdW1QYW5lbGluZwABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAcAAAAVGl0YW5pdW1QYW5lbGluZ0Rlc2NyaXB0aW9uAAEAAAABAAAAAAAAAAUAAAB0cnVlABQAAABUb29sSGFzQmVlbkVxdWlwcGVkAAEAAAABAAAAAAAAAAUAAAB0cnVlABkAAABVbHRyYUhpZ2hDYXBhY2l0eUFpclRhbmsAAQAAAAEAAAAAAAAABQAAAHRydWUAJAAAAFVsdHJhSGlnaENhcGFjaXR5QWlyVGFua0Rlc2NyaXB0aW9uAAEAAAABAAAAAAAAAAUAAAB0cnVlABcAAABVbm9idGFpbml1bURlc2NyaXB0aW9uAAIAAAAAAAAAAAAAABkAAABQbGFjZWhvbGRlciAtIGRvIG5vdCBsb2MAAQAAAAAAAAAFAAAAdHJ1ZQALAAAAVW5vYnRhbml1bQACAAAAAAAAAAAAAAAZAAAAUGxhY2Vob2xkZXIgLSBkbyBub3QgbG9jAAEAAAAAAAAABQAAAHRydWUACgAAAFdha2VtYWtlcgACAAAAAAAAAAAAAAAtAAAATmVlZHMgdG8gYmUgbW92ZWQgdG8gU1RfV2FrZW1ha2VyIGV2ZW50dWFsbHkAAQAAAAAAAAAFAAAAdHJ1ZQAVAAAAV2FrZW1ha2VyRGVzY3JpcHRpb24AAgAAAAAAAAAAAAAALQAAAE5lZWRzIHRvIGJlIG1vdmVkIHRvIFNUX1dha2VtYWtlciBldmVudHVhbGx5AAEAAAAAAAAABQAAAHRydWUAEgAAAFdha2VtYWtlckZyYWdtZW50AAIAAAAAAAAAAAAAAC0AAABOZWVkcyB0byBiZSBtb3ZlZCB0byBTVF9XYWtlbWFrZXIgZXZlbnR1YWxseQABAAAAAAAAAAUAAAB0cnVlAAYAAABXYXRlcgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQARAAAAV2F0ZXJEZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAbAAAAV2F0ZXJGaWx0ZXJHbGFuZENvbnN1bWFibGUAAQAAAAEAAAAAAAAABQAAAHRydWUAJgAAAFdhdGVyRmlsdGVyR2xhbmRDb25zdW1hYmxlRGVzY3JpcHRpb24AAQAAAAEAAAAAAAAABQAAAHRydWUAGgAAAFdhdGVyUHJvY2Vzc29yRGVzY3JpcHRpb24AAQAAAAEAAAAAAAAABQAAAHRydWUAGQAAAFdhdGVyU2x1Z0l0ZW1EZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAKAAAAV2lyaW5nS2l0AAEAAAABAAAAAAAAAAUAAAB0cnVlABUAAABXaXJpbmdLaXREZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAUAAAAWW91SGF2ZUNvbnN1bWVkRm9vZAABAAAAAQAAAAAAAAAFAAAAdHJ1ZQAVAAAAWW91SGF2ZUNvbnN1bWVkV2F0ZXIAAQAAAAEAAAAAAAAABQAAAHRydWUAEAAAAEFsZ2FlQmxvY2tUaXRsZQABAAAAAQAAAAAAAAAFAAAAVHJ1ZQAWAAAAQWxnYWVCbG9ja0Rlc2NyaXB0aW9uAAEAAAABAAAAAAAAAAUAAABUcnVlAA0AAABDb29rZWRQbmV1bW8AAQAAAAAAAAAAAAAAAAAAABgAAABDb29rZWRQbmV1bW9EZXNjcmlwdGlvbgABAAAAAAAAAAAAAAAAAAAAEgAAAFBuZXVtb0Rlc2NyaXB0aW9uAAEAAAAAAAAAAAAAAAAAAAANAAAAQmlvZnVlbEJsb2NrAAEAAAAAAAAAAAAAAAAAAAAYAAAAQmlvZnVlbEJsb2NrRGVzY3JpcHRpb24AAQAAAAAAAAAAAAAAAAAAAA=="
+    }
+  ],
+  "SearchableNames": null,
+  "ImportTypeHierarchies": null,
+  "MetaData": null,
+  "Thumbnails": null,
+  "WorldTileInfo": null,
+  "AppendedNullBytes": 0,
+  "OtherAssetsFailedToAccess": [],
+  "LegacyFileVersion": -9,
+  "DataResourceVersion": "Invalid",
+  "DataResources": null,
+  "UsesEventDrivenLoader": true,
+  "WillSerializeNameHashes": true,
+  "Imports": [
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "StringTable",
+      "OuterIndex": -2,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Script/Engine",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Default__StringTable",
+      "OuterIndex": -2,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "StringTable",
+      "PackageName": null,
+      "bImportOptional": false
+    }
+  ],
+  "DependsMap": [
+    []
+  ],
+  "SoftPackageReferenceList": null,
+  "AssetRegistryDependencyDataOffset": -1,
+  "AssetRegistryRecords": [],
+  "ImportBits": null,
+  "SoftPackageBits": null,
+  "ExtraPackageDependencies": null,
+  "BulkData": null,
+  "AdditionalFiles": "",
+  "Trailer": null,
+  "ValorantGarbageData": null,
+  "SeaOfThievesGarbageData": null,
+  "Generations": [
+    {
+      "$type": "UAssetAPI.FGenerationInfo, UAssetAPI",
+      "ExportCount": 1,
+      "NameCount": 10
+    }
+  ],
+  "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+  "PersistentGuid": "{00000000-0000-0000-0000-000000000000}",
+  "RecordedEngineVersion": {
+    "$type": "UAssetAPI.FEngineVersion, UAssetAPI",
+    "Major": 0,
+    "Minor": 0,
+    "Patch": 0,
+    "Changelist": 0,
+    "Branch": null
+  },
+  "RecordedCompatibleWithEngineVersion": {
+    "$type": "UAssetAPI.FEngineVersion, UAssetAPI",
+    "Major": 0,
+    "Minor": 0,
+    "Patch": 0,
+    "Changelist": 0,
+    "Branch": null
+  },
+  "ChunkIDs": [],
+  "PackageSource": 0,
+  "FolderName": "/Game/StringTables/ST_Items",
+  "LocalizationId": null,
+  "SoftObjectPathsCount": 0,
+  "SoftObjectPathsOffset": 482,
+  "SearchableNamesOffset": 0,
+  "ThumbnailTableOffset": 0,
+  "ImportTypeHierarchiesCount": 0,
+  "ImportTypeHierarchiesOffset": 0,
+  "SavedHash": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+  "CompressionFlags": 0,
+  "AdditionalPackagesToCook": [],
+  "NamesReferencedFromExportDataCount": 4,
+  "PayloadTocOffset": -1,
+  "DataResourceOffset": -1,
+  "doWeHaveAssetRegistryData": true,
+  "doWeHaveWorldTileInfo": false,
+  "PackageFlags": "PKG_Cooked, PKG_UnversionedProperties, PKG_RequiresLocalizationGather, PKG_FilterEditorOnly",
+  "HasUnversionedProperties": true,
+  "IsFilterEditorOnly": true,
+  "IsPreDependencyFormat": true
+}

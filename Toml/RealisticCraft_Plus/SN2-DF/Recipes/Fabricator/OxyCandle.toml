@@ -1,0 +1,19 @@
+[[recipe]]
+id = "OxyCandle"
+name = "Oxy-Candle"
+description = "A portable, single-use chemical oxygen generator. Rapidly produces a concentrated stream of breathable O2 directly into your reserves without using a thermal flame."
+category = "Consumables"
+DefaultRecipeState = "Unlocked"
+icon = "FILE MOD Icons/T_OxyCandle_Icon.png"
+ordering_index = 5000
+
+[[recipe.ingredients]]
+Titanium = 1
+Quartz = 1
+Lithium = 1
+FiberMesh = 1
+WiringKit = 1
+FalseOysterRaion_Nodule = 1
+
+[[recipe.outputs]]
+OxyCandle = 1

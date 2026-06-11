@@ -1,0 +1,15 @@
+[[recipe_modify]]
+id = "BatteryV2"
+name = "Advanced Battery"
+description = "Lithium-Strontium Power Cell in a Conduit Crystal solid-state matrix, using a Titanium shell. High capacity and moderate radioactivity compared to a Standard Battery. Does not corrode in seawater."
+category = "ResourcesPower"
+ordering_index = 11
+
+[[recipe_modify.ingredients]]
+Titanium = 1
+Lithium = 1
+Strontium = 1
+ConduitCrystal = 2
+
+[[recipe_modify.outputs]]
+AdvancedBattery = 1

@@ -1,0 +1,14 @@
+[[recipe_modify]]
+id = "Greeble_RoofAntenna_C"
+name = "RoofSonar"
+description = "RoofSonarDescription"
+category = "BuilderExteriorGreebleCategory"
+ordering_index = 6
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 1
+Grease = 1
+
+[[recipe_modify.outputs]]
+Greeble_RoofAntenna_C = 1

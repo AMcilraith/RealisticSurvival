@@ -1,0 +1,18 @@
+[[recipe_modify]]
+id = "Tailing_Jar_Coral"
+name = "TailingJarCoral"
+description = "TailingJarCoralDescription"
+category = "BuilderFurniture_Tailing_Category"
+ordering_index = 4
+DefaultRecipeState = "Locked"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+scan_data = ["Tailing_Jar_Coral"]
+
+[[recipe_modify.ingredients]]
+PlateCoral = 2
+
+[[recipe_modify.outputs]]
+Tailing_Jar_Coral = 1

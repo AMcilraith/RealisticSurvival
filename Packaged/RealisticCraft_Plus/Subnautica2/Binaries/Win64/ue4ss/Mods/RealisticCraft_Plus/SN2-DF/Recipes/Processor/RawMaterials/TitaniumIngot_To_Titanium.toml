@@ -1,0 +1,19 @@
+[[recipe]]
+id = "TitaniumIngot_To_Titanium"
+name = "Titanium"
+description = "Titanium Ingot fractured under Processor stress back into raw titanium ore."
+category = "ProcessorPlus_RawMaterials"
+ordering_index = 2
+crafting_time = 45.0
+DefaultRecipeState = "Locked"
+icon = "ITEM Titanium"
+
+[[recipe.unlocking_rule]]
+set_id = "DefaultRuleSet"
+pickup_items = ["TitaniumIngot"]
+
+[[recipe.ingredients]]
+TitaniumIngot = 1
+
+[[recipe.outputs]]
+Titanium = 3

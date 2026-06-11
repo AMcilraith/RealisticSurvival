@@ -1,0 +1,19 @@
+[[recipe_modify]]
+id = "Sign"
+name = "BaseSign"
+description = "BaseSignDescription"
+category = "BuilderFurnitureCategory"
+ordering_index = 20
+DefaultRecipeState = "Locked"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+scan_data = ["BasePiece_CarryableWallRack"]
+
+[[recipe_modify.ingredients]]
+Titanium = 1
+Quartz = 1
+
+[[recipe_modify.outputs]]
+Sign = 1

@@ -1,0 +1,14 @@
+[[recipe_modify]]
+id = "PosterCommunity01"
+name = "PosterCommunity01_Subtitle02"
+description = "PosterCommunity01_Subtitle01"
+category = "BuilderPostersCategory"
+ordering_index = 11
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 1
+Lead = 1
+
+[[recipe_modify.outputs]]
+Poster_Community01 = 1

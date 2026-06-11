@@ -1,0 +1,3 @@
+# Global defaults for RealisticScans.
+[defaults]
+debug = false

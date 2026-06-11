@@ -1,0 +1,19 @@
+[[recipe_modify]]
+id = "Stool"
+name = "Stool"
+description = "StoolDescription"
+category = "BuilderFurnitureCategory"
+ordering_index = 2
+DefaultRecipeState = "Locked"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+scan_data = ["Stool"]
+
+[[recipe_modify.ingredients]]
+Titanium = 1
+Rubber = 1
+
+[[recipe_modify.outputs]]
+Stool = 1

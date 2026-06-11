@@ -1,0 +1,13 @@
+[[recipe_modify]]
+id = "GoldToGoldIngot"
+name = "Gold Ingot"
+description = "Gold ore refined into a precision machining Ingot. Chemically stable in seawater. Standard material for insulating conductors and high-contact electrical plating."
+category = "Processor_Ingots"
+ordering_index = 50
+crafting_time = 60.0
+
+[[recipe_modify.ingredients]]
+Gold = 4
+
+[[recipe_modify.outputs]]
+GoldIngot = 1

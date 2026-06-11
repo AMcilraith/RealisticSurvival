@@ -1,0 +1,19 @@
+[[recipe_modify]]
+id = "Poster_KeepSwimming"
+name = "Poster01"
+description = "PosterDescription"
+category = "BuilderPostersCategory"
+ordering_index = 1
+DefaultRecipeState = "Locked"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+scan_data = ["Poster_KeepSwimming"]
+
+[[recipe_modify.ingredients]]
+Titanium = 1
+Lead = 1
+
+[[recipe_modify.outputs]]
+Poster_KeepSwimming = 1

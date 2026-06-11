@@ -1,0 +1,13 @@
+[[recipe_modify]]
+id = "WiringKit"
+name = "Wiring Kit"
+description = "Silver conductor wire, with a more robust insulation for more complex applications. Standard signal harness for basic fabrication. Corrosion-resistant and flexible. Use for general electronics and circuitry."
+category = "ResourcesElectronics"
+ordering_index = 40
+
+[[recipe_modify.ingredients]]
+Silver = 2
+Rubber = 1
+
+[[recipe_modify.outputs]]
+WiringKit = 1

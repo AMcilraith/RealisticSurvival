@@ -1,0 +1,20 @@
+[[recipe_modify]]
+id = "BasicBatteryTerminal"
+name = "BaseBatteryTerminal"
+description = "BaseBatteryTerminalDescription"
+category = "BuilderBaseObject_Power"
+DefaultRecipeState = "Locked"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+scan_data = ["BasePiece_BatteryTerminal"]
+
+[[recipe_modify.ingredients]]
+Titanium = 2
+Lead = 2
+ComputerChip = 1
+CopperWire = 1
+
+[[recipe_modify.outputs]]
+BasicBatteryTerminal = 1

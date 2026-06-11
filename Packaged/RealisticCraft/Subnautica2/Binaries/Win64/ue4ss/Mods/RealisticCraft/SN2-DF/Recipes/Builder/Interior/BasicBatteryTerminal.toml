@@ -1,0 +1,15 @@
+[[recipe_modify]]
+id = "BasicBatteryTerminal"
+name = "BaseBatteryTerminal"
+description = "BaseBatteryTerminalDescription"
+category = "BuilderBaseObject_Power"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 2
+Lead = 2
+ComputerChip = 1
+CopperWire = 1
+
+[[recipe_modify.outputs]]
+BasicBatteryTerminal = 1

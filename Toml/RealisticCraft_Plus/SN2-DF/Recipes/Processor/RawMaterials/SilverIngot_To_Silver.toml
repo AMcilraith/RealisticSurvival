@@ -1,0 +1,19 @@
+[[recipe]]
+id = "SilverIngot_To_Silver"
+name = "Silver"
+description = "Silver Ingot drawn apart under Processor tension back into raw silver ore."
+category = "ProcessorPlus_RawMaterials"
+ordering_index = 4
+crafting_time = 60.0
+DefaultRecipeState = "Locked"
+icon = "ITEM Silver"
+
+[[recipe.unlocking_rule]]
+set_id = "DefaultRuleSet"
+pickup_items = ["SilverIngot"]
+
+[[recipe.ingredients]]
+SilverIngot = 1
+
+[[recipe.outputs]]
+Silver = 3

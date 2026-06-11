@@ -1,0 +1,13 @@
+[[recipe_modify]]
+id = "PosterKeepCalm"
+name = "PosterKeepCalm"
+description = "PosterKeepCalmDescription"
+category = "BuilderPostersCategory"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 1
+Lead = 1
+
+[[recipe_modify.outputs]]
+Poster_KeepCalm = 1

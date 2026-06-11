@@ -1,0 +1,14 @@
+[[item_type]]
+id = "OxyCandle"
+name = "Oxy-Candle"
+description = "A portable, single-use chemical oxygen generator. Rapidly produces a concentrated stream of breathable O2 directly into your reserves without using a thermal flame."
+template = "FirstAidKit_Basic"
+icon = "FILE MOD Icons/T_OxyCandle_Icon.png"
+type_tag = "ItemType.Tools"
+equipment_slot = "Character.Slot.Tool"
+use_from_inventory = true
+tool = true
+pickup_cue_tag = "GameplayCue.Pickup.Plastic"
+drop_cue_tag = "GameplayCue.Drop.Plastic"
+[item_type.tunable_data]
+"ItemType.TunableData.Oxygen" = 60.0

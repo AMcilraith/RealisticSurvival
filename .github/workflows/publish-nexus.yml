@@ -1,0 +1,75 @@
+name: Publish To Nexus
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_version:
+        description: 'Mod release version to publish (defaults to ci/MOD_VERSION when empty)'
+        type: string
+        required: false
+        default: ''
+      version_override:
+        description: 'Nexus file version override (takes precedence over release_version)'
+        type: string
+        required: false
+        default: ''
+      package_run_id:
+        description: 'Workflow run ID from Package And Release (downloads mod-zips artifact)'
+        type: string
+        required: true
+      upload_description:
+        description: 'Optional Nexus file description'
+        type: string
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  nexus:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download packaged zips
+        uses: actions/download-artifact@v4
+        with:
+          name: mod-zips
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ inputs.package_run_id }}
+          path: Packaged
+
+      - name: Resolve Nexus version
+        id: version
+        shell: bash
+        run: |
+          set -euo pipefail
+          version=""
+          if [ -n "${{ inputs.version_override }}" ]; then
+            version="${{ inputs.version_override }}"
+            echo "Using version_override: $version"
+          elif [ -n "${{ inputs.release_version }}" ]; then
+            version="${{ inputs.release_version }}"
+            echo "Using release_version: $version"
+          elif [ -f ci/MOD_VERSION ]; then
+            version="$(tr -d '\r\n' < ci/MOD_VERSION)"
+            echo "Using ci/MOD_VERSION: $version"
+          fi
+          if [ -z "$version" ]; then
+            echo "Set version_override, release_version, or ensure ci/MOD_VERSION exists." >&2
+            exit 1
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Upload to Nexus Mods
+        shell: bash
+        env:
+          NEXUSMODS_API_KEY: ${{ secrets.NEXUSMODS_API_KEY }}
+          NEXUS_FILE_GROUP_ID_REALISTIC_CRAFT: ${{ secrets.NEXUS_FILE_GROUP_ID_REALISTIC_CRAFT }}
+          NEXUS_FILE_GROUP_ID_REALISTIC_CRAFT_PLUS: ${{ secrets.NEXUS_FILE_GROUP_ID_REALISTIC_CRAFT_PLUS }}
+          NEXUS_FILE_GROUP_ID_REALISTIC_STORAGE: ${{ secrets.NEXUS_FILE_GROUP_ID_REALISTIC_STORAGE }}
+          NEXUS_FILE_GROUP_ID_REALISTIC_SCANS: ${{ secrets.NEXUS_FILE_GROUP_ID_REALISTIC_SCANS }}
+          NEXUS_UPLOAD_DESCRIPTION: ${{ inputs.upload_description }}
+        run: bash ci/publish-nexus.sh '${{ steps.version.outputs.version }}'

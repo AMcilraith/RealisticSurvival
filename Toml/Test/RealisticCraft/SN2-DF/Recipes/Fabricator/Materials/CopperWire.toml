@@ -1,0 +1,13 @@
+[[recipe_modify]]
+id = "CopperWire"
+name = "Copper Wire"
+description = "Two Copper Ingots drawn into a conductive strand. Low resistance. Corrodes slowly in salt water, has basic insulation to prevent shocks. Replace as needed."
+category = "ResourcesElectronics"
+ordering_index = 20
+
+[[recipe_modify.ingredients]]
+Copper = 2
+Fiber = 1
+
+[[recipe_modify.outputs]]
+CopperWire = 1

@@ -1,0 +1,18 @@
+[[recipe_modify]]
+id = "Tailing_Chest"
+name = "TailingChest"
+description = "TailingChestDescription"
+category = "BuilderFurniture_Tailing_Category"
+ordering_index = 4
+DefaultRecipeState = "Locked"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+scan_data = ["Tailing_Chest"]
+
+[[recipe_modify.ingredients]]
+Titanium = 6
+
+[[recipe_modify.outputs]]
+Tailing_Chest = 1

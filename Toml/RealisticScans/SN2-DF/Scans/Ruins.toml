@@ -1,0 +1,117 @@
+# Ruins scan overrides for RealisticScans.
+# scan_duration = seconds to complete one instance scan.
+# num_required = unique instances needed for blueprint unlock.
+
+[[scan_modify]]
+id = "ArchitectLanguage"
+asset = "/Game/Data/ScanData/Ruins/DA_ArchitectLanguage_ScanData.DA_ArchitectLanguage_ScanData"
+scan_duration = 7.5
+num_required = 1
+
+[[scan_modify]]
+id = "Farms_BlackBox_Zip"
+asset = "/Game/Data/ScanData/Ruins/DA_Farms_BlackBox_Zip_ScanData.DA_Farms_BlackBox_Zip_ScanData"
+scan_duration = 7.5
+num_required = 1
+
+[[scan_modify]]
+id = "MetalFarming"
+asset = "/Game/Data/ScanData/Ruins/DA_MetalFarming_ScanData.DA_MetalFarming_ScanData"
+scan_duration = 7.5
+num_required = 1
+
+[[scan_modify]]
+id = "Needler_BlackBox_Ruby"
+asset = "/Game/Data/ScanData/Ruins/DA_Needler_BlackBox_Ruby_ScanData.DA_Needler_BlackBox_Ruby_ScanData"
+scan_duration = 7.5
+num_required = 1
+
+[[scan_modify]]
+id = "NewLanguage"
+asset = "/Game/Data/ScanData/Ruins/DA_NewLanguage_ScanData.DA_NewLanguage_ScanData"
+scan_duration = 7.5
+num_required = 1
+
+[[scan_modify]]
+id = "Observatory"
+asset = "/Game/Data/ScanData/Ruins/DA_Observatory_ScanData.DA_Observatory_ScanData"
+scan_duration = 7.5
+num_required = 1
+
+[[scan_modify]]
+id = "Observatory_ClimateLab"
+asset = "/Game/Data/ScanData/Ruins/DA_Observatory_ClimateLab_ScanData.DA_Observatory_ClimateLab_ScanData"
+scan_duration = 7.5
+num_required = 1
+
+[[scan_modify]]
+id = "Observatory_Door"
+asset = "/Game/Data/ScanData/Ruins/DA_Observatory_Door_ScanData.DA_Observatory_Door_ScanData"
+scan_duration = 7.5
+num_required = 1
+
+[[scan_modify]]
+id = "Observatory_Orrery"
+asset = "/Game/Data/ScanData/Ruins/DA_Observatory_Orrery_ScanData.DA_Observatory_Orrery_ScanData"
+scan_duration = 7.5
+num_required = 1
+
+[[scan_modify]]
+id = "Observatory_RosettaStone"
+asset = "/Game/Data/ScanData/Ruins/DA_Observatory_RosettaStone_ScanData.DA_Observatory_RosettaStone_ScanData"
+scan_duration = 7.5
+num_required = 1
+
+[[scan_modify]]
+id = "PowerBlightCore_BlackBox_Anita"
+asset = "/Game/Data/ScanData/Ruins/DA_PowerBlightCore_BlackBox_Anita_ScanData.DA_PowerBlightCore_BlackBox_Anita_ScanData"
+scan_duration = 7.5
+num_required = 1
+
+[[scan_modify]]
+id = "PowerPlantComponent"
+asset = "/Game/Data/ScanData/Ruins/DA_PowerPlantComponent_ScanData.DA_PowerPlantComponent_ScanData"
+scan_duration = 7.5
+num_required = 1
+
+[[scan_modify]]
+id = "PowerPlantNeedle"
+asset = "/Game/Data/ScanData/Ruins/DA_PowerPlantNeedle_ScanData.DA_PowerPlantNeedle_ScanData"
+scan_duration = 7.5
+num_required = 1
+
+[[scan_modify]]
+id = "PowerPlantSuperStructure"
+asset = "/Game/Data/ScanData/Ruins/DA_PowerPlantSuperStructure_ScanData.DA_PowerPlantSuperStructure_ScanData"
+scan_duration = 7.5
+num_required = 1
+
+[[scan_modify]]
+id = "PowerPlantUpperControlRoom"
+asset = "/Game/Data/ScanData/Ruins/DA_PowerPlantUpperControlRoom_ScanData.DA_PowerPlantUpperControlRoom_ScanData"
+scan_duration = 7.5
+num_required = 1
+
+[[scan_modify]]
+id = "Wreck2A_BlackBox_Mel"
+asset = "/Game/Data/ScanData/Ruins/DA_Wreck2A_BlackBox_Mel_ScanData.DA_Wreck2A_BlackBox_Mel_ScanData"
+scan_duration = 7.5
+num_required = 1
+
+[[scan_modify]]
+id = "Wreck2A_BlackBox_Singh"
+asset = "/Game/Data/ScanData/Ruins/DA_Wreck2A_BlackBox_Singh_ScanData.DA_Wreck2A_BlackBox_Singh_ScanData"
+scan_duration = 7.5
+num_required = 1
+
+[[scan_modify]]
+id = "Wreck2B_BlackBox_Tuba"
+asset = "/Game/Data/ScanData/Ruins/DA_Wreck2B_BlackBox_Tuba_ScanData.DA_Wreck2B_BlackBox_Tuba_ScanData"
+scan_duration = 7.5
+num_required = 1
+
+[[scan_modify]]
+id = "Wreck_SuperScanner_BlackBox_Iso"
+asset = "/Game/Data/ScanData/Ruins/DA_Wreck_SuperScanner_BlackBox_Iso_ScanData.DA_Wreck_SuperScanner_BlackBox_Iso_ScanData"
+scan_duration = 7.5
+num_required = 1

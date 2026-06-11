@@ -1,0 +1,15 @@
+[[recipe_modify]]
+id = "BasicBattery"
+name = "Basic Battery"
+description = "Copper plate electrodes in a Raion Acid Sac electrolyte. Portable energy supply. Ecological guilt negligible — the Raion had it coming."
+category = "ResourcesPower"
+ordering_index = 10
+
+[[recipe_modify.ingredients]]
+Titanium = 1
+Copper = 2
+AcidAnemone_AcidSac = 2
+Pent01a = 2
+
+[[recipe_modify.outputs]]
+BasicBattery = 1

@@ -1,0 +1,13 @@
+[[recipe_modify]]
+id = "Tailing_Jar"
+name = "TailingJar"
+description = "TailingJarDescription"
+category = "BuilderFurniture_Tailing_Category"
+ordering_index = 6
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Salt = 1
+
+[[recipe_modify.outputs]]
+Tailing_Jar = 1

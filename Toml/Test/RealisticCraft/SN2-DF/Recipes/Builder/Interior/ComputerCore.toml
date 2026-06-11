@@ -1,0 +1,21 @@
+[[recipe_modify]]
+id = "ComputerCore"
+name = "NoATerminal"
+description = "NoATerminalDescription"
+category = "BuilderHabitatSystemsCategory"
+ordering_index = 1
+DefaultRecipeState = "Locked"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+pickup_items = ["Builder"]
+
+[[recipe_modify.ingredients]]
+Titanium = 4
+Quartz = 2
+ComputerChip = 1
+CopperWire = 1
+
+[[recipe_modify.outputs]]
+ComputerCore = 1

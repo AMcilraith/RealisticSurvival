@@ -1,0 +1,11 @@
+[[item_type_modify]]
+id = "FirstAidKit_Enhanced"
+name = "Enhanced First Aid Kit"
+description = "Compressed Raion Medigel dressing augmented with healing agents from the Cherimoya fruit. Effective for moderate trauma. Accelerates cellular repair. Single use."
+equipment_slot = "Character.Slot.Tool"
+use_from_inventory = true
+pickup_cue_tag = "GameplayCue.Pickup.Tool"
+drop_cue_tag = "GameplayCue.Drop.Tool"
+[item_type_modify.tunable_data]
+"ItemType.TunableData.Health" = 80.0
+replace_tunable_data = true

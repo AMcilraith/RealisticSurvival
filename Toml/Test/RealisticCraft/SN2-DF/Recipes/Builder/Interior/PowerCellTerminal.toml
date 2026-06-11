@@ -1,0 +1,21 @@
+[[recipe_modify]]
+id = "PowerCellTerminal"
+name = "PowerCellTerminal"
+description = "PowerCellTerminalDescription"
+category = "BuilderBaseObject_Power"
+ordering_index = 1
+DefaultRecipeState = "Locked"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+scan_data = ["BasePiece_PowerCellTerminal"]
+
+[[recipe_modify.ingredients]]
+Titanium = 2
+Lead = 4
+ComputerChip = 1
+CopperWire = 1
+
+[[recipe_modify.outputs]]
+PowerCellTerminal = 1

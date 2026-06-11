@@ -1,0 +1,19 @@
+[[recipe_modify]]
+id = "CelestineToStrontium"
+name = "Strontium"
+description = "Refined from Celestine. Radioactive element used in Radioisotope Thermoelectric Generators (or RTGs) and other nuclear applications."
+category = "ProcessorAlternateRecipes"
+ordering_index = 42
+crafting_time = 30.0
+DefaultRecipeState = "Locked"
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+pickup_items = ["Celestine"]
+
+[[recipe_modify.ingredients]]
+Celestine = 4
+StrongAcid = 1
+
+[[recipe_modify.outputs]]
+Strontium = 1

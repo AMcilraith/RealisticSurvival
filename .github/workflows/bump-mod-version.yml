@@ -1,0 +1,32 @@
+name: Bump Mod Version
+
+on:
+  workflow_call:
+    inputs:
+      release_version:
+        description: 'Released mod version to bump from'
+        type: string
+        required: true
+    outputs:
+      next_release_version:
+        description: 'New value written to ci/MOD_VERSION'
+        value: ${{ jobs.bump.outputs.next_release_version }}
+
+permissions:
+  contents: write
+
+jobs:
+  bump:
+    runs-on: windows-latest
+    outputs:
+      next_release_version: ${{ steps.bump.outputs.next_release_version }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Bump ci/MOD_VERSION
+        id: bump
+        shell: bash
+        run: bash ci/bump-mod-version.sh '${{ inputs.release_version }}'

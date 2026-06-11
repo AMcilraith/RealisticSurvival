@@ -1,0 +1,41 @@
+name: Publish GitHub Release
+
+on:
+  workflow_call:
+    inputs:
+      release_version:
+        description: 'Mod release version to publish'
+        type: string
+        required: true
+    outputs:
+      published:
+        description: 'Whether a GitHub release was created'
+        value: ${{ jobs.github.outputs.published }}
+
+permissions:
+  contents: write
+
+jobs:
+  github:
+    runs-on: windows-latest
+    outputs:
+      published: ${{ steps.github.outputs.published }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download packaged zips
+        uses: actions/download-artifact@v4
+        with:
+          name: mod-zips
+          path: Packaged
+
+      - name: Create GitHub release
+        id: github
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_RELEASE_TAG: v${{ inputs.release_version }}
+          GITHUB_RELEASE_TITLE: Realistic Survival v${{ inputs.release_version }}
+          GITHUB_RELEASE_NOTES: ${{ github.event.head_commit.message }}
+        run: bash ci/publish-github-release.sh '${{ inputs.release_version }}'

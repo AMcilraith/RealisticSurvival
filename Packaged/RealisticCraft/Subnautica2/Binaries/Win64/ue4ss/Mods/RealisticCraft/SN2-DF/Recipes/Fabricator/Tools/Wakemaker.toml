@@ -1,0 +1,17 @@
+[[recipe_modify]]
+id = "Wakemaker"
+name = "Wakemaker"
+description = "Arm-mounted jet thruster with wired control and grease-sealed bearings. Effective for rapid maneuvering. Risk of shoulder strain is real and documented."
+category = "PersonalTool"
+ordering_index = 80
+crafting_time = 3.0
+
+[[recipe_modify.ingredients]]
+Titanium = 2
+Rubber = 1
+BasicBattery = 1
+CopperWire = 1
+Grease = 1
+
+[[recipe_modify.outputs]]
+Wakemaker = 1

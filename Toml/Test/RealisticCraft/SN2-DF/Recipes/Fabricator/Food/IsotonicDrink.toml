@@ -1,0 +1,20 @@
+[[recipe_modify]]
+id = "IsotonicDrink"
+name = "Isotonic Water"
+description = "Flash Slug extract in saline solution. Approximates the standard Alterra bodyprint electrolyte profile. Approximately."
+category = "SustenanceMeals"
+ordering_index = -98
+DefaultRecipeState = "Unlocked"
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+pickup_items = ["FlashSlug"]
+
+[[recipe_modify.ingredients]]
+FlashSlug = 1
+Salt = 1
+CherimoyaRotsacFruit = 1
+SugarAnalog = 1
+
+[[recipe_modify.outputs]]
+IsotonicDrink = 1

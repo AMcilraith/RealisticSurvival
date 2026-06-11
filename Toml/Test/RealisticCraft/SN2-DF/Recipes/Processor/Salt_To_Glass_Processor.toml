@@ -1,0 +1,19 @@
+[[recipe_modify]]
+id = "Salt_To_Glass_Processor"
+name = "Glass \n(from Salt, Lead)"
+description = "Lead and Salt, pressure-fused into Glass through silication. Hard, clear, and structurally tough. Alternative to Quartz Glass when Lead and Salt are more readily available."
+category = "ProcessorAlternateRecipes"
+ordering_index = 5
+crafting_time = 120.0
+DefaultRecipeState = "Locked"
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+pickup_items = ["Salt"]
+
+[[recipe_modify.ingredients]]
+Salt = 2
+Lead = 2
+
+[[recipe_modify.outputs]]
+Glass = 2

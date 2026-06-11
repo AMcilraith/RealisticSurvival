@@ -1,0 +1,19 @@
+[[recipe_modify]]
+id = "StrongAcid"
+name = "Strong Acid"
+description = "Concentrated acid derived from Necrolei Cysts, or synthesized from sulfur and gold. Catalysed with Lead. Dangerous and Toxic. Useful for metal stripping and advanced fabrication."
+category = "ResourcesElectronics"
+ordering_index = 50
+crafting_time = 30.0
+DefaultRecipeState = "Locked"
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+pickup_items = ["FalseOysterRaion_Nodule", "MildAcid"]
+
+[[recipe_modify.ingredients]]
+FalseOysterRaion_Nodule = 2
+Lead = 1
+
+[[recipe_modify.outputs]]
+StrongAcid = 1

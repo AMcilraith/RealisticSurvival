@@ -1,0 +1,14 @@
+[[recipe_modify]]
+id = "Greeble_RoofFan_Double"
+name = "RoofPumpDouble"
+description = "RoofPumpDoubleDescription"
+category = "BuilderExteriorGreebleCategory"
+ordering_index = 1
+DefaultRecipeState = "Locked"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 2
+
+[[recipe_modify.outputs]]
+Greeble_RoofFan_Double = 1

@@ -1,0 +1,14 @@
+[[recipe_modify]]
+id = "Axum_Drums"
+name = "AxumDrum"
+description = "AxumDrumDescription"
+category = "BuilderFurniture_Tailing_Category"
+ordering_index = 1
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 2
+Fiber = 1
+
+[[recipe_modify.outputs]]
+Axum_Drum = 1

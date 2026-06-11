@@ -1,0 +1,22 @@
+[[recipe_modify]]
+id = "BioBed"
+name = "Biobed"
+description = "BiobedDescription"
+category = "BuilderHabitatSystemsCategory"
+DefaultRecipeState = "Locked"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+scan_data = ["BasePiece_BioBed"]
+
+[[recipe_modify.ingredients]]
+Titanium = 4
+Glass = 2
+Sulfur = 2
+SugarAnalog = 4
+ComputerChip = 1
+CopperWire = 1
+
+[[recipe_modify.outputs]]
+BioBed = 1

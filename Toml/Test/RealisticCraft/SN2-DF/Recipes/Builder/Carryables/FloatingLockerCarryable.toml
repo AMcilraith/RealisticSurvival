@@ -1,0 +1,20 @@
+[[recipe_modify]]
+id = "FloatingLockerCarryable"
+name = "FloatingLocker"
+description = "Description"
+category = "BuilderTool_Carryable_Category"
+DefaultRecipeState = "Locked"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+pickup_items = ["Builder"]
+
+[[recipe_modify.ingredients]]
+Titanium = 2
+Rubber = 1
+WaterSlug = 2
+Fiber = 1
+
+[[recipe_modify.outputs]]
+FloatingLocker_Carryable = 1

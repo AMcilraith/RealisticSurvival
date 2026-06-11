@@ -1,0 +1,13 @@
+[[item_type_modify]]
+id = "IsotonicDrink"
+name = "Isotonic Water"
+description = "Flash Slug extract in saline solution. Approximates the standard Alterra bodyprint electrolyte profile. Approximately."
+icon = "FILE MOD Icons/IsoWater.png"
+equipment_slot = "Character.Slot.Tool"
+use_from_inventory = true
+pickup_cue_tag = "GameplayCue.Pickup.Liquid"
+drop_cue_tag = "GameplayCue.Drop.Liquid"
+[item_type_modify.tunable_data]
+"ItemType.TunableData.Food" = 20.0
+"ItemType.TunableData.Water" = 60.0
+replace_tunable_data = true

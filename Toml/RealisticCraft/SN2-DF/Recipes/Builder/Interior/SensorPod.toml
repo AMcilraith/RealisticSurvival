@@ -1,0 +1,15 @@
+[[recipe_modify]]
+id = "SensorPod"
+name = "Sensor Pod"
+description = "Sensor Pod"
+category = "BuilderHabitatSystemsCategory"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+TitaniumIngot = 4
+Quartz = 2
+ComputerChip = 1
+CopperWire = 1
+
+[[recipe_modify.outputs]]
+SensorPod = 1

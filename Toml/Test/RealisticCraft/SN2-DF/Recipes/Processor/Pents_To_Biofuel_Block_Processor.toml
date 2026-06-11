@@ -1,0 +1,18 @@
+[[recipe_modify]]
+id = "Pents_To_Biofuel_Block_Processor"
+name = "Biofuel Block\n(from Pents)"
+description = "Condensed, space-efficient fuel suitable for use in a Bioreactor. Produced at the Processor from Pent biological matter."
+category = "ProcessorAlternateRecipes"
+ordering_index = 5
+crafting_time = 120.0
+DefaultRecipeState = "Locked"
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+pickup_items = ["Pent01a"]
+
+[[recipe_modify.ingredients]]
+Pent01a = 4
+
+[[recipe_modify.outputs]]
+BiofuelBlock = 1

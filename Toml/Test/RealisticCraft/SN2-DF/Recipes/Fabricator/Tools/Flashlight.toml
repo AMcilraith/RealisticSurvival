@@ -1,0 +1,22 @@
+[[recipe_modify]]
+id = "Flashlight"
+name = "Portable Flashlight"
+description = "Description"
+category = "PersonalTool"
+ordering_index = 20
+crafting_time = 3.0
+DefaultRecipeState = "Locked"
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+scan_data = ["Tools_Flashlight"]
+
+[[recipe_modify.ingredients]]
+Titanium = 2
+Rubber = 1
+BasicBattery = 1
+CopperWire = 1
+Quartz = 1
+
+[[recipe_modify.outputs]]
+FlashLight = 1

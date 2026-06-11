@@ -1,0 +1,15 @@
+[[recipe_modify]]
+id = "SmallAirTank"
+name = "Standard Air Tank"
+description = "Titanium pressure vessel with Silver valve assembly. Stores compressed air for standard dive operations. SAER compliant."
+category = "PersonalOxygenTanks"
+ordering_index = 40
+
+[[recipe_modify.ingredients]]
+Titanium = 2
+Silver = 2
+Rubber = 1
+Fiber = 1
+
+[[recipe_modify.outputs]]
+OxygenTank_Small = 1

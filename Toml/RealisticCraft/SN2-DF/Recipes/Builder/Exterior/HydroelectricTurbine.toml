@@ -1,0 +1,16 @@
+[[recipe_modify]]
+id = "HydroelectricTurbine"
+name = "HydroelectricTurbine"
+description = "HydroelectricTurbineDescription"
+category = "BuilderPowerExternalCategory"
+ordering_index = 2
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 4
+Grease = 2
+ComputerChip = 1
+CopperWire = 1
+
+[[recipe_modify.outputs]]
+HydroelectricTurbine = 1

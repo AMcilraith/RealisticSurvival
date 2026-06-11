@@ -1,0 +1,18 @@
+[[recipe_modify]]
+id = "FirstAidKit_Enhanced"
+name = "Enhanced First Aid Kit"
+description = "Compressed Raion Medigel dressing augmented with healing agents from the Cherimoya fruit. Effective for moderate trauma. Accelerates cellular repair. Single use."
+category = "Consumables"
+ordering_index = 15
+DefaultRecipeState = "Locked"
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+pickup_items = ["Fiber", "AcidAnemone_Medigel"]
+
+[[recipe_modify.ingredients]]
+AcidAnemone_Medigel = 2
+CherimoyaRotsacFruit = 2
+
+[[recipe_modify.outputs]]
+FirstAidKit_Enhanced = 1

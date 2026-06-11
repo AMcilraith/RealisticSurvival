@@ -1,0 +1,249 @@
+# Resources scan overrides for RealisticScans.
+# scan_duration = seconds to complete one instance scan.
+# num_required = unique instances needed for blueprint unlock.
+
+[[scan_modify]]
+id = "AcidRaion"
+asset = "/Game/Data/ScanData/Resource/DA_AcidRaion_ScanData.DA_AcidRaion_ScanData"
+scan_duration = 3.5
+num_required = 2
+
+[[scan_modify]]
+id = "AirFruit"
+asset = "/Game/Data/ScanData/Resource/DA_AirFruit_ScanData.DA_AirFruit_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "Atacamite"
+asset = "/Game/Data/ScanData/Resource/DA_Atacamite_ScanData.DA_Atacamite_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "AxumAlloyIngot"
+asset = "/Game/Data/ScanData/Resource/DA_AxumAlloyIngot_ScanData.DA_AxumAlloyIngot_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "AxumDataCache"
+asset = "/Game/Data/ScanData/Resource/DA_AxumDataCache_ScanData.DA_AxumDataCache_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "AxumRebar"
+asset = "/Game/Data/ScanData/Resource/DA_AxumRebar_ScanData.DA_AxumRebar_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "AxumRelic"
+asset = "/Game/Data/ScanData/Resource/DA_AxumRelic_ScanData.DA_AxumRelic_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "Celestine"
+asset = "/Game/Data/ScanData/Resource/DA_Celestine_ScanData.DA_Celestine_ScanData"
+scan_duration = 3.2
+num_required = 2
+
+[[scan_modify]]
+id = "Copper"
+asset = "/Game/Data/ScanData/Resource/DA_Copper_ScanData.DA_Copper_ScanData"
+scan_duration = 2.5
+num_required = 1
+
+[[scan_modify]]
+id = "DeepRootResource"
+asset = "/Game/Data/ScanData/Resource/DA_DeepRootResource_ScanData.DA_DeepRootResource_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "Enamel"
+asset = "/Game/Data/ScanData/Resource/DA_Enamel_ScanData.DA_Enamel_ScanData"
+scan_duration = 3.2
+num_required = 2
+
+[[scan_modify]]
+id = "FerrofluidCrystal"
+asset = "/Game/Data/ScanData/Resource/DA_FerrofluidCrystal_ScanData.DA_FerrofluidCrystal_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "Fordite"
+asset = "/Game/Data/ScanData/Resource/DA_Fordite_ScanData.DA_Fordite_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "FreesiaPlant"
+asset = "/Game/Data/ScanData/Resource/DA_FreesiaPlant_ScanData.DA_FreesiaPlant_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "Fulgurite"
+asset = "/Game/Data/ScanData/Resource/DA_Fulgurite_ScanData.DA_Fulgurite_ScanData"
+scan_duration = 3.2
+num_required = 2
+
+[[scan_modify]]
+id = "GatewayCrystal"
+asset = "/Game/Data/ScanData/Resource/DA_GatewayCrystal_ScanData.DA_GatewayCrystal_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "GatewaySpire"
+asset = "/Game/Data/ScanData/Resource/DA_GatewaySpire_ScanData.DA_GatewaySpire_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "Germanium"
+asset = "/Game/Data/ScanData/Resource/DA_Germanium_ScanData.DA_Germanium_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "Gold"
+asset = "/Game/Data/ScanData/Resource/DA_Gold_ScanData.DA_Gold_ScanData"
+scan_duration = 2.5
+num_required = 1
+
+[[scan_modify]]
+id = "Lead"
+asset = "/Game/Data/ScanData/Resource/DA_Lead_ScanData.DA_Lead_ScanData"
+scan_duration = 2.5
+num_required = 1
+
+[[scan_modify]]
+id = "Lithium"
+asset = "/Game/Data/ScanData/Resource/DA_Lithium_ScanData.DA_Lithium_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "LuciferRotsac"
+asset = "/Game/Data/ScanData/Resource/DA_LuciferRotsac_ScanData.DA_LuciferRotsac_ScanData"
+scan_duration = 2.5
+num_required = 2
+
+[[scan_modify]]
+id = "MetalSalvage"
+asset = "/Game/Data/ScanData/Resource/DA_MetalSalvage_ScanData.DA_MetalSalvage_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "NeedlerSHarkNeedle"
+asset = "/Game/Data/ScanData/Resource/DA_NeedlerSHarkNeedle_ScanData.DA_NeedlerSHarkNeedle_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "Nickel"
+asset = "/Game/Data/ScanData/Resource/DA_Nickel_ScanData.DA_Nickel_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "NutrientBlock"
+asset = "/Game/Data/ScanData/Resource/DA_NutrientBlock_ScanData.DA_NutrientBlock_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "PlantMatter"
+asset = "/Game/Data/ScanData/Resource/DA_PlantMatter_ScanData.DA_PlantMatter_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "Plasteel"
+asset = "/Game/Data/ScanData/Resource/DA_Plasteel_ScanData.DA_Plasteel_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "PrismaticShell"
+asset = "/Game/Data/ScanData/Resource/DA_PrismaticShell_ScanData.DA_PrismaticShell_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "PuddingUrchin"
+asset = "/Game/Data/ScanData/Resource/DA_PuddingUrchin_ScanData.DA_PuddingUrchin_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "Quartz"
+asset = "/Game/Data/ScanData/Resource/DA_Quartz_ScanData.DA_Quartz_ScanData"
+scan_duration = 2.5
+num_required = 1
+
+[[scan_modify]]
+id = "Resource_BioMass"
+asset = "/Game/Data/ScanData/Resource/DA_Resource_BioMass_ScanData.DA_Resource_BioMass_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "Salt"
+asset = "/Game/Data/ScanData/Resource/DA_Salt_ScanData.DA_Salt_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "SensorPod"
+asset = "/Game/Data/ScanData/Resource/DA_SensorPod_ScanData.DA_SensorPod_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "ShellPiece"
+asset = "/Game/Data/ScanData/Resource/DA_ShellPiece_ScanData.DA_ShellPiece_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "Silver"
+asset = "/Game/Data/ScanData/Resource/DA_Silver_ScanData.DA_Silver_ScanData"
+scan_duration = 2.5
+num_required = 1
+
+[[scan_modify]]
+id = "SlugOoze"
+asset = "/Game/Data/ScanData/Resource/DA_SlugOoze_ScanData.DA_SlugOoze_ScanData"
+scan_duration = 2.8
+num_required = 1
+
+[[scan_modify]]
+id = "Strontium"
+asset = "/Game/Data/ScanData/Resource/DA_Strontium_ScanData.DA_Strontium_ScanData"
+scan_duration = 3.2
+num_required = 2
+
+[[scan_modify]]
+id = "Sulfur"
+asset = "/Game/Data/ScanData/Resource/DA_Sulfur_ScanData.DA_Sulfur_ScanData"
+scan_duration = 3.0
+num_required = 2
+
+[[scan_modify]]
+id = "Titanium"
+asset = "/Game/Data/ScanData/Resource/DA_Titanium_ScanData.DA_Titanium_ScanData"
+scan_duration = 2.5
+num_required = 1
+
+[[scan_modify]]
+id = "Troilite"
+asset = "/Game/Data/ScanData/Resource/DA_Troilite_ScanData.DA_Troilite_ScanData"
+scan_duration = 2.8
+num_required = 1

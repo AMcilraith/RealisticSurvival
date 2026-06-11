@@ -1,0 +1,12 @@
+[[recipe_modify]]
+id = "Axum_Jar_Small"
+name = "AxumJarSmall"
+description = "AxumJarSmallDescription"
+category = "BuilderFurniture_Axum_Category"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Copper = 1
+
+[[recipe_modify.outputs]]
+Axum_Jar_Small = 1

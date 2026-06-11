@@ -1,0 +1,19 @@
+[[recipe_modify]]
+id = "TableDining"
+name = "DiningTable"
+description = "DiningTableDescription"
+category = "BuilderFurnitureCategory"
+ordering_index = 4
+DefaultRecipeState = "Locked"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+scan_data = ["DiningTable"]
+
+[[recipe_modify.ingredients]]
+Titanium = 2
+Glass = 1
+
+[[recipe_modify.outputs]]
+TableDining = 1

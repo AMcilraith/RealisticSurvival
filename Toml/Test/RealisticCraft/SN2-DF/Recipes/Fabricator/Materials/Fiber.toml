@@ -1,0 +1,13 @@
+[[recipe_modify]]
+id = "Fiber"
+name = "Fiber"
+description = "Plant-like matter extruded into a continuous polymer strand using Raion extract. Closer to plastic or latex than cellulose. Surprisingly strong."
+category = "ResourcesElectronics"
+ordering_index = 30
+
+[[recipe_modify.ingredients]]
+PlantMatter = 2
+AcidAnemone_AcidSac = 1
+
+[[recipe_modify.outputs]]
+Fiber = 1

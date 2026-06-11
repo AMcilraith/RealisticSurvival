@@ -1,0 +1,18 @@
+[[recipe_modify]]
+id = "BaseSignal"
+name = "BaseSignal"
+description = "BaseSignalDescription"
+category = "BuilderUtilityExternalCategory"
+DefaultRecipeState = "Locked"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+pickup_items = ["Builder"]
+
+[[recipe_modify.ingredients]]
+Titanium = 1
+Copper = 1
+
+[[recipe_modify.outputs]]
+BaseSignal = 1

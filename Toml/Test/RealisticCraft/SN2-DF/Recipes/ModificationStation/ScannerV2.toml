@@ -1,0 +1,23 @@
+[[recipe_modify]]
+id = "ScannerV2"
+name = "Bioscanner"
+description = "Scanner base fitted with Enameled Glass deep-scan optics and Conduit Crystal signal processors. Reads Axum material signatures and Protean biology. Generates alien blueprints and biomods."
+category = "ToolUpgrades"
+ordering_index = 40
+crafting_time = 3.0
+DefaultRecipeState = "Locked"
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+scan_data = ["Tools_SuperScanner"]
+
+[[recipe_modify.ingredients]]
+Scanner = 1
+EnameledGlass = 1
+ConduitCrystal = 2
+Atacamite = 2
+ComputerChipMk2 = 1
+WiringKit = 1
+
+[[recipe_modify.outputs]]
+ScannerV2 = 1

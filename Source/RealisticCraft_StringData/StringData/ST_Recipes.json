@@ -1,0 +1,437 @@
+{
+  "$type": "UAssetAPI.UAsset, UAssetAPI",
+  "Info": "Serialized with UAssetAPI 1.1.0 (8b8687a)",
+  "NameMap": [
+    "Comment",
+    "Locked",
+    "ST_Recipes",
+    "/Game/StringTables/ST_Recipes",
+    "/Script/CoreUObject",
+    "Package",
+    "/Script/Engine",
+    "Class",
+    "StringTable",
+    "Default__StringTable"
+  ],
+  "CustomSerializationFlags": "None",
+  "UseSeparateBulkDataFiles": true,
+  "IsUnversioned": true,
+  "FileVersionLicenseeUE": 0,
+  "ObjectVersion": "VER_UE4_CORRECT_LICENSEE_FLAG",
+  "ObjectVersionUE5": "OS_SUB_OBJECT_SHADOW_SERIALIZATION",
+  "CustomVersionContainer": [
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{375EC13C-06E4-48FB-B500-84F0262A717E}",
+      "FriendlyName": "FCoreObjectVersion",
+      "Version": 4,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{E4B068ED-F494-42E9-A231-DA0B2E46BB41}",
+      "FriendlyName": "FEditorObjectVersion",
+      "Version": 40,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{CFFC743F-43B0-4480-9391-14DF171D2073}",
+      "FriendlyName": "FFrameworkObjectVersion",
+      "Version": 37,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{7B5AE74C-D270-4C10-A958-57980B212A5A}",
+      "FriendlyName": "FSequencerObjectVersion",
+      "Version": 13,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{29E575DD-E0A3-4627-9D10-D276232CDCEA}",
+      "FriendlyName": "FAnimPhysObjectVersion",
+      "Version": 17,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{601D1886-AC64-4F84-AA16-D3DE0DEAC7D6}",
+      "FriendlyName": "FFortniteMainBranchObjectVersion",
+      "Version": 207,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC}",
+      "FriendlyName": "FNiagaraObjectVersion",
+      "Version": 1,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{717F9EE7-E9B0-493A-88B3-91321B388107}",
+      "FriendlyName": "FAssetRegistryVersion",
+      "Version": 17,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{9C54D522-A826-4FBE-9421-074661B482D0}",
+      "FriendlyName": "FReleaseObjectVersion",
+      "Version": 44,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{E7086368-6B23-4C58-8439-1B7016265E91}",
+      "FriendlyName": "FFortniteReleaseBranchCustomObjectVersion",
+      "Version": 17,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{D89B5E42-24BD-4D46-8412-ACA8DF641779}",
+      "FriendlyName": "FUE5ReleaseStreamObjectVersion",
+      "Version": 56,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{FCF57AFA-5076-4283-B9A9-E658FFA02D32}",
+      "FriendlyName": "FNiagaraCustomVersion",
+      "Version": 92,
+      "IsSerialized": false
+    }
+  ],
+  "SoftObjectPathList": [],
+  "GatherableTextData": null,
+  "Exports": [
+    {
+      "$type": "UAssetAPI.ExportTypes.StringTableExport, UAssetAPI",
+      "Table": {
+        "TableNamespace": "ST_Recipes",
+        "Value": [
+          [
+            "PinRecipe",
+            "Pin Recipe"
+          ],
+          [
+            "UnpinRecipe",
+            "Unpin Recipe"
+          ],
+          [
+            "CraftRecipe",
+            "Craft"
+          ],
+          [
+            "UnpinAll",
+            "Unpin All"
+          ],
+          [
+            "UWESurvivalAttributeSet.Food",
+            "Food"
+          ],
+          [
+            "UWESurvivalAttributeSet.Water",
+            "Water"
+          ],
+          [
+            "UWESurvivalAttributeSet.Health",
+            "Health"
+          ],
+          [
+            "UWEHealthAttributeSet.Health",
+            "Health"
+          ],
+          [
+            "TitaniumFromSalvage",
+            "Salvaged Titanium"
+          ],
+          [
+            "TitaniumFromSalvageDescription",
+            "Crudely convert salvage into raw titanium."
+          ],
+          [
+            "SilverFromGold",
+            "Silver \r\n(from Gold)"
+          ],
+          [
+            "SilverFromGoldDescription",
+            "Silver processed from aurostibite gold ore."
+          ],
+          [
+            "GermaniumFromLead",
+            "Germanium\r\n(from Lead, Atacamite)"
+          ],
+          [
+            "GermaniumFromLeadDescription",
+            "Lead and Atacamite processed into a semiconducting Germanium substitute. A heavier, corrosion-resistant alternative for advanced fabrication."
+          ],
+          [
+            "CopperFromSilver",
+            "Copper \r\n(from Silver)"
+          ],
+          [
+            "CopperFromSilverDescription",
+            "Copper processed from argentite silver ore."
+          ],
+          [
+            "GreaseFromHalfmoon",
+            "Grease \r\n(from Halfmoons)"
+          ],
+          [
+            "GreaseFromHalfmoonDescription",
+            "Refined oils from local Halfmoon. Cellular contaminants removed. Active lipids stabilized. Yields one unit of Grease per oil unit."
+          ],
+          [
+            "GermaniumfromSilver",
+            "Germanium\r\n(from Silver, Celestine)"
+          ],
+          [
+            "GermaniumfromSilverDescription",
+            "Silver and Celestine refined into a semiconducting Germanium substitute. Highly efficient for advanced microelectronics and structural baffling."
+          ],
+          [
+            "CopperfromTitanium",
+            "Copper \r\n(from Titanium)"
+          ],
+          [
+            "CopperfromTitaniumDescription",
+            "Copper processed from rutile and anatase titanium ores. Very inefficient, low yield."
+          ],
+          [
+            "LockerUnlockedNotificationOverride",
+            "Locker Unlocked!"
+          ],
+          [
+            "PoliticalConsciousnessRecipeUnlockNotification",
+            "Blueprint Unlocked!"
+          ],
+          [
+            "PentToMildAcid",
+            "Mild Acid \r\n(from Pents)"
+          ],
+          [
+            "PentToMildAcidDescription",
+            "Weak acid extracted from Pent biological matter in the Processor. Comparable yield to Acid Sac method. Useful alternate source during early surface operations."
+          ],
+          [
+            "SulfurGoldToStrongAcid",
+            "Strong Acid \r\n(from Gold, Sulfur, Lead)"
+          ],
+          [
+            "SulfurGoldToStrongAcidDescription",
+            "Gold, Sulfur and Lead reduction creating Strong Acids capable for use in etching electronic components and other useful industrial tasks."
+          ],
+          [
+            "NecroleiToStrongAcid",
+            "Strong Acid \r\n(from Necrolei Cyst, Lead)"
+          ],
+          [
+            "NecroleiToStrongAcidDescription",
+            "Necrolei Cyst and Lead reduction creating Strong Acids capable for use in etching electronic components and other useful industrial tasks."
+          ],
+          [
+            "WaterFromPlantMatter",
+            "Water and Salt\r\n(from Fibrous Pulp)"
+          ],
+          [
+            "WaterFromPlantMatterDescription",
+            "Fibrous plant-like matter compressed and heated to extract cellular moisture. This process also yields 2 units of Salt. Less efficient than Water Slug processing, but uses widely available plant-like biomass."
+          ],
+          [
+            "WaterProcessorDescription",
+            "Fibrous plant-like matter compressed and heated to extract cellular moisture. This process also yields 2 units of Salt. Less efficient than Water Slug processing, but uses widely available plant-like biomass."
+          ],
+          [
+            "MildAcidFromAcidAnemonesProcessor",
+            "Mild Acid \r\n(from Acidic Raion)"
+          ],
+          [
+            "MildAcidFromAcidAnemonesProcessorDescription",
+            "Acidic Raion Sac extract batch-processed under Processor pressure using Copper as a catalyst. Higher per-unit purity than Fabricator method. Preferred for downstream chemistry and electrochemical work."
+          ],
+          [
+            "MildAcidProcessorConversionDescription",
+            "Acidic Raion Sac extract batch-processed under Processor pressure using Copper as a catalyst. Higher per-unit purity than Fabricator method. Preferred for downstream chemistry and electrochemical work."
+          ],
+          [
+            "BiofuelBlockFromPents",
+            "Biofuel Block\r\n(from Pents)"
+          ],
+          [
+            "BiofuelBlockFromPentsDescription",
+            "Condensed, space-efficient fuel suitable for use in a Bioreactor. Produced at the Processor from Pent biological matter."
+          ],
+          [
+            "BiofuelBlockFromFibrousPulp",
+            "Biofuel Block\r\n(from Fibrous Pulp)"
+          ],
+          [
+            "BiofuelBlockFromFibrousPulpDescription",
+            "Condensed, space-efficient fuel suitable for use in a Bioreactor. Produced at the Processor from fibrous plant pulp."
+          ],
+          [
+            "BiofuelBlockFromCrabFeces",
+            "Biofuel Block\r\n(from Crab Feces)"
+          ],
+          [
+            "BiofuelBlockFromCrabFecesDescription",
+            "Condensed, space-efficient fuel suitable for use in a Bioreactor. Produced at the Processor from crab feces."
+          ],
+          [
+            "GlassFromSalt",
+            "Glass \r\n(from Salt, Lead)"
+          ],
+          [
+            "GlassFromSaltDescription",
+            "Lead and Salt, pressure-fused into Glass through silication. Hard, clear, and structurally tough. Alternative to Quartz Glass when Lead and Salt are more readily available."
+          ]
+        ]
+      },
+      "Data": [],
+      "ObjectGuid": null,
+      "SerializationControl": "NoExtension",
+      "Operation": "None",
+      "HasLeadingFourNullBytes": false,
+      "ObjectName": "ST_Recipes",
+      "OuterIndex": 0,
+      "ClassIndex": -1,
+      "SuperIndex": 0,
+      "TemplateIndex": -3,
+      "ObjectFlags": "RF_Public, RF_Standalone, RF_Transactional",
+      "SerialSize": 3824,
+      "SerialOffset": 696,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": true,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [],
+      "CreateBeforeSerializationDependencies": [],
+      "SerializationBeforeCreateDependencies": [-1, -3],
+      "CreateBeforeCreateDependencies": [],
+      "Extras": "HwAAAAoAAABQaW5SZWNpcGUAAQAAAAEAAAAAAAAABQAAAFRydWUADAAAAFVucGluUmVjaXBlAAEAAAABAAAAAAAAAAUAAABUcnVlAAwAAABDcmFmdFJlY2lwZQABAAAAAQAAAAAAAAAFAAAAVHJ1ZQAJAAAAVW5waW5BbGwAAQAAAAEAAAAAAAAABQAAAFRydWUAHQAAAFVXRVN1cnZpdmFsQXR0cmlidXRlU2V0LkZvb2QAAQAAAAEAAAAAAAAABQAAAFRydWUAHgAAAFVXRVN1cnZpdmFsQXR0cmlidXRlU2V0LldhdGVyAAEAAAABAAAAAAAAAAUAAABUcnVlAB8AAABVV0VTdXJ2aXZhbEF0dHJpYnV0ZVNldC5IZWFsdGgAAQAAAAEAAAAAAAAABQAAAFRydWUAHQAAAFVXRUhlYWx0aEF0dHJpYnV0ZVNldC5IZWFsdGgAAQAAAAEAAAAAAAAABQAAAFRydWUAFAAAAFRpdGFuaXVtRnJvbVNhbHZhZ2UAAQAAAAEAAAAAAAAABQAAAFRydWUAHwAAAFRpdGFuaXVtRnJvbVNhbHZhZ2VEZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAVHJ1ZQAPAAAAU2lsdmVyRnJvbUdvbGQAAQAAAAEAAAAAAAAABQAAAFRydWUAGgAAAFNpbHZlckZyb21Hb2xkRGVzY3JpcHRpb24AAQAAAAEAAAAAAAAABQAAAFRydWUAHQAAAEdlcm1hbml1bUZyb21MZWFkRGVzY3JpcHRpb24AAQAAAAEAAAAAAAAABQAAAFRydWUAEgAAAEdlcm1hbml1bUZyb21MZWFkAAEAAAABAAAAAAAAAAUAAABUcnVlABwAAABDb3BwZXJGcm9tU2lsdmVyRGVzY3JpcHRpb24AAQAAAAEAAAAAAAAABQAAAFRydWUAEQAAAENvcHBlckZyb21TaWx2ZXIAAQAAAAEAAAAAAAAABQAAAFRydWUAEwAAAEdyZWFzZUZyb21IYWxmbW9vbgABAAAAAQAAAAAAAAAFAAAAVHJ1ZQAeAAAAR3JlYXNlRnJvbUhhbGZtb29uRGVzY3JpcHRpb24AAQAAAAEAAAAAAAAABQAAAFRydWUAFAAAAEdlcm1hbml1bWZyb21TaWx2ZXIAAQAAAAEAAAAAAAAABQAAAFRydWUAHwAAAEdlcm1hbml1bWZyb21TaWx2ZXJEZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAVHJ1ZQATAAAAQ29wcGVyZnJvbVRpdGFuaXVtAAEAAAABAAAAAAAAAAUAAABUcnVlAB4AAABDb3BwZXJmcm9tVGl0YW5pdW1EZXNjcmlwdGlvbgABAAAAAQAAAAAAAAAFAAAAVHJ1ZQAjAAAATG9ja2VyVW5sb2NrZWROb3RpZmljYXRpb25PdmVycmlkZQABAAAAAQAAAAAAAAAFAAAAVHJ1ZQAvAAAAUG9saXRpY2FsQ29uc2Npb3VzbmVzc1JlY2lwZVVubG9ja05vdGlmaWNhdGlvbgABAAAAAQAAAAAAAAAFAAAAVHJ1ZQAPAAAAUGVudFRvTWlsZEFjaWQAAQAAAAEAAAAAAAAABQAAAFRydWUAFwAAAFN1bGZ1ckdvbGRUb1N0cm9uZ0FjaWQAAQAAAAEAAAAAAAAABQAAAFRydWUAFQAAAFdhdGVyRnJvbVBsYW50TWF0dGVyAAEAAAABAAAAAAAAAAUAAABUcnVlACIAAABNaWxkQWNpZEZyb21BY2lkQW5lbW9uZXNQcm9jZXNzb3IAAQAAAAEAAAAAAAAABQAAAFRydWUAIQAAAEJpb2Z1ZWxCbG9ja0Zyb21QZW50c0Rlc2NyaXB0aW9uAAEAAAAAAAAAAAAAAAAAAAAWAAAAQmlvZnVlbEJsb2NrRnJvbVBlbnRzAAEAAAAAAAAAAAAAAAAAAAAcAAAAQmlvZnVlbEJsb2NrRnJvbUZpYnJvdXNQdWxwAAEAAAAAAAAAAAAAAAAAAAA="
+    }
+  ],
+  "SearchableNames": null,
+  "ImportTypeHierarchies": null,
+  "MetaData": null,
+  "Thumbnails": null,
+  "WorldTileInfo": null,
+  "AppendedNullBytes": 0,
+  "OtherAssetsFailedToAccess": [],
+  "LegacyFileVersion": -9,
+  "DataResourceVersion": "Invalid",
+  "DataResources": null,
+  "UsesEventDrivenLoader": true,
+  "WillSerializeNameHashes": true,
+  "Imports": [
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "StringTable",
+      "OuterIndex": -2,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Script/Engine",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Default__StringTable",
+      "OuterIndex": -2,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "StringTable",
+      "PackageName": null,
+      "bImportOptional": false
+    }
+  ],
+  "DependsMap": [[]],
+  "SoftPackageReferenceList": null,
+  "AssetRegistryDependencyDataOffset": -1,
+  "AssetRegistryRecords": [],
+  "ImportBits": null,
+  "SoftPackageBits": null,
+  "ExtraPackageDependencies": null,
+  "BulkData": null,
+  "AdditionalFiles": "",
+  "Trailer": null,
+  "ValorantGarbageData": null,
+  "SeaOfThievesGarbageData": null,
+  "Generations": [
+    {
+      "$type": "UAssetAPI.FGenerationInfo, UAssetAPI",
+      "ExportCount": 1,
+      "NameCount": 10
+    }
+  ],
+  "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+  "PersistentGuid": "{00000000-0000-0000-0000-000000000000}",
+  "RecordedEngineVersion": {
+    "$type": "UAssetAPI.FEngineVersion, UAssetAPI",
+    "Major": 0,
+    "Minor": 0,
+    "Patch": 0,
+    "Changelist": 0,
+    "Branch": null
+  },
+  "RecordedCompatibleWithEngineVersion": {
+    "$type": "UAssetAPI.FEngineVersion, UAssetAPI",
+    "Major": 0,
+    "Minor": 0,
+    "Patch": 0,
+    "Changelist": 0,
+    "Branch": null
+  },
+  "ChunkIDs": [],
+  "PackageSource": 0,
+  "FolderName": "/Game/StringTables/ST_Recipes",
+  "LocalizationId": null,
+  "SoftObjectPathsCount": 0,
+  "SoftObjectPathsOffset": 488,
+  "SearchableNamesOffset": 0,
+  "ThumbnailTableOffset": 0,
+  "ImportTypeHierarchiesCount": 0,
+  "ImportTypeHierarchiesOffset": 0,
+  "SavedHash": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+  "CompressionFlags": 0,
+  "AdditionalPackagesToCook": [],
+  "NamesReferencedFromExportDataCount": 4,
+  "PayloadTocOffset": -1,
+  "DataResourceOffset": -1,
+  "doWeHaveAssetRegistryData": true,
+  "doWeHaveWorldTileInfo": false,
+  "PackageFlags": "PKG_Cooked, PKG_UnversionedProperties, PKG_RequiresLocalizationGather, PKG_FilterEditorOnly",
+  "HasUnversionedProperties": true,
+  "IsFilterEditorOnly": true,
+  "IsPreDependencyFormat": true
+}

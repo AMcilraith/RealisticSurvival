@@ -1,0 +1,13 @@
+[[recipe_modify]]
+id = "Tailing_Jar_Coral_Small"
+name = "TailingJarCoralSmall"
+description = "TailingJarCoralSmallDescription"
+category = "BuilderFurniture_Tailing_Category"
+ordering_index = 5
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+PlateCoral = 1
+
+[[recipe_modify.outputs]]
+Tailing_Jar_Coral_Small = 1

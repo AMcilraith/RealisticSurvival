@@ -1,0 +1,13 @@
+[[recipe_modify]]
+id = "SugarAnalog"
+name = "Sugar of Saturn"
+description = "Lead-Salt compound. Activates sweet taste receptors via neurotoxic pathway. Safe at recommended serving sizes."
+category = "SustenanceProcessedFood"
+crafting_time = 5.0
+
+[[recipe_modify.ingredients]]
+PlateCoral = 2
+Lead = 1
+
+[[recipe_modify.outputs]]
+SugarAnalog = 2

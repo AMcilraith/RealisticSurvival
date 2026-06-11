@@ -1,0 +1,19 @@
+[[recipe_modify]]
+id = "CeilingLight_Rect_A"
+name = "RectangularCeilingLight"
+description = "RectangularCeilingLightDescription"
+category = "BuilderBaseObject_Lighting"
+ordering_index = 1
+DefaultRecipeState = "Locked"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+scan_data = ["BasePiece_CeilingLightSmall"]
+
+[[recipe_modify.ingredients]]
+Titanium = 2
+Quartz = 2
+
+[[recipe_modify.outputs]]
+CeilingLight_Rect_A = 1

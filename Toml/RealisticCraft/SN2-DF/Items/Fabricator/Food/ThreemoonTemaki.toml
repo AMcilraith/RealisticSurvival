@@ -1,0 +1,13 @@
+[[item_type_modify]]
+id = "ThreemoonTemaki"
+name = "Threemoon Temaki"
+description = "All three Halfmoon variants rolled in plant-like matter with Salt and brine. Statistically a complete meal."
+type_tag = "ItemType.Fuel"
+use_from_inventory = true
+gameplay_tags = ["ItemType.TunableData.BioFuelConsumption.Medium"]
+replace_gameplay_tags = true
+[item_type_modify.tunable_data]
+"ItemType.TunableData.Food" = 80.0
+"ItemType.TunableData.Health" = 20.0
+"ItemType.TunableData.Water" = 40.0
+replace_tunable_data = true

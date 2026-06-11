@@ -1,0 +1,19 @@
+[[recipe]]
+id = "Fiber_To_FiberMesh"
+name = "Fiber Mesh"
+description = "Fiber strands loom-woven under Processor tension into reinforced mesh."
+category = "ProcessorRefinement"
+ordering_index = 5
+crafting_time = 60.0
+DefaultRecipeState = "Locked"
+icon = "ITEM FiberMesh"
+
+[[recipe.unlocking_rule]]
+set_id = "DefaultRuleSet"
+pickup_items = ["Fiber"]
+
+[[recipe.ingredients]]
+Fiber = 5
+
+[[recipe.outputs]]
+FiberMesh = 2

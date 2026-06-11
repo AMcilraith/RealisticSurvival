@@ -1,0 +1,19 @@
+[[recipe_modify]]
+id = "Poster_PioneerProgram"
+name = "PosterPioneerProgram"
+description = "PosterDescription"
+category = "BuilderPostersCategory"
+ordering_index = 11
+DefaultRecipeState = "Locked"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.unlocking_rule]]
+set_id = "DefaultRuleSet"
+scan_data = ["BasePiece_Poster_PioneerProgram"]
+
+[[recipe_modify.ingredients]]
+Titanium = 1
+Lead = 1
+
+[[recipe_modify.outputs]]
+Poster_PioneerProgram = 1

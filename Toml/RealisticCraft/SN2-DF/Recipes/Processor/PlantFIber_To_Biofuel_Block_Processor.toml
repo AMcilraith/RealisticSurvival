@@ -1,0 +1,13 @@
+[[recipe_modify]]
+id = "PlantFIber_To_Biofuel_Block_Processor"
+name = "Biofuel Block\n(from Fibrous Pulp)"
+description = "Condensed, space-efficient fuel suitable for use in a Bioreactor. Produced at the Processor from fibrous plant pulp."
+category = "ProcessorBiofuel"
+ordering_index = 1
+crafting_time = 120.0
+
+[[recipe_modify.ingredients]]
+PlantMatter = 6
+
+[[recipe_modify.outputs]]
+BiofuelBlock = 1

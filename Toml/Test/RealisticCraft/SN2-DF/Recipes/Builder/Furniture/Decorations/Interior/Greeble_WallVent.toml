@@ -1,0 +1,14 @@
+[[recipe_modify]]
+id = "Greeble_WallVent"
+name = "WallVent"
+description = "WallVentDescription"
+category = "BuilderGreebleCategory"
+ordering_index = 3
+DefaultRecipeState = "Locked"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 2
+
+[[recipe_modify.outputs]]
+Greeble_WallVent = 1

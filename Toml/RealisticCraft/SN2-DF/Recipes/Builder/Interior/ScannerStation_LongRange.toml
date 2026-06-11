@@ -1,0 +1,18 @@
+[[recipe_modify]]
+id = "ScannerStation_LongRange"
+name = "ScannerStationLongRange"
+description = "ScannerStationLongRangeDescription"
+category = "BuilderHabitatSystemsCategory"
+ordering_index = 2
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 4
+Quartz = 2
+Lead = 2
+Silver = 2
+ComputerChip = 1
+CopperWire = 1
+
+[[recipe_modify.outputs]]
+ScannerStation_LongRange = 1
