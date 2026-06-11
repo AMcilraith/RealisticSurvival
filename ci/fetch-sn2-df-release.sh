@@ -188,7 +188,8 @@ install_sn2_df_from_release() {
 
   local temp_root
   temp_root="$(mktemp -d "${TMPDIR:-/tmp}/sn2-df-release-XXXXXX")"
-  trap 'rm -rf "$temp_root"' RETURN
+  # Capture path in the trap string; RETURN runs after locals are unset under set -u.
+  trap 'rm -rf "'"$temp_root"'"' RETURN
 
   local download_path="$temp_root/$asset_name"
   download_asset "$asset_json" "$download_path"

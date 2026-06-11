@@ -10,6 +10,13 @@ import zipfile
 from pathlib import Path
 
 
+def extract_tar(archive: tarfile.TarFile, dest_dir: Path) -> None:
+    if sys.version_info >= (3, 12):
+        archive.extractall(dest_dir, filter="data")
+    else:
+        archive.extractall(dest_dir)
+
+
 def is_zip(path: Path) -> bool:
     with path.open("rb") as handle:
         return handle.read(2) == b"PK"
@@ -56,7 +63,7 @@ def extract_archive(archive_path: Path, dest_dir: Path) -> None:
         return
 
     with tarfile.open(archive_path) as archive:
-        archive.extractall(dest_dir)
+        extract_tar(archive, dest_dir)
 
 
 def main() -> int:
