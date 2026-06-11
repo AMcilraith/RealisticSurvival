@@ -100,25 +100,6 @@ You can view most of the recipes in the Media section. Below, I will describe on
 
 Unpack and drop all files into the `/Subnautica2` folder. That should be it, as long as the requirements are installed.
 
----
-
-## GitHub Actions (CI)
-
-CI is workflow-only (bash steps on `windows-latest`; no PowerShell in pipelines).
-
-| Workflow | Trigger | Purpose |
-|----------|---------|---------|
-| **Package And Release** | Push to `main`/`master` (mod content paths) or manual | Check changes → package mods → GitHub release → bump `ci/MOD_VERSION` |
-| **Check Mod Changes** | Reusable | Detect changes under `Packaged/`, `Source/`, `Images/`, `Licence/` |
-| **Package Mods** | Reusable | Fetch SN2-DF, build paks with retoc, zip content mods |
-| **Publish GitHub Release** | Reusable | Create GitHub release with mod zip assets |
-| **Bump Mod Version** | Reusable | Commit next `ci/MOD_VERSION` after a successful GitHub release |
-| **Publish To Nexus** | **Manual only** (`workflow_dispatch`) | Upload mod zips to Nexus; requires `package_run_id` from a **Package And Release** run. Version comes from `version_override`, `release_version`, or `ci/MOD_VERSION` (first non-empty wins). |
-
-Nexus upload never runs on push. After **Package And Release** completes, run **Publish To Nexus** manually with the workflow run ID. Leave version fields empty to use `ci/MOD_VERSION`, or set `version_override` to publish under a different Nexus file version without repackaging.
-
----
-
 ## Requirements
 
 [UE4SS](https://www.nexusmods.com/subnautica2/mods/36) for Subnautica 2 is required for all included mods.
