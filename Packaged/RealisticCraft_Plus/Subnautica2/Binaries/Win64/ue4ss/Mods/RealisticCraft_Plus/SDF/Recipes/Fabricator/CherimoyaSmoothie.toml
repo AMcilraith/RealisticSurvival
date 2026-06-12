@@ -4,7 +4,7 @@ name = "Cherimoya Smoothie"
 description = "Blended Cherimoya fruit and Water Slug. A hearty and refreshing smoothie, but very slimy."
 category = "SustenanceWater"
 DefaultRecipeState = "Unlocked"
-icon = "FILE MOD Icons/T_Smoothie_Icon.png"
+icon = "ITEM MacaronCrisp"
 ordering_index = -99
 
 [[recipe.ingredients]]

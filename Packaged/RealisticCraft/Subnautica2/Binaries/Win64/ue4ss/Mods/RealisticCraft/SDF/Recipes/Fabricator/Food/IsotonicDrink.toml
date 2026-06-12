@@ -2,7 +2,7 @@
 id = "IsotonicDrink"
 name = "Isotonic Water"
 description = "Flash Slug extract in saline solution. Approximates the standard Alterra bodyprint electrolyte profile. Approximately."
-icon = "FILE MOD Icons/IsoWater.png"
+icon = "ITEM IsotonicDrink"
 category = "SustenanceWater"
 ordering_index = -98
 

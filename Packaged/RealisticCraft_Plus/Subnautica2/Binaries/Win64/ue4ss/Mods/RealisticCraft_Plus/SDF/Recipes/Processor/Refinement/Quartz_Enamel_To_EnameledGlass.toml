@@ -5,12 +5,7 @@ description = "Quartz and Enamel pressure-fused into reinforced Enameled Glass."
 category = "ProcessorRefinement"
 ordering_index = 7
 crafting_time = 120.0
-DefaultRecipeState = "Unlocked"
 icon = "ITEM EnameledGlass"
-
-[[recipe.unlocking_rule]]
-set_id = "DefaultRuleSet"
-pickup_items = ["Enamel"]
 
 [[recipe.ingredients]]
 Quartz = 3

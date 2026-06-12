@@ -4,7 +4,7 @@ name = "Oxy-Candle"
 description = "A portable, single-use chemical oxygen generator. Rapidly produces a concentrated stream of breathable O2 directly into your reserves without using a thermal flame."
 category = "Consumables"
 DefaultRecipeState = "Unlocked"
-icon = "FILE MOD Icons/T_OxyCandle_Icon.png"
+icon = "ITEM OxygenBottle"
 ordering_index = 5000
 
 [[recipe.ingredients]]

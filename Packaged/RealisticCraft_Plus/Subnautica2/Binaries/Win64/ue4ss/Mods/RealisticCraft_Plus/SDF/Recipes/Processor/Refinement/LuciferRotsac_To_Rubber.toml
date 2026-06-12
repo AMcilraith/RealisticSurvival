@@ -5,12 +5,7 @@ description = "Lucifer Rotsac polymer vulcanized with Mild Acid under sustained 
 category = "ProcessorRefinement"
 ordering_index = 4
 crafting_time = 90.0
-DefaultRecipeState = "Unlocked"
 icon = "ITEM Rubber"
-
-[[recipe.unlocking_rule]]
-set_id = "DefaultRuleSet"
-pickup_items = ["LuciferRotsac"]
 
 [[recipe.ingredients]]
 LuciferRotsac = 5

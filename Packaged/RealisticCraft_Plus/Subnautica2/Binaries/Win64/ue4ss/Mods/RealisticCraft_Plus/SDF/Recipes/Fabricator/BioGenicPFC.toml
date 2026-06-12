@@ -4,7 +4,7 @@ name = "Biogenic PFC Emulsion"
 description = "A liquid-breathing emulsion made from local bio-proteins that damages tissue, but provides a critical burst of emergency oxygen. Inhale through nose for maximum effect."
 category = "SustenanceWater"
 DefaultRecipeState = "Unlocked"
-icon = "FILE MOD Icons/T_Alcohol_Icon.png"
+icon = "ITEM CystSouffle"
 ordering_index = -97
 
 [[recipe.ingredients]]

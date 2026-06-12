@@ -2,15 +2,10 @@
 id = "CopperIngot_To_Copper"
 name = "Copper"
 description = "Copper Ingot milled and chipped back into raw copper ore."
-category = "ProcessorPlus_RawMaterials"
+category = "ProcessorRawMaterials"
 ordering_index = 2
 crafting_time = 45.0
-DefaultRecipeState = "Unlocked"
 icon = "ITEM Copper"
-
-[[recipe.unlocking_rule]]
-set_id = "DefaultRuleSet"
-pickup_items = ["CopperIngot"]
 
 [[recipe.ingredients]]
 CopperIngot = 1
