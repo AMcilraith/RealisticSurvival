@@ -3,7 +3,7 @@ id = "HalfmoontoGrease"
 name = "Grease \n(from Halfmoons)"
 description = "Refined oils from local Halfmoon. Cellular contaminants removed. Active lipids stabilized. Yields one unit of Grease per oil unit."
 category = "ProcessorExtraction"
-ordering_index = 10
+ordering_index = 5
 crafting_time = 120.0
 
 [[recipe_modify.ingredients]]

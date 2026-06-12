@@ -12,5 +12,4 @@ id = "TadpoleUpgrades"
 name = "Tadpole Upgrades"
 description = "Performance and capability upgrades for the Tadpole submersible."
 crafted_by = "ModificationStation"
-parent_category = "Vehicles"
 ordering_index = 1

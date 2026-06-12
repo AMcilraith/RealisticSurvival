@@ -3,7 +3,7 @@ id = "StrongAcidRecipe_SulfurGold"
 name = "Strong Acid \n(from Gold, Sulfur, Lead)"
 description = "Gold, Sulfur and Lead reduction creating Strong Acids capable for use in etching electronic components and other useful industrial tasks."
 category = "ProcessorExtraction"
-ordering_index = 7
+ordering_index = 2
 crafting_time = 60.0
 
 [[recipe_modify.ingredients]]

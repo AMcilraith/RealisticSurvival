@@ -5,7 +5,7 @@ description = "Gold Ingot shaved and granulated back into raw gold ore."
 category = "ProcessorPlus_RawMaterials"
 ordering_index = 4
 crafting_time = 60.0
-DefaultRecipeState = "Locked"
+DefaultRecipeState = "Unlocked"
 icon = "ITEM Gold"
 
 [[recipe.unlocking_rule]]

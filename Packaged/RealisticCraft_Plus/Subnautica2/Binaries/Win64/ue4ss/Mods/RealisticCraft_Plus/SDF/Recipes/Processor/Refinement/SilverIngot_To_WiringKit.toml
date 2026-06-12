@@ -5,7 +5,7 @@ description = "Silver Ingot drawn and sleeved with Rubber into a Wiring Kit harn
 category = "ProcessorRefinement"
 ordering_index = 6
 crafting_time = 75.0
-DefaultRecipeState = "Locked"
+DefaultRecipeState = "Unlocked"
 icon = "ITEM WiringKit"
 
 [[recipe.unlocking_rule]]

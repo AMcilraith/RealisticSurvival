@@ -5,7 +5,7 @@ description = "Fiber strands loom-woven under Processor tension into reinforced 
 category = "ProcessorRefinement"
 ordering_index = 5
 crafting_time = 60.0
-DefaultRecipeState = "Locked"
+DefaultRecipeState = "Unlocked"
 icon = "ITEM FiberMesh"
 
 [[recipe.unlocking_rule]]

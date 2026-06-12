@@ -5,7 +5,7 @@ description = "Titanium Ingot fractured under Processor stress back into raw tit
 category = "ProcessorPlus_RawMaterials"
 ordering_index = 1
 crafting_time = 45.0
-DefaultRecipeState = "Locked"
+DefaultRecipeState = "Unlocked"
 icon = "ITEM Titanium"
 
 [[recipe.unlocking_rule]]
