@@ -1,6 +1,0 @@
-[[recipe_modify]]
-id = "Beacon"
-
-[[recipe_modify.unlocking_rule]]
-set_id = "DefaultRuleSet"
-scan_data = ["Tools_Beacon"]
