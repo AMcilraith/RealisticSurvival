@@ -1,14 +1,3 @@
 [[recipe_modify]]
 id = "Salt_To_Glass_Processor"
-name = "Glass (x3)\n(from Salt, Lead)"
-description = "Lead and Salt, pressure-fused into Glass through silication. Hard, clear, and structurally tough. Alternative to Quartz Glass when Lead and Salt are more readily available."
 category = "ProcessorRefinement"
-ordering_index = 5
-crafting_time = 120.0
-
-[[recipe_modify.ingredients]]
-Salt = 2
-Lead = 1
-
-[[recipe_modify.outputs]]
-Glass = 3

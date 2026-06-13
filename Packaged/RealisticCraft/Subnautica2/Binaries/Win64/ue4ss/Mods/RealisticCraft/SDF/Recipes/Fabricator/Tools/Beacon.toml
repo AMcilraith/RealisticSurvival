@@ -1,19 +1,6 @@
 [[recipe_modify]]
 id = "Beacon"
-name = "Beacon_name"
-description = "Description"
-category = "PersonalTool"
-crafting_time = 2.0
 
 [[recipe_modify.unlocking_rule]]
 set_id = "DefaultRuleSet"
 scan_data = ["Tools_Beacon"]
-
-[[recipe_modify.ingredients]]
-Titanium = 1
-Copper = 1
-WaterSlug = 1
-Rubber = 1
-
-[[recipe_modify.outputs]]
-Beacon = 1

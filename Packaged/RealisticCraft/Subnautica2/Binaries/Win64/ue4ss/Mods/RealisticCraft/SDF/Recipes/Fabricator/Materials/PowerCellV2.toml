@@ -1,16 +1,3 @@
 [[recipe_modify]]
 id = "PowerCellV2"
-name = "Entangled Power Cell"
-description = "Ultra-high-capacity solid-state power source. Conduit Crystal matrix which is then acid-etched and doped with radioactive Strontium. Troilite for thermal regulation. The physics are real. The warranty is not."
 category = "ResourcesPower"
-ordering_index = 31
-crafting_time = 2.0
-
-[[recipe_modify.ingredients]]
-Titanium = 2
-Troilite = 2
-Strontium = 2
-ConduitCrystal = 4
-
-[[recipe_modify.outputs]]
-PowerCellV2 = 1

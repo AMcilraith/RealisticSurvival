@@ -1,15 +1,3 @@
 [[recipe_modify]]
 id = "AirBladder"
-name = "Air Bladder"
-description = "Titanium-framed rubber bladder. Rapid inflation for emergency ascent. Compressed air supply sufficient for approximately eight seconds. Use once. Ascend fast."
 category = "PersonalFins"
-ordering_index = 10000
-
-[[recipe_modify.ingredients]]
-Titanium = 2
-Rubber = 1
-WaterSlug = 2
-Fiber = 1
-
-[[recipe_modify.outputs]]
-AirBladder = 1

@@ -1,17 +1,3 @@
 [[recipe_modify]]
 id = "Rubber"
-name = "Rubber"
-description = "Vulcanized Lucifer Rotsac polymer treated with acid. Dense, flexible, and electrically inert. Primary non-metal insulator in fabrication chains."
 category = "ResourcesAdvancedMaterials"
-ordering_index = 50
-
-DefaultRecipeState = "Unlocked"
-
-remove_unlocking_rules = true
-
-[[recipe_modify.ingredients]]
-LuciferRotsac = 2
-MildAcid = 1
-
-[[recipe_modify.outputs]]
-Rubber = 1

@@ -1,17 +1,3 @@
 [[recipe_modify]]
 id = "MediumAirTank"
-name = "High Capacity Air Tank"
-description = "Plasteel-reinforced air tank. Expanded reservoir volume for extended dives. Do not exceed rated depth."
 category = "PersonalOxygenTanks"
-ordering_index = 41
-crafting_time = 2.5
-
-[[recipe_modify.ingredients]]
-OxygenTank_Small = 1
-Gold = 4
-Rubber = 2
-FiberMesh = 2
-PlasteelIngot = 1
-
-[[recipe_modify.outputs]]
-OxygenTank_Medium_EquippableItemType = 1

@@ -1,14 +1,4 @@
 [[recipe_modify]]
 id = "AcidSacToMildAcid"
-name = "Mild Acid (x2) \n(from Acidic Raion)"
-description = "Acidic Raion Sac extract batch-processed under Processor pressure using Copper as a catalyst. Higher per-unit purity than Fabricator method. Preferred for downstream chemistry and electrochemical work."
 category = "ProcessorExtraction"
 ordering_index = 3
-crafting_time = 30.0
-
-[[recipe_modify.ingredients]]
-AcidAnemone_AcidSac = 2
-Copper = 1
-
-[[recipe_modify.outputs]]
-MildAcid = 2

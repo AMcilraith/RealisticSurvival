@@ -1,13 +1,3 @@
 [[recipe_modify]]
 id = "CopperToCopperIngot"
-name = "Copper Ingot"
-description = "Copper ore smelted into a solid machining Ingot under Processor heat. Required for drawn wire and precision electrical components. GHS H400: mildly toxic to aquatic life. Life here remains untroubled."
 category = "Processor_Ingots"
-ordering_index = 25
-crafting_time = 30.0
-
-[[recipe_modify.ingredients]]
-Copper = 4
-
-[[recipe_modify.outputs]]
-CopperIngot = 1

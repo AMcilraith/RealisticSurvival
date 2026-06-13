@@ -1,16 +1,4 @@
 [[recipe_modify]]
 id = "IsotonicDrink"
-name = "Isotonic Water"
-description = "Flash Slug extract in saline solution. Approximates the standard Alterra bodyprint electrolyte profile. Approximately."
-icon = "ITEM IsotonicDrink"
 category = "SustenanceWater"
-ordering_index = -98
-
-[[recipe_modify.ingredients]]
-FlashSlug = 1
-Salt = 1
-CherimoyaRotsacFruit = 1
-SugarAnalog = 1
-
-[[recipe_modify.outputs]]
-IsotonicDrink = 1
+icon = "ITEM IsotonicDrink"

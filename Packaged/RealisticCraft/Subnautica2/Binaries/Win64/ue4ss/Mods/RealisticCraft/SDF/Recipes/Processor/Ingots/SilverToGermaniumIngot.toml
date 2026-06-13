@@ -1,14 +1,3 @@
 [[recipe_modify]]
 id = "SilverToGermaniumIngot"
-name = "Germanium\n(from Silver, Celestine)"
-description = "Silver and Celestine refined into a semiconducting Germanium substitute. Highly efficient for advanced microelectronics and structural baffling."
 category = "Processor_ValuableIngots"
-ordering_index = 60
-crafting_time = 120.0
-
-[[recipe_modify.ingredients]]
-Silver = 4
-Celestine = 1
-
-[[recipe_modify.outputs]]
-GermaniumIngot = 1

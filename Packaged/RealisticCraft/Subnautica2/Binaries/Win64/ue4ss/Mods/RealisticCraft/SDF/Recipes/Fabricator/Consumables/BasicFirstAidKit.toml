@@ -1,18 +1,7 @@
 [[recipe_modify]]
 id = "BasicFirstAidKit"
-name = "Basic First Aid Kit"
-description = "Compressed Raion Medigel dressing. Stabilizes mild trauma and surface wounds. Single use. Derived from Frontiersman emergency protocols."
-category = "Consumables"
-ordering_index = 10
-
 DefaultRecipeState = "Locked"
 
 [[recipe_modify.unlocking_rule]]
 set_id = "DefaultRuleSet"
 pickup_items = ["AcidAnemone_Medigel"]
-
-[[recipe_modify.ingredients]]
-AcidAnemone_Medigel = 2
-
-[[recipe_modify.outputs]]
-FirstAidKit_Basic = 1

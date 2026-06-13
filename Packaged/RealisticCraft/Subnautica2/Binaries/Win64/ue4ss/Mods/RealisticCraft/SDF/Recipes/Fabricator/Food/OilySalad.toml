@@ -1,14 +1,3 @@
 [[recipe_modify]]
 id = "OilySalad"
-name = "Oily Salad"
-description = "Compressed plant-like fiber in its own extracted hydrocarbon oil. Liminal flavor profile. Bowel effects unknown."
 category = "SustenanceSalads"
-
-[[recipe_modify.ingredients]]
-PlantMatter = 4
-Salt = 1
-CherimoyaRotsacFruit = 1
-LuciferRotsac = 1
-
-[[recipe_modify.outputs]]
-OilySalad = 2

@@ -1,14 +1,3 @@
 [[recipe_modify]]
 id = "PlasteelIngot_Processor"
-name = "Plasteel Ingot"
-description = "Bonelike matrix of Titanium and Ceramic. Self-healing. Stronger than strong."
 category = "Processor_ValuableIngots"
-ordering_index = 90
-crafting_time = 120.0
-
-[[recipe_modify.ingredients]]
-Titanium = 4
-Lithium = 1
-
-[[recipe_modify.outputs]]
-PlasteelIngot = 1

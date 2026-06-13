@@ -1,13 +1,3 @@
 [[recipe_modify]]
 id = "EnameledGlass"
-name = "Enameled Glass"
-description = "Celestine Glass fused with crushed Enamel. Structural reinforcement increases barometric tolerance. Required for deep-water viewports."
 category = "ResourcesRawMaterials"
-ordering_index = 25
-
-[[recipe_modify.ingredients]]
-Celestine = 4
-Enamel = 4
-
-[[recipe_modify.outputs]]
-EnameledGlass = 1
