@@ -1,6 +1,6 @@
 [[recipe]]
 id = "PlantMatter_To_Fiber"
-name = "Fiber"
+name = "Fiber (x3)"
 description = "Plant-like biomass extruded under sustained Processor heat into Fiber strands."
 category = "ProcessorRefinement"
 ordering_index = 3
@@ -12,4 +12,4 @@ PlantMatter = 5
 AcidAnemone_AcidSac = 2
 
 [[recipe.outputs]]
-Fiber = 2
+Fiber = 3

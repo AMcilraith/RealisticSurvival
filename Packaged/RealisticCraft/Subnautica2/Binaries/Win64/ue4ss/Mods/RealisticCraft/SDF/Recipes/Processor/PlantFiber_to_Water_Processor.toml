@@ -1,6 +1,6 @@
 [[recipe_modify]]
 id = "PlantFiber_to_Water_Processor"
-name = "Water and Salt\n(from Fibrous Pulp)"
+name = "Water (x1) and Salt (x2)\n(from Fibrous Pulp)"
 description = "Fibrous plant-like matter compressed and heated to extract cellular moisture. This process also yields 2 units of Salt. Less efficient than Water Slug processing, but uses widely available plant-like biomass."
 category = "ProcessorAlternateRecipes"
 ordering_index = 5

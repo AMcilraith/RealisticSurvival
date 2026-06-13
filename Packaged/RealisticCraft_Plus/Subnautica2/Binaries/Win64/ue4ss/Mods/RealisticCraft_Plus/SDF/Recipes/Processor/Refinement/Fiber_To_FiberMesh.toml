@@ -1,10 +1,10 @@
 [[recipe]]
 id = "Fiber_To_FiberMesh"
-name = "Fiber Mesh"
+name = "Fiber Mesh (x2)"
 description = "Fiber strands loom-woven under Processor tension into reinforced mesh."
 category = "ProcessorRefinement"
 ordering_index = 5
-crafting_time = 60.0
+crafting_time = 90.0
 icon = "ITEM FiberMesh"
 
 [[recipe.ingredients]]

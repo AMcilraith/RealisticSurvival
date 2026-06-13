@@ -1,6 +1,6 @@
 [[recipe]]
 id = "CopperIngot_To_CopperWire"
-name = "Copper Wire"
+name = "Copper Wire (x4)"
 description = "Copper Ingot drawn under Processor tension into insulated wire."
 category = "ProcessorRefinement"
 ordering_index = 2
@@ -9,7 +9,7 @@ icon = "ITEM CopperWire"
 
 [[recipe.ingredients]]
 CopperIngot = 1
-Fiber = 3
+Fiber = 2
 
 [[recipe.outputs]]
-CopperWire = 2
+CopperWire = 4

@@ -1,6 +1,6 @@
 [[recipe]]
 id = "GoldIngot_To_Gold"
-name = "Gold"
+name = "Gold (x3)"
 description = "Gold Ingot shaved and granulated back into raw gold ore."
 category = "ProcessorRawMaterials"
 ordering_index = 3

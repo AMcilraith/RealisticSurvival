@@ -1,6 +1,6 @@
 [[recipe]]
 id = "Quartz_Enamel_To_EnameledGlass"
-name = "Enameled Glass"
+name = "Enameled Glass (x2)"
 description = "Quartz and Enamel pressure-fused into reinforced Enameled Glass."
 category = "ProcessorRefinement"
 ordering_index = 7
@@ -12,4 +12,4 @@ Quartz = 3
 Enamel = 2
 
 [[recipe.outputs]]
-EnameledGlass = 1
+EnameledGlass = 2

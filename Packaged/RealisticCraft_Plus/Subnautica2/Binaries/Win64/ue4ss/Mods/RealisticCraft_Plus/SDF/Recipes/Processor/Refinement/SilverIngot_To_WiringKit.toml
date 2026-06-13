@@ -1,6 +1,6 @@
 [[recipe]]
 id = "SilverIngot_To_WiringKit"
-name = "Wiring Kit"
+name = "Wiring Kit (x2)"
 description = "Silver Ingot drawn and sleeved with Rubber into a Wiring Kit harness."
 category = "ProcessorRefinement"
 ordering_index = 6

@@ -1,6 +1,6 @@
 [[recipe]]
 id = "SilverIngot_To_Silver"
-name = "Silver"
+name = "Silver (x3)"
 description = "Silver Ingot drawn apart under Processor tension back into raw silver ore."
 category = "ProcessorRawMaterials"
 ordering_index = 4

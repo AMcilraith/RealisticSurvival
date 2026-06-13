@@ -1,6 +1,6 @@
 [[recipe]]
 id = "CopperIngot_To_Copper"
-name = "Copper"
+name = "Copper (x3)"
 description = "Copper Ingot milled and chipped back into raw copper ore."
 category = "ProcessorRawMaterials"
 ordering_index = 2

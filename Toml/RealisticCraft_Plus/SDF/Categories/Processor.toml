@@ -1,8 +1,0 @@
-# RealisticCraft_Plus processor categories.
-
-[[category]]
-id = "ProcessorPlus_RawMaterials"
-name = "Raw Materials"
-description = "Break machined ingots back down into ore and mineral feedstock."
-crafted_by = "Processor"
-ordering_index = 8

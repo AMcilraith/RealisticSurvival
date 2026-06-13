@@ -1,14 +1,15 @@
 [[recipe]]
 id = "LuciferRotsac_To_Rubber"
-name = "Rubber"
+name = "Rubber (x3)"
 description = "Lucifer Rotsac polymer vulcanized with Mild Acid under sustained Processor heat."
 category = "ProcessorRefinement"
 ordering_index = 4
-crafting_time = 90.0
+crafting_time = 60.0
 icon = "ITEM Rubber"
 
 [[recipe.ingredients]]
 LuciferRotsac = 5
+MildAcid = 2
 
 [[recipe.outputs]]
-Rubber = 2
+Rubber = 3
