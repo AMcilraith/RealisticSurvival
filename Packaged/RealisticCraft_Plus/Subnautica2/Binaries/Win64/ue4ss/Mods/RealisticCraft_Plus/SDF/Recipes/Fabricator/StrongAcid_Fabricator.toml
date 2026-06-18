@@ -1,7 +1,7 @@
 [[recipe]]
 id = "StrongAcid_Fab"
 name = "Strong Acid"
-description = "Traditional Sulfuric Acid reduction using Pent, Raion, Sulfur, and Lead reduction creating Strong Acids capable for use in etching electronic components and other useful industrial tasks."
+description = "Traditional Sulfuric Acid reduction using Pent, Sulfur, and Lead reduction creating Strong Acids capable for use in etching electronic components and other useful industrial tasks."
 category = "ResourcesBasicMaterials"
 DefaultRecipeState = "Unlocked"
 icon = "ITEM StrongAcid"
@@ -9,7 +9,6 @@ ordering_index = 2
 
 [[recipe.ingredients]]
 Pent01a = 2
-AcidAnemone_AcidSac = 2
 Lead = 1
 Sulfur = 1
 

@@ -1,11 +1,8 @@
+local config = require("config")
+
 local Hotbar = {}
 
 local VERBOSE_LOGGING = false
-
-local HOTBAR_START = 5
-local HOTBAR_MAX = 7
-local HOTBAR_INC = 1
-local HOTBAR_UPG_MAX = 3
 
 local function logVerbose(message)
     if VERBOSE_LOGGING then
@@ -89,8 +86,9 @@ function Hotbar.Apply(player)
     end
 
     local currentTier = math.max(0, math.floor(getHotbarUpgradeCount(player) or 0))
-    local cappedTier = math.min(currentTier, HOTBAR_UPG_MAX)
-    local hbTarget = math.min(HOTBAR_START + (cappedTier * HOTBAR_INC), HOTBAR_MAX)
+    local cappedTier = math.min(currentTier, config.hotbar.MaxUpgrades)
+    local hbTarget = math.min(config.hotbar.StartingSlots + (cappedTier * config.hotbar.Increment),
+        config.hotbar.MaxSlots)
 
     local toolbarComp = getToolbarComponent(player)
     if toolbarComp and toolbarComp:IsValid() then

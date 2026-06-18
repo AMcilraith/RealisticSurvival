@@ -1,11 +1,8 @@
+local config = require("config")
+
 local PlayerInventory = {}
 
 local VERBOSE_LOGGING = false
-
-local INV_START = 15
-local INV_MAX = 35
-local INV_INC = 5
-local INV_UPG_MAX = 4
 
 local function logVerbose(message)
     if VERBOSE_LOGGING then
@@ -71,9 +68,9 @@ local function getPlayerInventoryUpgradeCount(player)
             logVerbose(string.format("Raw upgrade tracker value read: %d", val))
 
             -- Dynamic tier parsing fallback logic:
-            if val >= INV_INC then
+            if val >= config.inventory.Increment then
                 -- Handle case where the tracker logs raw slot counts (5, 10, 15...)
-                count = math.floor(val / INV_INC)
+                count = math.floor(val / config.inventory.Increment)
             elseif val % 3 == 0 then
                 -- Handle case where the tracker logs old hardcoded game steps (3, 6, 9...)
                 count = math.floor(val / 3)
@@ -107,8 +104,9 @@ function PlayerInventory.Apply(player)
     end
 
     local currentTier = math.max(0, math.floor(getPlayerInventoryUpgradeCount(player) or 0))
-    local cappedTier = math.min(currentTier, INV_UPG_MAX)
-    local invTarget = math.min(INV_START + (cappedTier * INV_INC), INV_MAX)
+    local cappedTier = math.min(currentTier, config.inventory.MaxUpgrades)
+    local invTarget = math.min(config.inventory.StartingSlots + (cappedTier * config.inventory.Increment),
+        config.inventory.MaxSlots)
 
     local invComp = getInventoryComponent(player)
     if invComp and invComp:IsValid() then

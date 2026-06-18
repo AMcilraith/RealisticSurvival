@@ -4,13 +4,17 @@ local PassiveBiomods = {}
 
 local UNLOCKED_STATE = 1
 
-local INCREASE_TAG = { TagName = FName("EventTracker.IncreasePassiveBiomodSlots") }
-local PERMANENT_TAG = { TagName = FName("PermanentUpgrades.PassiveBiomodSlots") }
+local INCREASE_TAG = {
+    TagName = FName("EventTracker.IncreasePassiveBiomodSlots")
+}
+local PERMANENT_TAG = {
+    TagName = FName("PermanentUpgrades.PassiveBiomodSlots")
+}
 
 local lastModSlotsGranted = 0
 
 local function logVerbose(message)
-    if config.VerboseLogging then
+    if config.biomods.VerboseLogging then
         print(string.format("[RealisticStorage:PassiveBiomods] %s", message))
     end
 end
@@ -51,7 +55,7 @@ local function getPlayerState(player)
 end
 
 local function isCreatureBioScan(scanData)
-    if not config.ScansPerCreatureOnly then
+    if not config.biomods.ScansPerCreatureOnly then
         return true
     end
     local ok, fullName = pcall(function()
@@ -94,12 +98,12 @@ end
 
 local function milestoneSlotsForScanCount(scanCount)
     local slots = 0
-    for _, threshold in ipairs(config.PassiveBiomodMilestones) do
+    for _, threshold in ipairs(config.biomods.Milestones) do
         if scanCount >= threshold then
             slots = slots + 1
         end
     end
-    return math.min(slots, config.MaxModPassiveSlots)
+    return math.min(slots, config.biomods.MaxSlots)
 end
 
 function PassiveBiomods.Apply(player)
@@ -123,9 +127,8 @@ function PassiveBiomods.Apply(player)
     if modSlots > lastModSlotsGranted then
         local delta = modSlots - lastModSlotsGranted
         tracker:Notify(INCREASE_TAG, PERMANENT_TAG, delta)
-        logVerbose(string.format(
-            "Granted %d passive biomod slot(s) (%d creature bioscans, mod total %d).",
-            delta, scanCount, modSlots))
+        logVerbose(string.format("Granted %d passive biomod slot(s) (%d creature bioscans, mod total %d).", delta,
+            scanCount, modSlots))
         lastModSlotsGranted = modSlots
     end
 end

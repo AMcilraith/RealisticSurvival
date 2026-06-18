@@ -247,15 +247,15 @@
           ],
           [
             "WaterFromPlantMatter",
-            "Water (x1) and Salt (x2)\r\n(from Fibrous Pulp)"
+            "Water (x2) and Salt (x1)\r\n(from Fibrous Pulp)"
           ],
           [
             "WaterFromPlantMatterDescription",
-            "Fibrous plant-like matter compressed and heated to extract cellular moisture. This process also yields 2 units of Salt. Less efficient than Water Slug processing, but uses widely available plant-like biomass."
+            "Fibrous plant-like matter compressed and heated to extract cellular moisture. This process also yields a small amount Salt. Less efficient than Water Slug processing, but uses widely available plant-like biomass."
           ],
           [
             "WaterProcessorDescription",
-            "Fibrous plant-like matter compressed and heated to extract cellular moisture. This process also yields 2 units of Salt. Less efficient than Water Slug processing, but uses widely available plant-like biomass."
+            "Fibrous plant-like matter compressed and heated to extract cellular moisture. This process also yields a small amount Salt. Less efficient than Water Slug processing, but uses widely available plant-like biomass."
           ],
           [
             "MildAcidFromAcidAnemonesProcessor",
@@ -314,7 +314,7 @@
       "SuperIndex": 0,
       "TemplateIndex": -3,
       "ObjectFlags": "RF_Public, RF_Standalone, RF_Transactional",
-      "SerialSize": 6047,
+      "SerialSize": 6055,
       "SerialOffset": 696,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,

@@ -2,40 +2,35 @@
   "$type": "UAssetAPI.UAsset, UAssetAPI",
   "Info": "Serialized with UAssetAPI 1.1.0 (8b8687a)",
   "NameMap": [
-    "/Game/Data/CraftingRecipes/Categories/Processor/DA_ProcessorAlternateRecipes",
-    "/Game/Data/ItemType/DA_Water_ItemType",
-    "/Game/Data/ItemType/Resource/DA_PlantMatter_ItemType",
+    "/Game/Data/CraftingRecipes/Categories/Fabricator/DA_ResourcesBasicMaterials",
+    "/Game/Data/ItemType/DA_EnameledGlass_ItemType",
+    "/Game/Data/ItemType/DA_Glass_ItemType",
+    "/Game/Data/ItemType/Resource/DA_Enamel_ItemType",
     "/Game/StringTables/ST_Items",
     "/Game/StringTables/ST_Items.ST_Items",
-    "/Game/StringTables/ST_Recipes",
-    "/Game/StringTables/ST_Recipes.ST_Recipes",
-    "/Game/Utility/Editor/IconBaker/IconTextures/IconBaker_Sustenance/T_WaterBottle_Icon",
-    "DA_PlantMatter_ItemType",
-    "DA_ProcessorAlternateRecipes",
-    "DA_Water_ItemType",
+    "/Game/Utility/Editor/IconBaker/IconTextures/IconBaker_Misc/T_EnameledGlass_Icon_Temp",
+    "DA_Enamel_ItemType",
+    "DA_EnameledGlass_ItemType",
+    "DA_Glass_ItemType",
+    "DA_ResourcesBasicMaterials",
     "ST_Items",
-    "ST_Recipes",
-    "T_WaterBottle_Icon",
-    "DA_PlantFiber_to_Water_ProcessorRecipe",
-    "/Game/Data/CraftingRecipes/Processor/DA_PlantFiber_to_Water_ProcessorRecipe",
+    "T_EnameledGlass_Icon_Temp",
+    "DA_EnameledGlassRecipe",
+    "/Game/Data/CraftingRecipes/Fabricator/DA_EnameledGlassRecipe",
     "/Script/CoreUObject",
     "Package",
     "/Script/UWECrafting",
     "Class",
     "UWECraftingRecipe",
-    "/Game/Data/BaseBuilding/BuilderActions/DA_Processor_ConstructData",
-    "/Script/Subnautica2",
-    "SN2BuilderConstructActionData",
-    "DA_Processor_ConstructData",
     "/Script/Engine",
     "StringTable",
+    "/Game/Data/CraftingRecipes/ModificationStation/DA_Tadpole_CrushDepthUpgrade_01_Recipe",
+    "DA_Tadpole_CrushDepthUpgrade_01_Recipe",
     "Default__UWECraftingRecipe",
-    "/Game/Data/ItemType/Resource/DA_Salt_Itemtype",
-    "SoftObjectProperty",
-    "DA_Salt_Itemtype",
-    "/Game/Data/ItemType/Resource/DA_Salt_ItemType",
-    "DA_Salt_ItemTyp",
-    "DA_Salt_ItemType"
+    "/Script/UWEInventory",
+    "UWEItemType",
+    "/Game/Data/ItemType/Resource/DA_Celestine_ItemType",
+    "DA_Celestine_ItemType"
   ],
   "CustomSerializationFlags": "None",
   "UseSeparateBulkDataFiles": true,
@@ -151,7 +146,7 @@
           "$type": "UAssetAPI.PropertyTypes.Objects.TextPropertyData, UAssetAPI",
           "Flags": 0,
           "HistoryType": "StringTableEntry",
-          "TableId": "/Game/StringTables/ST_Recipes.ST_Recipes",
+          "TableId": "/Game/StringTables/ST_Items.ST_Items",
           "Namespace": null,
           "CultureInvariantString": null,
           "SourceFmt": null,
@@ -168,7 +163,7 @@
           "PropertyTagFlags": "None",
           "PropertyTypeName": null,
           "PropertyTagExtensions": "NoExtension",
-          "Value": "WaterFromPlantMatter"
+          "Value": "EnameledGlass"
         },
         {
           "$type": "UAssetAPI.PropertyTypes.Objects.TextPropertyData, UAssetAPI",
@@ -191,7 +186,7 @@
           "PropertyTagFlags": "None",
           "PropertyTypeName": null,
           "PropertyTagExtensions": "NoExtension",
-          "Value": "WaterProcessorDescription"
+          "Value": "EnameledGlassDescription"
         },
         {
           "$type": "UAssetAPI.PropertyTypes.Objects.SoftObjectPropertyData, UAssetAPI",
@@ -206,8 +201,8 @@
             "$type": "UAssetAPI.PropertyTypes.Objects.FSoftObjectPath, UAssetAPI",
             "AssetPath": {
               "$type": "UAssetAPI.PropertyTypes.Objects.FTopLevelAssetPath, UAssetAPI",
-              "PackageName": "/Game/Utility/Editor/IconBaker/IconTextures/IconBaker_Sustenance/T_WaterBottle_Icon",
-              "AssetName": "T_WaterBottle_Icon"
+              "PackageName": "/Game/Utility/Editor/IconBaker/IconTextures/IconBaker_Misc/T_EnameledGlass_Icon_Temp",
+              "AssetName": "T_EnameledGlass_Icon_Temp"
             },
             "SubPathString": null
           }
@@ -251,84 +246,8 @@
                     "$type": "UAssetAPI.PropertyTypes.Objects.FSoftObjectPath, UAssetAPI",
                     "AssetPath": {
                       "$type": "UAssetAPI.PropertyTypes.Objects.FTopLevelAssetPath, UAssetAPI",
-                      "PackageName": "/Game/Data/ItemType/DA_Water_ItemType",
-                      "AssetName": "DA_Water_ItemType"
-                    },
-                    "SubPathString": null
-                  }
-                },
-                {
-                  "$type": "UAssetAPI.PropertyTypes.Objects.IntPropertyData, UAssetAPI",
-                  "Name": "NumItems",
-                  "ArrayIndex": 0,
-                  "PropertyGuid": null,
-                  "IsZero": false,
-                  "PropertyTagFlags": "None",
-                  "PropertyTypeName": null,
-                  "PropertyTagExtensions": "NoExtension",
-                  "Value": 2
-                },
-                {
-                  "$type": "UAssetAPI.PropertyTypes.Structs.StructPropertyData, UAssetAPI",
-                  "StructType": "Vector",
-                  "SerializeNone": true,
-                  "StructGUID": "{00000000-0000-0000-0000-000000000000}",
-                  "SerializationControl": "NoExtension",
-                  "Operation": "None",
-                  "Name": "CollisionCheckSize",
-                  "ArrayIndex": 0,
-                  "PropertyGuid": null,
-                  "IsZero": true,
-                  "PropertyTagFlags": "None",
-                  "PropertyTypeName": null,
-                  "PropertyTagExtensions": "NoExtension",
-                  "Value": []
-                },
-                {
-                  "$type": "UAssetAPI.PropertyTypes.Objects.ArrayPropertyData, UAssetAPI",
-                  "ArrayType": "SoftObjectProperty",
-                  "DummyStruct": null,
-                  "Name": "ClassesToIgnoreForCollisionCheck",
-                  "ArrayIndex": 0,
-                  "PropertyGuid": null,
-                  "IsZero": false,
-                  "PropertyTagFlags": "None",
-                  "PropertyTypeName": null,
-                  "PropertyTagExtensions": "NoExtension",
-                  "Value": []
-                }
-              ]
-            },
-            {
-              "$type": "UAssetAPI.PropertyTypes.Structs.StructPropertyData, UAssetAPI",
-              "StructType": "CraftingRecipeOutput",
-              "SerializeNone": true,
-              "StructGUID": "{00000000-0000-0000-0000-000000000000}",
-              "SerializationControl": "NoExtension",
-              "Operation": "None",
-              "Name": "1",
-              "ArrayIndex": 0,
-              "PropertyGuid": null,
-              "IsZero": false,
-              "PropertyTagFlags": "None",
-              "PropertyTypeName": null,
-              "PropertyTagExtensions": "NoExtension",
-              "Value": [
-                {
-                  "$type": "UAssetAPI.PropertyTypes.Objects.SoftObjectPropertyData, UAssetAPI",
-                  "Name": "ItemType",
-                  "ArrayIndex": 0,
-                  "PropertyGuid": null,
-                  "IsZero": false,
-                  "PropertyTagFlags": "None",
-                  "PropertyTypeName": null,
-                  "PropertyTagExtensions": "NoExtension",
-                  "Value": {
-                    "$type": "UAssetAPI.PropertyTypes.Objects.FSoftObjectPath, UAssetAPI",
-                    "AssetPath": {
-                      "$type": "UAssetAPI.PropertyTypes.Objects.FTopLevelAssetPath, UAssetAPI",
-                      "PackageName": "/Game/Data/ItemType/Resource/DA_Salt_ItemType",
-                      "AssetName": "DA_Salt_ItemType"
+                      "PackageName": "/Game/Data/ItemType/DA_EnameledGlass_ItemType",
+                      "AssetName": "DA_EnameledGlass_ItemType"
                     },
                     "SubPathString": null
                   }
@@ -416,8 +335,8 @@
                     "$type": "UAssetAPI.PropertyTypes.Objects.FSoftObjectPath, UAssetAPI",
                     "AssetPath": {
                       "$type": "UAssetAPI.PropertyTypes.Objects.FTopLevelAssetPath, UAssetAPI",
-                      "PackageName": "/Game/Data/ItemType/Resource/DA_PlantMatter_ItemType",
-                      "AssetName": "DA_PlantMatter_ItemType"
+                      "PackageName": "/Game/Data/ItemType/Resource/DA_Celestine_ItemType",
+                      "AssetName": "DA_Celestine_ItemType"
                     },
                     "SubPathString": null
                   }
@@ -431,7 +350,54 @@
                   "PropertyTagFlags": "None",
                   "PropertyTypeName": null,
                   "PropertyTagExtensions": "NoExtension",
-                  "Value": 4
+                  "Value": 2
+                }
+              ]
+            },
+            {
+              "$type": "UAssetAPI.PropertyTypes.Structs.StructPropertyData, UAssetAPI",
+              "StructType": "CraftingRecipeRequirement",
+              "SerializeNone": true,
+              "StructGUID": "{00000000-0000-0000-0000-000000000000}",
+              "SerializationControl": "NoExtension",
+              "Operation": "None",
+              "Name": "1",
+              "ArrayIndex": 0,
+              "PropertyGuid": null,
+              "IsZero": false,
+              "PropertyTagFlags": "None",
+              "PropertyTypeName": null,
+              "PropertyTagExtensions": "NoExtension",
+              "Value": [
+                {
+                  "$type": "UAssetAPI.PropertyTypes.Objects.SoftObjectPropertyData, UAssetAPI",
+                  "Name": "ItemType",
+                  "ArrayIndex": 0,
+                  "PropertyGuid": null,
+                  "IsZero": false,
+                  "PropertyTagFlags": "None",
+                  "PropertyTypeName": null,
+                  "PropertyTagExtensions": "NoExtension",
+                  "Value": {
+                    "$type": "UAssetAPI.PropertyTypes.Objects.FSoftObjectPath, UAssetAPI",
+                    "AssetPath": {
+                      "$type": "UAssetAPI.PropertyTypes.Objects.FTopLevelAssetPath, UAssetAPI",
+                      "PackageName": "/Game/Data/ItemType/Resource/DA_Enamel_ItemType",
+                      "AssetName": "DA_Enamel_ItemType"
+                    },
+                    "SubPathString": null
+                  }
+                },
+                {
+                  "$type": "UAssetAPI.PropertyTypes.Objects.IntPropertyData, UAssetAPI",
+                  "Name": "NumItems",
+                  "ArrayIndex": 0,
+                  "PropertyGuid": null,
+                  "IsZero": false,
+                  "PropertyTagFlags": "None",
+                  "PropertyTypeName": null,
+                  "PropertyTagExtensions": "NoExtension",
+                  "Value": 2
                 }
               ]
             }
@@ -449,17 +415,6 @@
           "PropertyTypeName": null,
           "PropertyTagExtensions": "NoExtension",
           "Value": "Locked"
-        },
-        {
-          "$type": "UAssetAPI.PropertyTypes.Objects.BoolPropertyData, UAssetAPI",
-          "Name": "bNotifyOnUnlock",
-          "ArrayIndex": 0,
-          "PropertyGuid": null,
-          "IsZero": true,
-          "PropertyTagFlags": "None",
-          "PropertyTypeName": null,
-          "PropertyTagExtensions": "NoExtension",
-          "Value": false
         },
         {
           "$type": "UAssetAPI.PropertyTypes.Objects.ArrayPropertyData, UAssetAPI",
@@ -490,9 +445,9 @@
                 {
                   "$type": "UAssetAPI.PropertyTypes.Objects.TextPropertyData, UAssetAPI",
                   "Flags": 0,
-                  "HistoryType": "None",
-                  "Namespace": null,
-                  "CultureInvariantString": null,
+                  "HistoryType": "Base",
+                  "Namespace": "",
+                  "CultureInvariantString": "ACquire Teeth",
                   "SourceFmt": null,
                   "Arguments": null,
                   "ArgumentsData": null,
@@ -507,7 +462,180 @@
                   "PropertyTagFlags": "None",
                   "PropertyTypeName": null,
                   "PropertyTagExtensions": "NoExtension",
-                  "Value": null
+                  "Value": "17BB516F410AF0B711FFE2AB7A42265B"
+                },
+                {
+                  "$type": "UAssetAPI.PropertyTypes.Objects.ArrayPropertyData, UAssetAPI",
+                  "ArrayType": "StructProperty",
+                  "Name": "Entries",
+                  "ArrayIndex": 0,
+                  "PropertyGuid": null,
+                  "IsZero": false,
+                  "PropertyTagFlags": "None",
+                  "PropertyTypeName": null,
+                  "PropertyTagExtensions": "NoExtension",
+                  "Value": [
+                    {
+                      "$type": "UAssetAPI.PropertyTypes.Structs.StructPropertyData, UAssetAPI",
+                      "StructType": "UWERecipeUnlockRuleEntry",
+                      "SerializeNone": true,
+                      "StructGUID": "{00000000-0000-0000-0000-000000000000}",
+                      "SerializationControl": "NoExtension",
+                      "Operation": "None",
+                      "Name": "0",
+                      "ArrayIndex": 0,
+                      "PropertyGuid": null,
+                      "IsZero": false,
+                      "PropertyTagFlags": "None",
+                      "PropertyTypeName": null,
+                      "PropertyTagExtensions": "NoExtension",
+                      "Value": [
+                        {
+                          "$type": "UAssetAPI.PropertyTypes.Objects.EnumPropertyData, UAssetAPI",
+                          "EnumType": "ERecipeEventTypes",
+                          "InnerType": "ByteProperty",
+                          "Name": "EventType",
+                          "ArrayIndex": 0,
+                          "PropertyGuid": null,
+                          "IsZero": true,
+                          "PropertyTagFlags": "None",
+                          "PropertyTypeName": null,
+                          "PropertyTagExtensions": "NoExtension",
+                          "Value": "OnPickup"
+                        },
+                        {
+                          "$type": "UAssetAPI.PropertyTypes.Structs.StructPropertyData, UAssetAPI",
+                          "StructType": "GameplayTag",
+                          "SerializeNone": true,
+                          "StructGUID": "{00000000-0000-0000-0000-000000000000}",
+                          "SerializationControl": "NoExtension",
+                          "Operation": "None",
+                          "Name": "EventTrackerVerbTag",
+                          "ArrayIndex": 0,
+                          "PropertyGuid": null,
+                          "IsZero": false,
+                          "PropertyTagFlags": "None",
+                          "PropertyTypeName": null,
+                          "PropertyTagExtensions": "NoExtension",
+                          "Value": [
+                            {
+                              "$type": "UAssetAPI.PropertyTypes.Objects.NamePropertyData, UAssetAPI",
+                              "Name": "TagName",
+                              "ArrayIndex": 0,
+                              "PropertyGuid": null,
+                              "IsZero": true,
+                              "PropertyTagFlags": "None",
+                              "PropertyTypeName": null,
+                              "PropertyTagExtensions": "NoExtension",
+                              "Value": null
+                            }
+                          ]
+                        },
+                        {
+                          "$type": "UAssetAPI.PropertyTypes.Objects.EnumPropertyData, UAssetAPI",
+                          "EnumType": "ERequirementScope",
+                          "InnerType": "ByteProperty",
+                          "Name": "RequirementScope",
+                          "ArrayIndex": 0,
+                          "PropertyGuid": null,
+                          "IsZero": false,
+                          "PropertyTagFlags": "None",
+                          "PropertyTypeName": null,
+                          "PropertyTagExtensions": "NoExtension",
+                          "Value": "PlayerSpecific"
+                        },
+                        {
+                          "$type": "UAssetAPI.PropertyTypes.Objects.IntPropertyData, UAssetAPI",
+                          "Name": "RequiredCount",
+                          "ArrayIndex": 0,
+                          "PropertyGuid": null,
+                          "IsZero": false,
+                          "PropertyTagFlags": "None",
+                          "PropertyTypeName": null,
+                          "PropertyTagExtensions": "NoExtension",
+                          "Value": 1
+                        },
+                        {
+                          "$type": "UAssetAPI.PropertyTypes.Objects.ObjectPropertyData, UAssetAPI",
+                          "Name": "EventAsset",
+                          "ArrayIndex": 0,
+                          "PropertyGuid": null,
+                          "IsZero": false,
+                          "PropertyTagFlags": "None",
+                          "PropertyTypeName": null,
+                          "PropertyTagExtensions": "NoExtension",
+                          "Value": -9
+                        },
+                        {
+                          "$type": "UAssetAPI.PropertyTypes.Structs.StructPropertyData, UAssetAPI",
+                          "StructType": "GameplayTag",
+                          "SerializeNone": true,
+                          "StructGUID": "{00000000-0000-0000-0000-000000000000}",
+                          "SerializationControl": "NoExtension",
+                          "Operation": "None",
+                          "Name": "EventTag",
+                          "ArrayIndex": 0,
+                          "PropertyGuid": null,
+                          "IsZero": false,
+                          "PropertyTagFlags": "None",
+                          "PropertyTypeName": null,
+                          "PropertyTagExtensions": "NoExtension",
+                          "Value": [
+                            {
+                              "$type": "UAssetAPI.PropertyTypes.Objects.NamePropertyData, UAssetAPI",
+                              "Name": "TagName",
+                              "ArrayIndex": 0,
+                              "PropertyGuid": null,
+                              "IsZero": true,
+                              "PropertyTagFlags": "None",
+                              "PropertyTypeName": null,
+                              "PropertyTagExtensions": "NoExtension",
+                              "Value": null
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "UAssetAPI.PropertyTypes.Structs.StructPropertyData, UAssetAPI",
+              "StructType": "UWERecipeUnlockRules",
+              "SerializeNone": true,
+              "StructGUID": "{00000000-0000-0000-0000-000000000000}",
+              "SerializationControl": "NoExtension",
+              "Operation": "None",
+              "Name": "1",
+              "ArrayIndex": 0,
+              "PropertyGuid": null,
+              "IsZero": false,
+              "PropertyTagFlags": "None",
+              "PropertyTypeName": null,
+              "PropertyTagExtensions": "NoExtension",
+              "Value": [
+                {
+                  "$type": "UAssetAPI.PropertyTypes.Objects.TextPropertyData, UAssetAPI",
+                  "Flags": 0,
+                  "HistoryType": "Base",
+                  "Namespace": "",
+                  "CultureInvariantString": "Gain depth module recipe",
+                  "SourceFmt": null,
+                  "Arguments": null,
+                  "ArgumentsData": null,
+                  "TransformType": "ToLower",
+                  "SourceValue": null,
+                  "FormatOptions": null,
+                  "TargetCulture": null,
+                  "Name": "RuleName",
+                  "ArrayIndex": 0,
+                  "PropertyGuid": null,
+                  "IsZero": false,
+                  "PropertyTagFlags": "None",
+                  "PropertyTypeName": null,
+                  "PropertyTagExtensions": "NoExtension",
+                  "Value": "754AE7F0426E72E530ED448B4AA9DA19"
                 },
                 {
                   "$type": "UAssetAPI.PropertyTypes.Objects.ArrayPropertyData, UAssetAPI",
@@ -609,7 +737,7 @@
                           "PropertyTagFlags": "None",
                           "PropertyTypeName": null,
                           "PropertyTagExtensions": "NoExtension",
-                          "Value": -6
+                          "Value": -7
                         },
                         {
                           "$type": "UAssetAPI.PropertyTypes.Structs.StructPropertyData, UAssetAPI",
@@ -648,17 +776,6 @@
           ]
         },
         {
-          "$type": "UAssetAPI.PropertyTypes.Objects.FloatPropertyData, UAssetAPI",
-          "Name": "CraftingTime",
-          "ArrayIndex": 0,
-          "PropertyGuid": null,
-          "IsZero": false,
-          "PropertyTagFlags": "None",
-          "PropertyTypeName": null,
-          "PropertyTagExtensions": "NoExtension",
-          "Value": 30.0
-        },
-        {
           "$type": "UAssetAPI.PropertyTypes.Objects.SoftObjectPropertyData, UAssetAPI",
           "Name": "Category",
           "ArrayIndex": 0,
@@ -671,8 +788,8 @@
             "$type": "UAssetAPI.PropertyTypes.Objects.FSoftObjectPath, UAssetAPI",
             "AssetPath": {
               "$type": "UAssetAPI.PropertyTypes.Objects.FTopLevelAssetPath, UAssetAPI",
-              "PackageName": "/Game/Data/CraftingRecipes/Categories/Processor/DA_ProcessorAlternateRecipes",
-              "AssetName": "DA_ProcessorAlternateRecipes"
+              "PackageName": "/Game/Data/CraftingRecipes/Categories/Fabricator/DA_ResourcesBasicMaterials",
+              "AssetName": "DA_ResourcesBasicMaterials"
             },
             "SubPathString": null
           }
@@ -686,21 +803,21 @@
           "PropertyTagFlags": "None",
           "PropertyTypeName": null,
           "PropertyTagExtensions": "NoExtension",
-          "Value": 5
+          "Value": 25
         }
       ],
       "ObjectGuid": null,
       "SerializationControl": "NoExtension",
       "Operation": "None",
       "HasLeadingFourNullBytes": false,
-      "ObjectName": "DA_PlantFiber_to_Water_ProcessorRecipe",
+      "ObjectName": "DA_EnameledGlassRecipe",
       "OuterIndex": 0,
       "ClassIndex": -1,
       "SuperIndex": 0,
-      "TemplateIndex": -9,
+      "TemplateIndex": -8,
       "ObjectFlags": "RF_Public, RF_Standalone, RF_Transactional",
-      "SerialSize": 271,
-      "SerialOffset": 2043,
+      "SerialSize": 414,
+      "SerialOffset": 1869,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -714,13 +831,13 @@
       "GeneratePublicHash": false,
       "SerializationBeforeSerializationDependencies": [],
       "CreateBeforeSerializationDependencies": [
-        -8,
-        -7,
-        -6
+        -6,
+        -9,
+        -7
       ],
       "SerializationBeforeCreateDependencies": [
         -1,
-        -9
+        -8
       ],
       "CreateBeforeCreateDependencies": [],
       "Extras": ""
@@ -750,15 +867,6 @@
     },
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "/Game/Data/BaseBuilding/BuilderActions/DA_Processor_ConstructData",
-      "OuterIndex": 0,
-      "ClassPackage": "/Script/CoreUObject",
-      "ClassName": "Package",
-      "PackageName": null,
-      "bImportOptional": false
-    },
-    {
-      "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "/Game/StringTables/ST_Items",
       "OuterIndex": 0,
       "ClassPackage": "/Script/CoreUObject",
@@ -768,7 +876,16 @@
     },
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "/Game/StringTables/ST_Recipes",
+      "ObjectName": "/Game/Data/CraftingRecipes/ModificationStation/DA_Tadpole_CrushDepthUpgrade_01_Recipe",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Game/Data/ItemType/Resource/DA_Enamel_ItemType",
       "OuterIndex": 0,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Package",
@@ -786,17 +903,8 @@
     },
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "DA_Processor_ConstructData",
-      "OuterIndex": -2,
-      "ClassPackage": "/Script/Subnautica2",
-      "ClassName": "SN2BuilderConstructActionData",
-      "PackageName": null,
-      "bImportOptional": false
-    },
-    {
-      "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "ST_Items",
-      "OuterIndex": -3,
+      "OuterIndex": -2,
       "ClassPackage": "/Script/Engine",
       "ClassName": "StringTable",
       "PackageName": null,
@@ -804,10 +912,10 @@
     },
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "ST_Recipes",
-      "OuterIndex": -4,
-      "ClassPackage": "/Script/Engine",
-      "ClassName": "StringTable",
+      "ObjectName": "DA_Tadpole_CrushDepthUpgrade_01_Recipe",
+      "OuterIndex": -3,
+      "ClassPackage": "/Script/UWECrafting",
+      "ClassName": "UWECraftingRecipe",
       "PackageName": null,
       "bImportOptional": false
     },
@@ -817,6 +925,15 @@
       "OuterIndex": -5,
       "ClassPackage": "/Script/UWECrafting",
       "ClassName": "UWECraftingRecipe",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "DA_Enamel_ItemType",
+      "OuterIndex": -4,
+      "ClassPackage": "/Script/UWEInventory",
+      "ClassName": "UWEItemType",
       "PackageName": null,
       "bImportOptional": false
     }
@@ -839,7 +956,7 @@
     {
       "$type": "UAssetAPI.FGenerationInfo, UAssetAPI",
       "ExportCount": 1,
-      "NameCount": 34
+      "NameCount": 29
     }
   ],
   "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
@@ -862,10 +979,10 @@
   },
   "ChunkIDs": [],
   "PackageSource": 0,
-  "FolderName": "/Game/Data/CraftingRecipes/Processor/DA_PlantFiber_to_Water_ProcessorRecipe",
+  "FolderName": "/Game/Data/CraftingRecipes/Fabricator/DA_EnameledGlassRecipe",
   "LocalizationId": null,
   "SoftObjectPathsCount": 0,
-  "SoftObjectPathsOffset": 1631,
+  "SoftObjectPathsOffset": 1457,
   "SearchableNamesOffset": 0,
   "ThumbnailTableOffset": 0,
   "ImportTypeHierarchiesCount": 0,
@@ -873,12 +990,12 @@
   "SavedHash": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
   "CompressionFlags": 0,
   "AdditionalPackagesToCook": [],
-  "NamesReferencedFromExportDataCount": 34,
+  "NamesReferencedFromExportDataCount": 29,
   "PayloadTocOffset": -1,
   "DataResourceOffset": -1,
   "doWeHaveAssetRegistryData": true,
   "doWeHaveWorldTileInfo": false,
-  "PackageFlags": "PKG_Cooked, PKG_UnversionedProperties, PKG_FilterEditorOnly",
+  "PackageFlags": "PKG_Cooked, PKG_UnversionedProperties, PKG_RequiresLocalizationGather, PKG_FilterEditorOnly",
   "HasUnversionedProperties": true,
   "IsFilterEditorOnly": true,
   "IsPreDependencyFormat": true
