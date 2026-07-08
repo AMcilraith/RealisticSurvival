@@ -1,0 +1,13 @@
+[[recipe_modify]]
+id = "LampCeilingBulb"
+name = "SmallCeilingLight"
+description = "SmallCeilingLightDescription"
+category = "BuilderBaseObject_Lighting"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 1
+Quartz = 1
+
+[[recipe_modify.outputs]]
+LampCeilingBulb = 1

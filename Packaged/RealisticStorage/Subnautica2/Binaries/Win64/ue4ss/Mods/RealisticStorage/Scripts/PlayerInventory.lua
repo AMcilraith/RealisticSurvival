@@ -10,6 +10,49 @@ local function logVerbose(message)
     end
 end
 
+local function unwrap(value)
+    if value == nil then return nil end
+    if type(value) ~= "userdata" then return value end
+    if value.Get ~= nil then
+        local ok, got = pcall(function() return value:Get() end)
+        if ok then return got end
+        return nil
+    end
+    if value.get ~= nil then
+        local ok, got = pcall(function() return value:get() end)
+        if ok then return got end
+        return nil
+    end
+    return value
+end
+
+local function isValid(object)
+    if object == nil then return false end
+    object = unwrap(object)
+    if object == nil then return false end
+    local ok, valid = pcall(function() return object:IsValid() end)
+    return ok and valid == true
+end
+
+local function safeGet(object, property)
+    if not isValid(object) then return nil end
+    local ok, value = pcall(function() return object[property] end)
+    return ok and value or nil
+end
+
+local function safeSet(object, property, value)
+    if not isValid(object) then return false end
+    return pcall(function() object[property] = value end)
+end
+
+local function safeCall(object, functionName, ...)
+    if not isValid(object) then return false end
+    local args = { ... }
+    return pcall(function()
+        object[functionName](object, table.unpack(args))
+    end)
+end
+
 local function getTracker()
     local ctx = StaticFindObject("/Script/UWEEventTracker.UWEEventTrackerStatics")
     if not ctx or not ctx:IsValid() then
@@ -90,7 +133,8 @@ local function getInventoryComponent(player)
         local ok, v = pcall(function()
             return player[name]
         end)
-        if ok and v and v:IsValid() then
+        v = unwrap(v)
+        if ok and isValid(v) then
             return v
         end
         return nil
@@ -99,7 +143,7 @@ local function getInventoryComponent(player)
 end
 
 function PlayerInventory.Apply(player)
-    if not player or not player:IsValid() then
+    if not isValid(player) then
         return
     end
 
@@ -109,17 +153,20 @@ function PlayerInventory.Apply(player)
         config.inventory.MaxSlots)
 
     local invComp = getInventoryComponent(player)
-    if invComp and invComp:IsValid() then
-        if invComp.MaxItems ~= invTarget then
-            logVerbose(string.format(
-                "Upgrade Event! Force shifting layout size from %d to %d slots (Tier %d detected).", invComp.MaxItems,
-                invTarget, cappedTier))
-            pcall(function()
-                invComp:SetMaxItems(invTarget)
-            end)
-            invComp.MaxItems = invTarget
-        end
+    if not isValid(invComp) then
+        return
     end
+
+    local currentItems = safeGet(invComp, "MaxItems")
+    if currentItems == invTarget then
+        return
+    end
+
+    logVerbose(string.format(
+        "Upgrade Event! Force shifting layout size from %d to %d slots (Tier %d detected).",
+        currentItems or 0, invTarget, cappedTier))
+    safeCall(invComp, "SetMaxItems", invTarget)
+    safeSet(invComp, "MaxItems", invTarget)
 end
 
 function PlayerInventory.Clear(player)

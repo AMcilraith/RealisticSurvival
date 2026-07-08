@@ -1,0 +1,19 @@
+[[recipe_modify]]
+id = "Processor"
+name = "Processor"
+description = "ProcessorDescription"
+category = "BuilderToolProductionResearchCategory"
+ordering_index = 2
+crafting_time = 26.0
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 4
+Sulfur = 4
+PlateCoral = 2
+Quartz = 2
+ComputerChip = 1
+CopperWire = 1
+
+[[recipe_modify.outputs]]
+Processor = 1

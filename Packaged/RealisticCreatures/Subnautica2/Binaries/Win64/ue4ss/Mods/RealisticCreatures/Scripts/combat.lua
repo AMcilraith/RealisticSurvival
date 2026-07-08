@@ -59,7 +59,7 @@ end
 local cancelCorpseTimers
 local removeCorpseFromQueue
 
-local function asObject(v) return utils.unwrap(v) end
+local function asObject(v) return utils.asHookParam(v) end
 
 local function unwrapWeak(v)
     if v == nil then return nil end
@@ -81,9 +81,9 @@ end
 local function getPlayerLoc()
     local pc = UEHelpers.GetPlayerController()
     if not utils.isValid(pc) then return nil end
-    local loc = getLoc(pc.Pawn)
+    local loc = getLoc(utils.getPlayerPawn(pc))
     if loc ~= nil then return loc end
-    local cam = pc.PlayerCameraManager
+    local cam = utils.unwrap(utils.safeGet(pc, "PlayerCameraManager"))
     if utils.isValid(cam) then
         local ok, cl = pcall(function() return cam:GetCameraLocation() end)
         if ok then return cl end
@@ -93,7 +93,7 @@ end
 
 local function getPlayerPawn()
     local pc = UEHelpers.GetPlayerController()
-    return pc ~= nil and pc.Pawn or nil
+    return utils.getPlayerPawn(pc)
 end
 
 local function distFromPlayer(actor)
@@ -336,30 +336,62 @@ local function getPlayerToolDamage(actor)
     return config.toolDamage or config.fallbackDamage or 20.0
 end
 
+local function resolveCreatureActor(actor)
+    actor = creatures.getHealthActor(asObject(actor))
+    if not utils.isValid(actor) then return nil end
+    if creatures.isCreatureActor(actor) then return actor end
+    return nil
+end
+
+local function getHoverTargetFromAbility(context)
+    local ability = asObject(context)
+    if not utils.isValid(ability) then return nil, nil end
+
+    local ok, hoverInfo = utils.callIfPresentReturning(ability, "GetHoverInfoFromActorInfo")
+    if ok and hoverInfo ~= nil then
+        local actor = unwrapWeak(hoverInfo.Actor)
+        if utils.isValid(actor) then
+            local hitLoc = getLoc(actor)
+            local hitResult = utils.safeGet(hoverInfo, "HitResult")
+            if hitResult ~= nil then
+                local impact = utils.safeGet(hitResult, "ImpactPoint") or utils.safeGet(hitResult, "Location")
+                if impact ~= nil and impact.X ~= nil then hitLoc = impact end
+            end
+            return actor, hitLoc
+        end
+    end
+
+    ok, hoverInfo = utils.callIfPresentReturning(ability, "GetHoverActorFromActorInfo")
+    if ok and utils.isValid(hoverInfo) then
+        return hoverInfo, getLoc(hoverInfo)
+    end
+
+    return nil, nil
+end
+
 local function resolveCreatureVictim(primary, ctx)
-    primary = asObject(primary)
-    if creatures.isCreatureActor(primary) then return primary end
+    local resolved = resolveCreatureActor(primary)
+    if resolved ~= nil then return resolved end
+
     if not utils.isValid(ctx) then return nil end
 
-    local ok, hoverInfo = utils.callIfPresentReturning(ctx, "GetHoverInfoFromActorInfo")
-    if ok and hoverInfo ~= nil then
-        local a = unwrapWeak(hoverInfo.Actor)
-        if creatures.isCreatureActor(a) then return a end
-    end
-    ok, hoverInfo = utils.callIfPresentReturning(ctx, "GetHoverActorFromActorInfo")
-    if ok and creatures.isCreatureActor(hoverInfo) then return hoverInfo end
+    local hover, hitLoc = getHoverTargetFromAbility(ctx)
+    resolved = resolveCreatureActor(hover)
+    if resolved ~= nil then return resolved end
 
-    local hover = asObject(utils.safeGet(ctx, "Hover Target Actor") or utils.safeGet(ctx, "Hover_Target_Actor"))
-    if creatures.isCreatureActor(hover) then return hover end
+    hover = asObject(utils.safeGet(ctx, "Hover Target Actor") or utils.safeGet(ctx, "Hover_Target_Actor"))
+    resolved = resolveCreatureActor(hover)
+    if resolved ~= nil then return resolved end
 
     local hit = utils.safeGet(ctx, "HitResult")
     if hit ~= nil then
         local handle = utils.safeGet(hit, "HitObjectHandle")
         if handle ~= nil then
-            local a = asObject(utils.safeGet(handle, "Actor"))
-            if creatures.isCreatureActor(a) then return a end
+            resolved = resolveCreatureActor(utils.safeGet(handle, "Actor"))
+            if resolved ~= nil then return resolved end
         end
     end
+
     return nil
 end
 
@@ -391,12 +423,21 @@ local function damagePlayerHit(actor, hitLoc, damageOverride, maxDist)
 end
 
 local function damageTarget(target, hitLoc, dmg, maxDist)
-    return damagePlayerHit(creatures.getHealthActor(asObject(target)), hitLoc, dmg, maxDist)
+    return damagePlayerHit(resolveCreatureActor(target), hitLoc, dmg, maxDist)
+end
+
+local function damageActorParamTarget(actorParam)
+    local actor = resolveCreatureActor(actorParam)
+    if actor == nil then return false end
+    -- Ability callbacks already validated the target; skip melee range gate (KillableCreatures uses 0).
+    return damagePlayerHit(actor, getLoc(actor), config.toolDamage, 0.0)
 end
 
 local function tryHook(name, cb)
     local ok = pcall(RegisterHook, name, cb)
-    if ok and config.logEnabled then print("[RealisticCreatures] hooked " .. name .. "\n") end
+    if ok and config.logEnabled then
+        print(string.format("[RealisticCreatures] hooked %s\n", name))
+    end
     return ok
 end
 
@@ -422,22 +463,49 @@ local function findClassByExactName(className)
     return nil, nil
 end
 
+local MULTITOOL_CUT_PATHS = {
+    "/Game/Blueprints/AbilitySystem/Abilities/Tools/GA_SurvivalMultiTool_Cut.GA_SurvivalMultiTool_Cut_C",
+    "/Game/Blueprints/AbilitySystem/Abilities/GA_SurvivalMultiTool_Cut.GA_SurvivalMultiTool_Cut_C",
+}
+
 local function installBPClassHooks(displayName, className, hookSpec)
     local installed, attempts = false, 0
+    local hookAttempted = {}
+
+    local function installOnPath(path)
+        local any = false
+        for fname, cb in pairs(hookSpec) do
+            local key = path .. ":" .. fname
+            if not hookAttempted[key] then
+                hookAttempted[key] = true
+                if tryHook(key, cb) then any = true end
+            end
+        end
+        return any
+    end
+
     local function tryInstall()
         if installed then return true end
         attempts = attempts + 1
+
+        for _, path in ipairs(MULTITOOL_CUT_PATHS) do
+            if installOnPath(path) then
+                installed = true
+                return true
+            end
+        end
+
         local _, fn = findClassByExactName(className)
         if fn == nil then return false end
         local path = fn:match("(/Game/%S+_C)$") or fn:match("(%S+)$")
         if path == nil then return false end
-        local any = false
-        for fname, cb in pairs(hookSpec) do
-            if tryHook(path .. ":" .. fname, cb) then any = true end
+        if installOnPath(path) then
+            installed = true
+            return true
         end
-        if any then installed = true; return true end
         return false
     end
+
     tryInstall()
     local loop = LoopInGameThreadWithDelay(2000, function()
         if tryInstall() or attempts >= 60 then CancelDelayedAction(loop) end
@@ -455,7 +523,7 @@ function M.installPlayerHooks()
             pcall(function()
                 local now = os.clock()
                 if now - lastSwingInputTime < (config.swingInputCooldownSeconds or 0.22) then return end
-                local victim = resolveCreatureVictim(context, context) or resolveCreatureVictim(context, nil)
+                local victim = resolveCreatureVictim(context, context)
                 if victim ~= nil then
                     if damagePlayerHit(victim, getLoc(victim), nil, config.maxHitDistance) then
                         lastSwingInputTime = now
@@ -469,20 +537,14 @@ function M.installPlayerHooks()
 
     installBPClassHooks("MultitoolCut", "GA_SurvivalMultiTool_Cut_C", {
         DamageTarget = function(ctx, actorParam)
-            pcall(function()
-                local v = resolveCreatureVictim(actorParam, ctx)
-                if v then damagePlayerHit(v, getLoc(v), nil, config.maxHitDistance) end
-            end)
+            pcall(function() damageActorParamTarget(actorParam) end)
         end,
         PlayHitEffect = function(ctx, actorParam)
-            pcall(function()
-                local v = resolveCreatureVictim(actorParam, ctx)
-                if v then damagePlayerHit(v, getLoc(v), nil, config.maxHitDistance) end
-            end)
+            pcall(function() damageActorParamTarget(actorParam) end)
         end,
         DestroyTarget = function(ctx, actorParam)
             pcall(function()
-                local v = resolveCreatureVictim(actorParam, ctx)
+                local v = resolveCreatureActor(actorParam)
                 if v then M.killCreature(v, getPlayerPawn(), "player") end
             end)
         end,

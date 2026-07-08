@@ -1,0 +1,16 @@
+[[recipe_modify]]
+id = "DeployableElevator"
+name = "DeployableElevator"
+description = "DeployableElevatorDesc"
+category = "BuilderTool_Carryable_Category"
+ordering_index = 5
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 4
+Rubber = 2
+WaterSlug = 4
+Grease = 2
+
+[[recipe_modify.outputs]]
+DeployableElevator = 1

@@ -1,0 +1,17 @@
+[[recipe_modify]]
+id = "Scanner"
+name = "Scanner"
+description = "Titanium-framed Glass-lens Scanner, battery-powered. Emits coherent light through Quartz optics to analyze biological and structural targets. Generates databank entries and unlock blueprints."
+category = "PersonalTool"
+ordering_index = 40
+crafting_time = 3.0
+
+[[recipe_modify.ingredients]]
+Titanium = 2
+Rubber = 1
+BasicBattery = 1
+CopperWire = 1
+Glass = 1
+
+[[recipe_modify.outputs]]
+Scanner = 1

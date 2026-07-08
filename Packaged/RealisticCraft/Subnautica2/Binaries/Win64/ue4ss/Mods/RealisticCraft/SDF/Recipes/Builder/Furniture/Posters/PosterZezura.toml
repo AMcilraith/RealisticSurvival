@@ -1,0 +1,13 @@
+[[recipe_modify]]
+id = "PosterZezura"
+name = "PosterZezura"
+description = "PosterZezuraDescription"
+category = "BuilderPostersCategory"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 1
+Lead = 1
+
+[[recipe_modify.outputs]]
+Poster_Zezura = 1

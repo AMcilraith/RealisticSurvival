@@ -125,7 +125,8 @@ end
 
 LoopAsync(1000, function()
     for player, _ in pairs(activePlayers) do
-        if player:IsValid() then
+        local ok, valid = pcall(function() return player:IsValid() end)
+        if ok and valid then
             PlayerInventory.Apply(player)
             Hotbar.Apply(player)
             PassiveBiomods.Apply(player)

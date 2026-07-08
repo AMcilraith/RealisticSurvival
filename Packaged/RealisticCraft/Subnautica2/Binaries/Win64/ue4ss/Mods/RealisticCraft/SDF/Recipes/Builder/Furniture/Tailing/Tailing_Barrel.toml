@@ -1,0 +1,13 @@
+[[recipe_modify]]
+id = "Tailing_Barrel"
+name = "TailingBarrel"
+description = "TailingBarrelDescription"
+category = "BuilderFurniture_Tailing_Category"
+ordering_index = 2
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 4
+
+[[recipe_modify.outputs]]
+Tailing_Barrel = 1

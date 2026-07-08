@@ -23,23 +23,20 @@ local function tryHook(functionName, callback)
     return ok
 end
 
-local function getPlayerVehicleLocation()
-    local UEHelpers = require("UEHelpers")
-    local pc = UEHelpers.GetPlayerController()
-    if not utils.isValid(pc) or not utils.isValid(pc.Pawn) then return nil end
-
-    local pawnName = utils.getFullName(pc.Pawn):lower()
-    if pawnName:find("tadpole", 1, true) or pawnName:find("seatruck", 1, true) or
-        pawnName:find("seamoth", 1, true) or pawnName:find("cyclops", 1, true) or
-        pawnName:find("submarine", 1, true) then
-        local ok, loc = pcall(function() return pc.Pawn:K2_GetActorLocation() end)
-        return ok and loc or nil
-    end
-    return nil
-end
+local cachedBaseLoc = nil
+local cachedBaseLocAt = nil
+local cachedVehicleLoc = nil
+local cachedVehicleLocAt = 0.0
 
 local function getNearestBaseLocation(playerLoc)
     if playerLoc == nil then return nil end
+
+    local ttl = config.baseLocationCacheSeconds or 30.0
+    local now = os.clock()
+    if cachedBaseLoc ~= nil and cachedBaseLocAt ~= nil and (now - cachedBaseLocAt) < ttl then
+        return cachedBaseLoc
+    end
+
     local best, bestDist = nil, math.huge
     for _, base in ipairs(FindAllOf("SN2Base") or {}) do
         if utils.isValid(base) then
@@ -50,13 +47,51 @@ local function getNearestBaseLocation(playerLoc)
             end
         end
     end
+
+    cachedBaseLoc = best
+    cachedBaseLocAt = now
     return best
+end
+
+local function getPlayerVehicleLocationCached()
+    local ttl = config.baseLocationCacheSeconds or 30.0
+    local now = os.clock()
+    if cachedVehicleLocAt > 0 and (now - cachedVehicleLocAt) < ttl then
+        return cachedVehicleLoc
+    end
+
+    local UEHelpers = require("UEHelpers")
+    local pc = UEHelpers.GetPlayerController()
+    if not utils.isValid(pc) then
+        cachedVehicleLoc = nil
+        cachedVehicleLocAt = now
+        return nil
+    end
+
+    local pawn = utils.getPlayerPawn(pc)
+    if not utils.isValid(pawn) then
+        cachedVehicleLoc = nil
+        cachedVehicleLocAt = now
+        return nil
+    end
+
+    local pawnName = utils.getFullName(pawn):lower()
+    if pawnName:find("tadpole", 1, true) or pawnName:find("seatruck", 1, true) or
+        pawnName:find("seamoth", 1, true) or pawnName:find("cyclops", 1, true) or
+        pawnName:find("submarine", 1, true) then
+        local ok, loc = pcall(function() return pawn:K2_GetActorLocation() end)
+        cachedVehicleLoc = ok and loc or nil
+    else
+        cachedVehicleLoc = nil
+    end
+    cachedVehicleLocAt = now
+    return cachedVehicleLoc
 end
 
 local function runAiTick()
     local snapshot, playerLoc = cache.buildTickSnapshot(config.maxDetectionRadius, config.maxActiveCreatures)
     if #snapshot == 0 then return end
-    ecosystem.tickAi(snapshot, playerLoc, getPlayerVehicleLocation(), getNearestBaseLocation(playerLoc))
+    ecosystem.tickAi(snapshot, playerLoc, getPlayerVehicleLocationCached(), getNearestBaseLocation(playerLoc))
 end
 
 local function runPopulationTick()

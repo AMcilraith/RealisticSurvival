@@ -1,0 +1,12 @@
+[[recipe_modify]]
+id = "Reaper_Preorder_01"
+name = "PreorderReaper"
+category = "BuilderFurnitureCategory"
+ordering_index = 102
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 4
+
+[[recipe_modify.outputs]]
+Reaper_Preorder_01 = 1

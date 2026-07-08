@@ -61,22 +61,29 @@ local function findEntryByAddr(snapshot, addr)
 end
 
 local function nearestThreat(selfEntry, snapshot)
+    if not food_chain.isPrey(selfEntry.name) then return nil, math.huge end
+
     local best = nil
     local bestDist = math.huge
+    local detectRadius = config.maxDetectionRadius or 8000
+    local detectRadiusSq = detectRadius * detectRadius
 
     for _, other in ipairs(snapshot) do
         if other.addr ~= selfEntry.addr and not combat.isDead(other.addr) then
             if food_chain.isPredatorOf(other.name, selfEntry.name) then
-                local dist = utils.dist3D(selfEntry.loc, other.loc)
-                if dist < bestDist and dist <= config.maxDetectionRadius then
-                    bestDist = dist
+                local dx = selfEntry.loc.X - other.loc.X
+                local dy = selfEntry.loc.Y - other.loc.Y
+                local dz = selfEntry.loc.Z - other.loc.Z
+                local distSq = dx * dx + dy * dy + dz * dz
+                if distSq < bestDist and distSq <= detectRadiusSq then
+                    bestDist = distSq
                     best = other
                 end
             end
         end
     end
 
-    return best, bestDist
+    return best, math.sqrt(bestDist)
 end
 
 local function nearestPrey(selfEntry, snapshot)
@@ -85,20 +92,35 @@ local function nearestPrey(selfEntry, snapshot)
 
     local best = nil
     local bestDist = math.huge
+    local detectRadius = config.maxDetectionRadius or 8000
+    local detectRadiusSq = detectRadius * detectRadius
 
     for _, other in ipairs(snapshot) do
         if other.addr ~= selfEntry.addr and not combat.isDead(other.addr) then
             if food_chain.isPreyOf(other.name, selfEntry.name) then
-                local dist = utils.dist3D(selfEntry.loc, other.loc)
-                if dist < bestDist and dist <= config.maxDetectionRadius then
-                    bestDist = dist
+                local dx = selfEntry.loc.X - other.loc.X
+                local dy = selfEntry.loc.Y - other.loc.Y
+                local dz = selfEntry.loc.Z - other.loc.Z
+                local distSq = dx * dx + dy * dy + dz * dz
+                if distSq < bestDist and distSq <= detectRadiusSq then
+                    bestDist = distSq
                     best = other
                 end
             end
         end
     end
 
-    return best, bestDist
+    return best, math.sqrt(bestDist)
+end
+
+local function maybeNudgeToward(actor, fromLoc, toLoc, step)
+    if config.aiPhysicalNudgeEnabled == false then return end
+    nudgeToward(actor, fromLoc, toLoc, step)
+end
+
+local function maybeNudgeAway(actor, fromLoc, threatLoc, step)
+    if config.aiPhysicalNudgeEnabled == false then return end
+    nudgeAway(actor, fromLoc, threatLoc, step)
 end
 
 local function nudgeToward(actor, fromLoc, toLoc, step)
@@ -240,7 +262,10 @@ function M.tickAi(snapshot, playerLoc, vehicleLoc, baseLoc)
             state.fear = math.max(0.0, state.fear - (config.fearDecayPerTick or 5.0))
         end
 
-        local threat, threatDist = nearestThreat(entry, snapshot)
+        local threat, threatDist = nil, math.huge
+        if food_chain.isPrey(entry.name) then
+            threat, threatDist = nearestThreat(entry, snapshot)
+        end
         if threat ~= nil then
             state.fear = math.min(100.0, state.fear + (config.fearFromPredatorPerTick or 12.0))
             if threatDist <= config.maxDetectionRadius * 0.5 then
@@ -260,7 +285,7 @@ function M.tickAi(snapshot, playerLoc, vehicleLoc, baseLoc)
         if state.fear >= (config.fleeFearThreshold or 60) or state.mode == STATE_FLEE then
             state.mode = STATE_FLEE
             if threat ~= nil then
-                nudgeAway(entry.actor, entry.loc, threat.loc, (config.fleeMoveStep or 100.0) * (config.fleeSpeedMultiplier or 1.0))
+                maybeNudgeAway(entry.actor, entry.loc, threat.loc, (config.fleeMoveStep or 100.0) * (config.fleeSpeedMultiplier or 1.0))
             end
             if tickNow >= state.fleeUntil then
                 state.mode = STATE_IDLE
@@ -285,7 +310,7 @@ function M.tickAi(snapshot, playerLoc, vehicleLoc, baseLoc)
                 state.mode = STATE_IDLE
                 state.huntTargetAddr = nil
             else
-                nudgeToward(entry.actor, entry.loc, prey.loc, (config.huntMoveStep or 80.0) * (config.huntSpeedMultiplier or 1.0))
+                maybeNudgeToward(entry.actor, entry.loc, prey.loc, (config.huntMoveStep or 80.0) * (config.huntSpeedMultiplier or 1.0))
                 combat.tryAttack(entry.actor, prey.actor, entry.name, prey.name)
                 if combat.isDead(prey.addr) then
                     state.mode = STATE_IDLE
@@ -302,7 +327,7 @@ function M.tickAi(snapshot, playerLoc, vehicleLoc, baseLoc)
                 state.huntTargetAddr = prey.addr
                 state.huntStartedAt = tickNow
                 state.energy = math.max(0.0, state.energy - (config.energyCostPerTick or 1.5))
-                nudgeToward(entry.actor, entry.loc, prey.loc, (config.huntMoveStep or 80.0) * (config.huntSpeedMultiplier or 1.0))
+                maybeNudgeToward(entry.actor, entry.loc, prey.loc, (config.huntMoveStep or 80.0) * (config.huntSpeedMultiplier or 1.0))
                 combat.tryAttack(entry.actor, prey.actor, entry.name, prey.name)
             end
         end

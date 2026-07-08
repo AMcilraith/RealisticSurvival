@@ -119,6 +119,14 @@ function M.getHealthActor(actor)
         end
     end
 
+    if utils.isValid(actor) and utils.safeGet(actor, "GetOuter") ~= nil then
+        local ok, parent = pcall(function() return actor:GetOuter() end)
+        if ok and M.getHealthComponent(parent) ~= nil then
+            if address ~= nil then healthActorByAddr[address] = parent end
+            return parent
+        end
+    end
+
     if address ~= nil then healthActorByAddr[address] = actor end
     return actor
 end

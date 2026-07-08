@@ -1,0 +1,15 @@
+[[recipe_modify]]
+id = "BeaconCarryable"
+name = "Beacon_name"
+description = "Description"
+category = "BuilderTool_Carryable_Category"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 1
+Copper = 1
+WaterSlug = 1
+Rubber = 1
+
+[[recipe_modify.outputs]]
+Beacon = 1

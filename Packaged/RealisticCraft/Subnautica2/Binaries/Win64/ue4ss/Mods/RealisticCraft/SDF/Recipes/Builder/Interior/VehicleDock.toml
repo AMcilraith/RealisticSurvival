@@ -1,0 +1,12 @@
+[[recipe_modify]]
+id = "VehicleDock"
+name = "TadpoleDock"
+description = "TadpoleDockDescription"
+category = "BuilderVehiclesCategory"
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+TitaniumIngot = 2
+Grease = 2
+ComputerChip = 1
+CopperWire = 1

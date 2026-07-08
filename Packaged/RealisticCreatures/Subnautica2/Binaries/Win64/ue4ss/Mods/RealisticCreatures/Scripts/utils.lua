@@ -6,21 +6,45 @@ function M.unwrap(value)
     if value == nil then return nil end
     if type(value) ~= "userdata" then return value end
 
-    -- TWeakObjectPtr exposes Get/get; a null target returns nil from Get() but
-    -- throws if get() is called on the expired wrapper — do not fall through.
+    -- TWeakObjectPtr: Get() is safe for null/expired targets; get() throws a C++
+    -- exception that can bypass pcall. Never call get() here.
     if value.Get ~= nil then
         local ok, got = pcall(function() return value:Get() end)
         if ok then return got end
         return nil
     end
 
-    if value.get ~= nil then
-        local ok, got = pcall(function() return value:get() end)
-        if ok then return got end
-        return nil
+    return value
+end
+
+-- Hook callback params may arrive as LuaWeakObjectPtr (get, not Get).
+function M.asHookParam(param)
+    if param == nil then return nil end
+    if type(param) ~= "userdata" then return param end
+
+    if param.Get ~= nil then
+        local ok, object = pcall(function() return param:Get() end)
+        return ok and object or nil
     end
 
-    return value
+    if param.get ~= nil then
+        local ok, object = pcall(function() return param:get() end)
+        if ok and object ~= nil then return object end
+    end
+
+    return param
+end
+
+function M.getPlayerPawn(pc)
+    if not M.isValid(pc) then return nil end
+
+    local ok, pawn = pcall(function() return pc:K2_GetPawn() end)
+    if ok and M.isValid(pawn) then return pawn end
+
+    pawn = M.unwrap(M.safeGet(pc, "Pawn"))
+    if M.isValid(pawn) then return pawn end
+
+    return nil
 end
 
 function M.isValid(object)

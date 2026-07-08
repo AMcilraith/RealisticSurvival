@@ -1,0 +1,19 @@
+[[recipe_modify]]
+id = "ModificationStation"
+name = "ModificationStation"
+description = "ModificationStationDesc"
+category = "BuilderToolProductionResearchCategory"
+ordering_index = 4
+crafting_time = 8.0
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 2
+Sulfur = 2
+PlateCoral = 2
+Celestine = 2
+ComputerChipMk2 = 1
+WiringKit = 1
+
+[[recipe_modify.outputs]]
+ModificationStation = 1

@@ -1,0 +1,18 @@
+[[recipe_modify]]
+id = "ThreemoonTemaki"
+name = "Threemoon Temaki"
+description = "All three Halfmoon variants rolled in plant-like matter with Salt and brine. Statistically a complete meal."
+category = "SustenanceMeals"
+ordering_index = 200
+crafting_time = 5.0
+
+[[recipe_modify.ingredients]]
+Halfmoon = 2
+HalfmoonVariant01 = 1
+HalfmoonVariant02 = 1
+Salt = 4
+PlantMatter = 4
+LuciferRotsac = 4
+
+[[recipe_modify.outputs]]
+ThreemoonTemaki = 4

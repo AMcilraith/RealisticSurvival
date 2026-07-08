@@ -1,0 +1,18 @@
+[[recipe_modify]]
+id = "MetalFarm"
+name = "MetalFarm"
+description = "MetalFarmDescription"
+category = "BuilderFarmingStructures_Category"
+ordering_index = 2
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+AxumAlloyIngot = 1
+AxumBioprintCulture = 1
+Strontium = 2
+Grease = 2
+ComputerChipMk2 = 1
+WiringKit = 1
+
+[[recipe_modify.outputs]]
+MetalFarm = 1

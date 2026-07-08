@@ -1,0 +1,13 @@
+[[recipe_modify]]
+id = "Axum_Jar_Tall"
+name = "AxumJarTall"
+description = "AxumJarTallDescription"
+category = "BuilderFurniture_Axum_Category"
+ordering_index = 2
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Copper = 1
+
+[[recipe_modify.outputs]]
+Axum_Jar_Tall = 1

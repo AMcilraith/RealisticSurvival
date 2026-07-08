@@ -1,5 +1,8 @@
 -- Centralized cache for expensive UE4SS calls.
 
+local config = require("config")
+local utils = require("utils")
+
 local M = {}
 
 local nameByAddr = {}
@@ -57,28 +60,18 @@ end
 local cachedSmall = {}
 local cachedLarge = {}
 local lastScanClock = -999
-local SCAN_TTL = 3.0
 
-function M.getCreatureActors(ttlOverride)
+local function scanTtl()
+    return config.creatureScanTtlSeconds or 5.0
+end
+
+function M.getCreatureActors()
     local now = os.clock()
-    local ttl = ttlOverride or SCAN_TTL
 
-    if now - lastScanClock >= ttl then
+    if now - lastScanClock >= scanTtl() then
         cachedSmall = FindAllOf("UWEAISmallFish") or {}
         cachedLarge = FindAllOf("UWEAILargeFish") or {}
         lastScanClock = now
-    else
-        local function filterValid(list)
-            local out = {}
-            for _, a in ipairs(list) do
-                if a ~= nil and a.IsValid ~= nil and a:IsValid() then
-                    out[#out + 1] = a
-                end
-            end
-            return out
-        end
-        cachedSmall = filterValid(cachedSmall)
-        cachedLarge = filterValid(cachedLarge)
     end
 
     return cachedSmall, cachedLarge
@@ -92,8 +85,9 @@ local UEHelpers = require("UEHelpers")
 
 local function getPlayerLoc()
     local pc = UEHelpers.GetPlayerController()
-    if pc == nil or pc.IsValid == nil or not pc:IsValid() then return nil end
-    local ok, loc = pcall(function() return pc.Pawn:K2_GetActorLocation() end)
+    local pawn = utils.getPlayerPawn(pc)
+    if not utils.isValid(pawn) then return nil end
+    local ok, loc = pcall(function() return pawn:K2_GetActorLocation() end)
     return ok and loc or nil
 end
 
@@ -109,26 +103,29 @@ function M.buildTickSnapshot(maxRadius, maxCount)
     local playerLoc = getPlayerLoc()
     local small, large = M.getCreatureActors()
     local snapshot = {}
+    local maxRadiusSq = maxRadius ~= nil and (maxRadius * maxRadius) or nil
 
     local function tryAdd(actor)
         if #snapshot >= maxCount then return end
-        if actor == nil or actor.IsValid == nil or not actor:IsValid() then return end
+        if not utils.isValid(actor) then return end
 
-        local ok, addr = pcall(function() return actor:GetAddress() end)
-        if not ok or addr == nil then return end
+        local addr = utils.getAddress(actor)
+        if addr == nil then return end
 
-        local ok2, loc = pcall(function() return actor:K2_GetActorLocation() end)
-        if not ok2 or loc == nil then return end
-        locByAddr[addr] = loc
+        local loc = M.getLocation(actor, addr)
+        if loc == nil then return end
 
-        if playerLoc ~= nil and dist3D(loc, playerLoc) > maxRadius then return end
+        if playerLoc ~= nil and maxRadiusSq ~= nil then
+            local dx = loc.X - playerLoc.X
+            local dy = loc.Y - playerLoc.Y
+            local dz = loc.Z - playerLoc.Z
+            if (dx * dx + dy * dy + dz * dz) > maxRadiusSq then return end
+        end
 
         local name = nameByAddr[addr]
         if name == nil then
-            local ok3, n = pcall(function() return actor:GetFullName() end)
-            if not ok3 or n == nil then return end
-            name = n
-            nameByAddr[addr] = name
+            name = M.getName(actor, addr)
+            if name == nil then return end
         end
 
         snapshot[#snapshot + 1] = {
@@ -140,8 +137,14 @@ function M.buildTickSnapshot(maxRadius, maxCount)
         }
     end
 
-    for _, a in ipairs(small) do tryAdd(a) end
-    for _, a in ipairs(large) do tryAdd(a) end
+    for _, a in ipairs(small) do
+        if #snapshot >= maxCount then break end
+        tryAdd(a)
+    end
+    for _, a in ipairs(large) do
+        if #snapshot >= maxCount then break end
+        tryAdd(a)
+    end
 
     return snapshot, playerLoc
 end

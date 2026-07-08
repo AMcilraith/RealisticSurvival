@@ -1,0 +1,14 @@
+[[recipe_modify]]
+id = "Poster_Reprinting"
+name = "Poster02"
+description = "PosterDescription"
+category = "BuilderPostersCategory"
+ordering_index = 2
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 1
+Lead = 1
+
+[[recipe_modify.outputs]]
+Poster_Reprinting = 1

@@ -1,0 +1,17 @@
+[[recipe_modify]]
+id = "SonicResonator"
+name = "Sonic Resonator"
+description = "Titanium Ingot housing with specialised transducers and a Wiring Kit signal array. Phased-array sound amplifier for mining and extraction."
+category = "PersonalTool"
+ordering_index = 70
+crafting_time = 3.0
+
+[[recipe_modify.ingredients]]
+TitaniumIngot = 1
+Rubber = 1
+BasicBattery = 1
+CopperWire = 1
+Grease = 1
+
+[[recipe_modify.outputs]]
+SonicResonator = 1

@@ -1,0 +1,18 @@
+[[recipe_modify]]
+id = "SonicResonatorV2"
+name = "Feedback Resonator"
+description = "Sonic Resonator upgraded with Conduit Crystal transducers and Strontium-treated Enameled Glass housing. Bacterial feedback loop identifies and shatters hardened biomolecule structures."
+category = "ToolUpgrades"
+ordering_index = 70
+crafting_time = 3.0
+
+[[recipe_modify.ingredients]]
+SonicResonator = 1
+Strontium = 2
+ConduitCrystal = 4
+Troilite = 2
+ComputerChipMk2 = 1
+WiringKit = 1
+
+[[recipe_modify.outputs]]
+SonicResonatorV2 = 1

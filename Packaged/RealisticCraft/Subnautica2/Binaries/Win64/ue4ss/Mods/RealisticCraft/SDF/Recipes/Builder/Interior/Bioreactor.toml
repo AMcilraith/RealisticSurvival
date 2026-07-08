@@ -1,0 +1,19 @@
+[[recipe_modify]]
+id = "Bioreactor"
+name = "Bioreactor"
+description = "BioreactorDescription"
+category = "BuilderBaseObject_Power"
+ordering_index = 2
+crafting_time = 15.0
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 6
+Sulfur = 4
+Grease = 2
+Glass = 2
+ComputerChip = 1
+CopperWire = 1
+
+[[recipe_modify.outputs]]
+Bioreactor = 1

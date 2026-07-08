@@ -1,14 +1,23 @@
 return {
-    logEnabled = false,
+    logEnabled = true,
 
     -- AI tick interval in milliseconds
-    aiTickMs = 500,
+    aiTickMs = 1000,
+
+    -- Seconds between full-world creature scans (FindAllOf)
+    creatureScanTtlSeconds = 5.0,
+
+    -- Seconds to cache nearest-base lookup (avoids FindAllOf every AI tick)
+    baseLocationCacheSeconds = 30.0,
+
+    -- Teleport nudges fight native AI and are expensive; off by default
+    aiPhysicalNudgeEnabled = false,
 
     -- Population balance tick interval in milliseconds (5 min)
     populationTickMs = 300000,
 
     -- Max creatures with full AI simultaneously (beyond this -> forced IDLE)
-    maxActiveCreatures = 50,
+    maxActiveCreatures = 30,
 
     -- Detection radius in UE units (1m = 100 units)
     maxDetectionRadius = 8000,

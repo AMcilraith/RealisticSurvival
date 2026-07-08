@@ -1,0 +1,14 @@
+[[recipe_modify]]
+id = "Poster_KeepSwimming"
+name = "Poster01"
+description = "PosterDescription"
+category = "BuilderPostersCategory"
+ordering_index = 1
+DuplicatesBuilderActionData = true
+
+[[recipe_modify.ingredients]]
+Titanium = 1
+Lead = 1
+
+[[recipe_modify.outputs]]
+Poster_KeepSwimming = 1

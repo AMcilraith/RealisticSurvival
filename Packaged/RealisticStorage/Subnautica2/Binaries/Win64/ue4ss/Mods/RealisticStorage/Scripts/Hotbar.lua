@@ -10,6 +10,49 @@ local function logVerbose(message)
     end
 end
 
+local function unwrap(value)
+    if value == nil then return nil end
+    if type(value) ~= "userdata" then return value end
+    if value.Get ~= nil then
+        local ok, got = pcall(function() return value:Get() end)
+        if ok then return got end
+        return nil
+    end
+    if value.get ~= nil then
+        local ok, got = pcall(function() return value:get() end)
+        if ok then return got end
+        return nil
+    end
+    return value
+end
+
+local function isValid(object)
+    if object == nil then return false end
+    object = unwrap(object)
+    if object == nil then return false end
+    local ok, valid = pcall(function() return object:IsValid() end)
+    return ok and valid == true
+end
+
+local function safeGet(object, property)
+    if not isValid(object) then return nil end
+    local ok, value = pcall(function() return object[property] end)
+    return ok and value or nil
+end
+
+local function safeSet(object, property, value)
+    if not isValid(object) then return false end
+    return pcall(function() object[property] = value end)
+end
+
+local function safeCall(object, functionName, ...)
+    if not isValid(object) then return false end
+    local args = { ... }
+    return pcall(function()
+        object[functionName](object, table.unpack(args))
+    end)
+end
+
 local function getTracker()
     local ctx = StaticFindObject("/Script/UWEEventTracker.UWEEventTrackerStatics")
     if not ctx or not ctx:IsValid() then
@@ -72,7 +115,8 @@ local function getToolbarComponent(player)
         local ok, v = pcall(function()
             return player[name]
         end)
-        if ok and v and v:IsValid() then
+        v = unwrap(v)
+        if ok and isValid(v) then
             return v
         end
         return nil
@@ -81,7 +125,7 @@ local function getToolbarComponent(player)
 end
 
 function Hotbar.Apply(player)
-    if not player or not player:IsValid() then
+    if not isValid(player) then
         return
     end
 
@@ -91,36 +135,25 @@ function Hotbar.Apply(player)
         config.hotbar.MaxSlots)
 
     local toolbarComp = getToolbarComponent(player)
-    if toolbarComp and toolbarComp:IsValid() then
-        -- Handle whichever sizing properties the engine layout exposes
-        local currentSlots = toolbarComp.MaxSlots or toolbarComp.SlotCount or toolbarComp.MaxItems
-        if currentSlots ~= hbTarget then
-            logVerbose(string.format("Directly overriding player toolbar layout size to %d slots.", hbTarget))
-
-            pcall(function()
-                if toolbarComp.SetMaxSlots then
-                    toolbarComp:SetMaxSlots(hbTarget)
-                end
-            end)
-            pcall(function()
-                if toolbarComp.SetSlotCount then
-                    toolbarComp:SetSlotCount(hbTarget)
-                end
-            end)
-
-            if toolbarComp.MaxSlots then
-                toolbarComp.MaxSlots = hbTarget
-            end
-            if toolbarComp.SlotCount then
-                toolbarComp.SlotCount = hbTarget
-            end
-            if toolbarComp.MaxItems then
-                toolbarComp.MaxItems = hbTarget
-            end
-        end
-    else
+    if not isValid(toolbarComp) then
         logVerbose("WARNING: Could not find Toolbar or QuickSlot Component directly on the player object.")
+        return
     end
+
+    local currentSlots = safeGet(toolbarComp, "MaxSlots")
+        or safeGet(toolbarComp, "SlotCount")
+        or safeGet(toolbarComp, "MaxItems")
+    if currentSlots == hbTarget then
+        return
+    end
+
+    logVerbose(string.format("Directly overriding player toolbar layout size to %d slots.", hbTarget))
+
+    safeCall(toolbarComp, "SetMaxSlots", hbTarget)
+    safeCall(toolbarComp, "SetSlotCount", hbTarget)
+    safeSet(toolbarComp, "MaxSlots", hbTarget)
+    safeSet(toolbarComp, "SlotCount", hbTarget)
+    safeSet(toolbarComp, "MaxItems", hbTarget)
 end
 
 function Hotbar.Clear(player)
